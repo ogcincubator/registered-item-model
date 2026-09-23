@@ -1,0 +1,29 @@
+digraph G {
+graph [rankdir=LR, bgcolor="white", pad="0.3", nodesep="0.42", ranksep="1.0", splines=true];
+node [shape=ellipse, fontname="Arial", fontsize=19, color="#48515a", fontcolor="#353c43", penwidth=1.3, margin="0.18,0.12"];
+edge [fontname="Arial", fontsize=15, color="#48515a", fontcolor="#24292e", penwidth=1.1, arrowhead=vee, arrowsize=0.75];
+"https://w3id.org/ogc/rim/RegisterItem" [label="Register item", shape=ellipse];
+"https://w3id.org/ogc/rim/RegisterItemobjectIdentifierliteral" [label="URI", shape=box];
+"https://w3id.org/ogc/rim/ConceptVersion" [label="Concept version", shape=ellipse];
+"https://w3id.org/ogc/rim/ConceptVersionobjectIdentifierliteral" [label="URI", shape=box];
+"https://w3id.org/ogc/rim/RegisterItemfunctionalIdentifierliteral" [label="URI", shape=box];
+"https://w3id.org/ogc/rim/ConceptVersionfunctionalIdentifierliteral" [label="URI", shape=box];
+"https://w3id.org/ogc/rim/ValidityStatus" [label="Validity status", shape=ellipse];
+"https://w3id.org/ogc/rim/PublicationStatus" [label="Publication status", shape=ellipse];
+"https://w3id.org/ogc/rim/RegisterItemisRedactedliteral" [label="boolean", shape=box];
+"https://w3id.org/ogc/rim/ConceptVersionisRedactedliteral" [label="boolean", shape=box];
+"https://w3id.org/ogc/rim/RegisterItemisDeletedliteral" [label="boolean", shape=box];
+"https://w3id.org/ogc/rim/ConceptVersionisDeletedliteral" [label="boolean", shape=box];
+"https://w3id.org/ogc/rim/RegisterItem" -> "https://w3id.org/ogc/rim/RegisterItemobjectIdentifierliteral" [label="object identifier"];
+"https://w3id.org/ogc/rim/ConceptVersion" -> "https://w3id.org/ogc/rim/ConceptVersionobjectIdentifierliteral" [label="object identifier"];
+"https://w3id.org/ogc/rim/RegisterItem" -> "https://w3id.org/ogc/rim/RegisterItemfunctionalIdentifierliteral" [label="functional identifier"];
+"https://w3id.org/ogc/rim/ConceptVersion" -> "https://w3id.org/ogc/rim/ConceptVersionfunctionalIdentifierliteral" [label="functional identifier"];
+"https://w3id.org/ogc/rim/RegisterItem" -> "https://w3id.org/ogc/rim/ValidityStatus" [label="validity status"];
+"https://w3id.org/ogc/rim/ConceptVersion" -> "https://w3id.org/ogc/rim/ValidityStatus" [label="validity status"];
+"https://w3id.org/ogc/rim/RegisterItem" -> "https://w3id.org/ogc/rim/PublicationStatus" [label="publication status"];
+"https://w3id.org/ogc/rim/ConceptVersion" -> "https://w3id.org/ogc/rim/PublicationStatus" [label="publication status"];
+"https://w3id.org/ogc/rim/RegisterItem" -> "https://w3id.org/ogc/rim/RegisterItemisRedactedliteral" [label="is redacted"];
+"https://w3id.org/ogc/rim/ConceptVersion" -> "https://w3id.org/ogc/rim/ConceptVersionisRedactedliteral" [label="is redacted"];
+"https://w3id.org/ogc/rim/RegisterItem" -> "https://w3id.org/ogc/rim/RegisterItemisDeletedliteral" [label="is deleted"];
+"https://w3id.org/ogc/rim/ConceptVersion" -> "https://w3id.org/ogc/rim/ConceptVersionisDeletedliteral" [label="is deleted"];
+}

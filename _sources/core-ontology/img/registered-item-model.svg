@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1918" viewBox="0 0 2200 1918.1854166666667"><rect width="100%" height="100%" fill="white" /><text x="45" y="60" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#353c43">Registered Item Model</text><text x="45" y="100" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#353c43">Classes are ellipses • Properties are arrows • Literal values are rectangles</text><text x="45" y="132" font-family="Arial, sans-serif" font-size="19" font-weight="normal" fill="#353c43">Repeated ellipses denote the same class. Parent classes are shown in parentheses.</text><text x="45.0" y="180" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#353c43">Register and governance</text><svg width="1032.5" height="424.1854166666667" viewBox="0.00 0.00 1200.00 493.00" x="45.0" y="205">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(21.6 471.8)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-21.6,21.6 -21.6,-471.8 1178.29,-471.8 1178.29,21.6 -21.6,21.6" />
+
+<g id="node1" class="node">
+<title>https://w3id.org/ogc/rim/Register</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="68.18" cy="-212.6" rx="68.18" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="68.18" y="-205.42" font-family="Arial" font-size="19.00" fill="#353c43">Register</text>
+</g>
+
+<g id="node2" class="node">
+<title>https://w3id.org/ogc/rim/RegisterSystem</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="489.71" cy="-422.6" rx="114.85" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="489.71" y="-415.42" font-family="Arial" font-size="19.00" fill="#353c43">Register system</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>https://w3id.org/ogc/rim/Register-&gt;https://w3id.org/ogc/rim/RegisterSystem</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M82.08,-240.26C98.45,-272.2 129.78,-323.91 172.36,-351.6 230.39,-389.33 305.66,-407.19 368.22,-415.57" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="375.63,-416.52 367.76,-418.92 373.23,-416.26 368.18,-415.62 368.19,-415.57 368.2,-415.52 373.25,-416.17 368.62,-412.22 375.63,-416.52" />
+<text xml:space="preserve" text-anchor="middle" x="255.61" y="-414.27" font-family="Arial" font-size="15.00" fill="#24292e">runs on</text>
+</g>
+
+<g id="node3" class="node">
+<title>https://w3id.org/ogc/rim/RegisterSpecification</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="489.71" cy="-321.6" rx="93.1" ry="42.98" />
+<text xml:space="preserve" text-anchor="middle" x="489.71" y="-325.3" font-family="Arial" font-size="19.00" fill="#353c43">Register</text>
+<text xml:space="preserve" text-anchor="middle" x="489.71" y="-303.55" font-family="Arial" font-size="19.00" fill="#353c43">specification</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>https://w3id.org/ogc/rim/Register-&gt;https://w3id.org/ogc/rim/RegisterSpecification</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M93.09,-238.91C112.41,-258.26 141.4,-283.24 172.36,-295.6 241.06,-323.01 324.68,-328.83 388.69,-328.16" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="395.85,-328.05 388.41,-331.54 393.45,-328.14 388.36,-328.21 388.36,-328.16 388.35,-328.11 393.44,-328.04 388.3,-324.79 395.85,-328.05" />
+<text xml:space="preserve" text-anchor="middle" x="255.61" y="-330.67" font-family="Arial" font-size="15.00" fill="#24292e">has specification</text>
+</g>
+
+<g id="node5" class="node">
+<title>http://www.w3.org/ns/prov#Agent</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="489.71" cy="-186.6" rx="83.03" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="489.71" y="-179.42" font-family="Arial" font-size="19.00" fill="#353c43">prov:Agent</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>https://w3id.org/ogc/rim/Register-&gt;http://www.w3.org/ns/prov#Agent</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M109.01,-235.06C127.64,-244.31 150.49,-253.94 172.36,-258.6 244.74,-274 266.71,-275.03 338.86,-258.6 375.54,-250.24 413.72,-231.73 442.36,-215.57" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="448.64,-211.97 443.81,-218.63 446.57,-213.21 442.16,-215.74 442.13,-215.7 442.11,-215.65 446.52,-213.12 440.45,-212.77 448.64,-211.97" />
+<text xml:space="preserve" text-anchor="middle" x="255.61" y="-274.29" font-family="Arial" font-size="15.00" fill="#24292e">register owner</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>https://w3id.org/ogc/rim/Register-&gt;http://www.w3.org/ns/prov#Agent</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M136.88,-212.72C191.48,-212.36 270.21,-210.83 338.86,-205.6 360.12,-203.98 382.99,-201.47 404.3,-198.8" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="411.68,-197.86 404.67,-202.16 409.3,-198.22 404.25,-198.86 404.24,-198.81 404.23,-198.76 409.28,-198.12 403.81,-195.46 411.68,-197.86" />
+<text xml:space="preserve" text-anchor="middle" x="255.61" y="-215.99" font-family="Arial" font-size="15.00" fill="#24292e">register manager</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>https://w3id.org/ogc/rim/Register-&gt;http://www.w3.org/ns/prov#Agent</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M119.11,-193.8C135.79,-188.42 154.65,-183.28 172.36,-180.6 249.29,-168.94 337.93,-172.02 401.78,-177.1" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="408.89,-177.68 401.13,-180.43 406.48,-177.54 401.41,-177.12 401.41,-177.07 401.41,-177.02 406.49,-177.44 401.69,-173.7 408.89,-177.68" />
+<text xml:space="preserve" text-anchor="middle" x="255.61" y="-184.35" font-family="Arial" font-size="15.00" fill="#24292e">control body</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>https://w3id.org/ogc/rim/Register-&gt;http://www.w3.org/ns/prov#Agent</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M99.01,-187.41C118.51,-172.65 145.31,-155.41 172.36,-147.6 257.25,-123.09 359.31,-144.32 424.1,-163.78" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="430.92,-165.87 422.76,-166.9 428.6,-165.21 423.74,-163.72 423.75,-163.67 423.77,-163.62 428.63,-165.11 424.74,-160.44 430.92,-165.87" />
+<text xml:space="preserve" text-anchor="middle" x="255.61" y="-151.35" font-family="Arial" font-size="15.00" fill="#24292e">register system manager</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>https://w3id.org/ogc/rim/Register-&gt;http://www.w3.org/ns/prov#Agent</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M87.19,-185.64C105.37,-161.08 135.92,-126.46 172.36,-111.6 240.88,-83.65 266.84,-94.58 338.86,-111.6 376.28,-120.44 415.01,-140.15 443.72,-157.14" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="450.02,-160.93 441.85,-159.96 447.93,-159.73 443.57,-157.11 443.59,-157.07 443.62,-157.02 447.98,-159.65 445.33,-154.17 450.02,-160.93" />
+<text xml:space="preserve" text-anchor="middle" x="255.61" y="-115.35" font-family="Arial" font-size="15.00" fill="#24292e">register user</text>
+</g>
+
+<g id="node6" class="node">
+<title>https://w3id.org/ogc/rim/Commitment</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="489.71" cy="-27.6" rx="94.17" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="489.71" y="-20.42" font-family="Arial" font-size="19.00" fill="#353c43">Commitment</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>https://w3id.org/ogc/rim/Register-&gt;https://w3id.org/ogc/rim/Commitment</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M80.75,-184.95C96.3,-151.56 127.3,-96.54 172.36,-69.6 237.32,-30.76 323.04,-21.41 388.86,-21.14" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="396.27,-21.15 388.76,-24.51 393.86,-21.2 388.77,-21.19 388.77,-21.14 388.77,-21.09 393.86,-21.1 388.77,-17.76 396.27,-21.15" />
+<text xml:space="preserve" text-anchor="middle" x="255.61" y="-73.35" font-family="Arial" font-size="15.00" fill="#24292e">has commitment</text>
+</g>
+
+<g id="node4" class="node">
+<title>https://w3id.org/ogc/rim/RegisterSpecificationdefinesSubstantiveChangeliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="1043.58,-341.11 971.16,-341.11 971.16,-302.08 1043.58,-302.08 1043.58,-341.11" />
+<text xml:space="preserve" text-anchor="middle" x="1007.37" y="-314.42" font-family="Arial" font-size="19.00" fill="#353c43">string</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterSpecification-&gt;https://w3id.org/ogc/rim/RegisterSpecificationdefinesSubstantiveChangeliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M583.2,-321.6C694.77,-321.6 877.81,-321.6 961.76,-321.6" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="969.19,-321.6 961.69,-324.97 966.78,-321.65 961.69,-321.65 961.69,-321.6 961.69,-321.55 966.78,-321.55 961.69,-318.22 969.19,-321.6" />
+<text xml:space="preserve" text-anchor="middle" x="731.31" y="-325.35" font-family="Arial" font-size="15.00" fill="#24292e">defines substantive change</text>
+</g>
+
+<g id="node7" class="node">
+<title>https://w3id.org/ogc/rim/CommitmentCategory</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="1007.37" cy="-27.6" rx="149.32" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="1007.37" y="-20.42" font-family="Arial" font-size="19.00" fill="#353c43">Commitment category</text>
+</g>
+
+<g id="edge10" class="edge">
+<title>https://w3id.org/ogc/rim/Commitment-&gt;https://w3id.org/ogc/rim/CommitmentCategory</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M584.39,-27.6C658.01,-27.6 762.2,-27.6 848.62,-27.6" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="856.12,-27.6 848.62,-30.97 853.71,-27.65 848.62,-27.65 848.62,-27.6 848.62,-27.55 853.71,-27.55 848.62,-24.22 856.12,-27.6" />
+<text xml:space="preserve" text-anchor="middle" x="731.31" y="-31.35" font-family="Arial" font-size="15.00" fill="#24292e">commitment category</text>
+</g>
+</g>
+</svg><text x="1122.5" y="180" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#353c43">Items and concepts</text><svg width="1032.5" height="372.9821260583255" viewBox="0.00 0.00 1063.00 384.00" x="1122.5" y="205">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(21.6 362.8)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-21.6,21.6 -21.6,-362.8 1040.92,-362.8 1040.92,21.6 -21.6,21.6" />
+
+<g id="node1" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItem</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="114.85" cy="-159.6" rx="97.35" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="114.85" y="-152.42" font-family="Arial" font-size="19.00" fill="#353c43">Register item</text>
+</g>
+
+<g id="node2" class="node">
+<title>https://w3id.org/ogc/rim/Register</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="917.73" cy="-313.6" rx="68.18" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="917.73" y="-306.42" font-family="Arial" font-size="19.00" fill="#353c43">Register</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/Register</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M180.5,-180.46C196.88,-186.55 214.21,-193.72 229.7,-201.6 246.83,-210.32 248.46,-217.08 265.7,-225.6 456.6,-319.96 715.35,-323.49 841.43,-318.49" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="848.57,-318.19 841.21,-321.87 846.16,-318.34 841.07,-318.55 841.07,-318.5 841.07,-318.45 846.16,-318.24 840.93,-315.13 848.57,-318.19" />
+<text xml:space="preserve" text-anchor="middle" x="532.3" y="-320.48" font-family="Arial" font-size="15.00" fill="#24292e">in register</text>
+</g>
+
+<g id="node3" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItemClass</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="532.3" cy="-228.6" rx="132.35" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="532.3" y="-221.42" font-family="Arial" font-size="19.00" fill="#353c43">Register item class</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterItemClass</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M199.92,-173.56C263.03,-184.04 350.09,-198.5 419.13,-209.97" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="426.14,-211.13 418.18,-213.23 423.75,-210.79 418.73,-209.95 418.74,-209.9 418.74,-209.85 423.77,-210.69 419.29,-206.57 426.14,-211.13" />
+<text xml:space="preserve" text-anchor="middle" x="314.82" y="-204.03" font-family="Arial" font-size="15.00" fill="#24292e">item class</text>
+</g>
+
+<g id="node5" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItem-other</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="532.3" cy="-133.6" rx="97.35" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="532.3" y="-126.42" font-family="Arial" font-size="19.00" fill="#353c43">Register item</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterItem-other</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M212.56,-158.77C258.47,-157.89 314.09,-156.13 363.95,-152.6 386.71,-150.99 411.14,-148.59 434.11,-146.04" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="441.51,-145.21 434.43,-149.4 439.12,-145.53 434.06,-146.1 434.05,-146.05 434.05,-146 439.11,-145.43 433.67,-142.7 441.51,-145.21" />
+<text xml:space="preserve" text-anchor="middle" x="314.82" y="-161.08" font-family="Arial" font-size="15.00" fill="#24292e">related item</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterItem-other</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M188.14,-140.95C212.59,-135.5 240.17,-130.29 265.7,-127.6 319.57,-121.91 379.91,-122.7 429.45,-125.23" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="436.92,-125.63 429.25,-128.6 434.51,-125.55 429.42,-125.28 429.43,-125.23 429.43,-125.18 434.51,-125.45 429.61,-121.86 436.92,-125.63" />
+<text xml:space="preserve" text-anchor="middle" x="314.82" y="-131.35" font-family="Arial" font-size="15.00" fill="#24292e">superseded by</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterItem-other</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M162.64,-135.07C191.49,-121.35 229.72,-105.64 265.7,-98.6 329.71,-86.07 403.3,-97.77 456.76,-110.92" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="463.86,-112.71 455.77,-114.15 461.51,-112.17 456.58,-110.92 456.59,-110.87 456.6,-110.83 461.54,-112.07 457.42,-107.6 463.86,-112.71" />
+<text xml:space="preserve" text-anchor="middle" x="314.82" y="-102.35" font-family="Arial" font-size="15.00" fill="#24292e">supersedes</text>
+</g>
+
+<g id="node6" class="node">
+<title>https://w3id.org/ogc/rim/ConceptVersion</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="532.3" cy="-27.6" rx="115.38" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="532.3" y="-20.42" font-family="Arial" font-size="19.00" fill="#353c43">Concept version</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/ConceptVersion</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M150.17,-133.33C179.31,-112.41 223.09,-84.13 265.7,-68.6 311.92,-51.75 365.12,-41.83 411.71,-35.98" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="419,-35.1 411.96,-39.35 416.61,-35.44 411.56,-36.05 411.55,-36 411.55,-35.95 416.6,-35.34 411.15,-32.65 419,-35.1" />
+<text xml:space="preserve" text-anchor="middle" x="314.82" y="-72.35" font-family="Arial" font-size="15.00" fill="#24292e">realizes</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItemClass-&gt;https://w3id.org/ogc/rim/Register</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M636.08,-246.19C680.56,-254.32 733.1,-264.6 780.14,-275.6 804.27,-281.24 830.53,-288.32 853.53,-294.83" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="860.55,-296.84 852.42,-298.02 858.22,-296.22 853.33,-294.83 853.34,-294.78 853.35,-294.73 858.25,-296.13 854.27,-291.53 860.55,-296.84" />
+<text xml:space="preserve" text-anchor="middle" x="740.39" y="-279.35" font-family="Arial" font-size="15.00" fill="#24292e">defined in</text>
+</g>
+
+<g id="node4" class="node">
+<title>http://www.w3.org/2000/01/rdf-schema#Resource</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="917.73" cy="-224.6" rx="101.59" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="917.73" y="-217.42" font-family="Arial" font-size="19.00" fill="#353c43">rdfs:Resource</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItemClass-&gt;http://www.w3.org/2000/01/rdf-schema#Resource</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M663.02,-223.49C675.73,-223.13 688.44,-222.82 700.64,-222.6 735.97,-221.97 744.81,-222.34 780.14,-222.6 788.95,-222.66 798.08,-222.75 807.24,-222.85" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="814.69,-222.94 807.16,-226.23 812.28,-222.96 807.19,-222.9 807.2,-222.85 807.2,-222.8 812.29,-222.86 807.24,-219.48 814.69,-222.94" />
+<text xml:space="preserve" text-anchor="middle" x="740.39" y="-226.35" font-family="Arial" font-size="15.00" fill="#24292e">validated by</text>
+</g>
+
+<g id="node7" class="node">
+<title>https://w3id.org/ogc/rim/Concept</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="917.73" cy="-27.6" rx="68.18" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="917.73" y="-20.42" font-family="Arial" font-size="19.00" fill="#353c43">Concept</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>https://w3id.org/ogc/rim/ConceptVersion-&gt;https://w3id.org/ogc/rim/Concept</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M648.08,-27.6C710.28,-27.6 785.44,-27.6 840.42,-27.6" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="847.73,-27.6 840.23,-30.97 845.32,-27.65 840.23,-27.65 840.23,-27.6 840.23,-27.55 845.32,-27.55 840.23,-24.22 847.73,-27.6" />
+<text xml:space="preserve" text-anchor="middle" x="740.39" y="-31.35" font-family="Arial" font-size="15.00" fill="#24292e">version of</text>
+</g>
+
+<g id="node8" class="node">
+<title>https://w3id.org/ogc/rim/ConceptSystem</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="114.85" cy="-244.6" rx="114.85" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="114.85" y="-237.42" font-family="Arial" font-size="19.00" fill="#353c43">Concept system</text>
+</g>
+</g>
+</svg><text x="45.0" y="719.1854166666667" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#353c43">Identifiers and status</text><svg width="1006.5999999999999" height="1029.0" viewBox="0.00 0.00 719.00 735.00" x="45.0" y="744.1854166666667">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(21.6 713.63)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-21.6,21.6 -21.6,-713.63 697.65,-713.63 697.65,21.6 -21.6,21.6" />
+
+<g id="node1" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItem</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="115.38" cy="-504.51" rx="97.35" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="115.38" y="-497.34" font-family="Arial" font-size="19.00" fill="#353c43">Register item</text>
+</g>
+
+<g id="node2" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItemobjectIdentifierliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="580.74,-692.03 522.57,-692.03 522.57,-653 580.74,-653 580.74,-692.03" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-665.34" font-family="Arial" font-size="19.00" fill="#353c43">URI</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterItemobjectIdentifierliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M150.44,-530.77C179.82,-552.28 224.12,-582.07 266.76,-600.51 351.37,-637.12 458.52,-657.99 513.85,-667.05" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="520.96,-668.19 513.01,-670.33 518.57,-667.86 513.54,-667.05 513.55,-667 513.56,-666.95 518.58,-667.76 514.09,-663.67 520.96,-668.19" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-644.61" font-family="Arial" font-size="15.00" fill="#24292e">object identifier</text>
+</g>
+
+<g id="node5" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItemfunctionalIdentifierliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="580.74,-623.03 522.57,-623.03 522.57,-584 580.74,-584 580.74,-623.03" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-596.34" font-family="Arial" font-size="19.00" fill="#353c43">URI</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterItemfunctionalIdentifierliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M181.9,-525.13C208.14,-533 238.74,-541.72 266.76,-548.51 354.57,-569.82 459.23,-588.35 513.65,-597.48" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="520.93,-598.7 512.98,-600.79 518.55,-598.35 513.53,-597.51 513.54,-597.46 513.54,-597.41 518.57,-598.25 514.09,-594.13 520.93,-598.7" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-579.01" font-family="Arial" font-size="15.00" fill="#24292e">functional identifier</text>
+</g>
+
+<g id="node7" class="node">
+<title>https://w3id.org/ogc/rim/ValidityStatus</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="551.65" cy="-303.51" rx="101.06" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-296.34" font-family="Arial" font-size="19.00" fill="#353c43">Validity status</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/ValidityStatus</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M148.07,-478.02C177.36,-454.57 222.87,-420.72 266.76,-398.51 331.18,-365.92 409.28,-340.72 467.25,-324.5" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="474.36,-322.53 468.03,-327.78 472.05,-323.22 467.14,-324.58 467.13,-324.53 467.12,-324.48 472.02,-323.12 466.23,-321.28 474.36,-322.53" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-402.26" font-family="Arial" font-size="15.00" fill="#24292e">validity status</text>
+</g>
+
+<g id="node8" class="node">
+<title>https://w3id.org/ogc/rim/PublicationStatus</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="551.65" cy="-388.51" rx="124.39" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-381.34" font-family="Arial" font-size="19.00" fill="#353c43">Publication status</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/PublicationStatus</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M178.58,-482.96C205.53,-473.96 237.54,-463.71 266.76,-455.51 327.86,-438.38 397.17,-421.97 452.01,-409.67" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="459.03,-408.11 452.45,-413.03 456.69,-408.68 451.72,-409.79 451.71,-409.74 451.7,-409.69 456.67,-408.58 450.98,-406.45 459.03,-408.11" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-459.26" font-family="Arial" font-size="15.00" fill="#24292e">publication status</text>
+</g>
+
+<g id="node9" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItemisRedactedliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="598.36,-554.03 504.94,-554.03 504.94,-515 598.36,-515 598.36,-554.03" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-527.34" font-family="Arial" font-size="19.00" fill="#353c43">boolean</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterItemisRedactedliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M210.61,-511.02C297.75,-517.04 424.26,-525.78 495.86,-530.73" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="502.98,-531.22 495.26,-534.07 500.57,-531.11 495.49,-530.75 495.49,-530.7 495.5,-530.65 500.58,-531.01 495.73,-527.34 502.98,-531.22" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-526.83" font-family="Arial" font-size="15.00" fill="#24292e">is redacted</text>
+</g>
+
+<g id="node11" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItemisDeletedliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="598.36,-485.03 504.94,-485.03 504.94,-446 598.36,-446 598.36,-485.03" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-458.34" font-family="Arial" font-size="19.00" fill="#353c43">boolean</text>
+</g>
+
+<g id="edge11" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterItemisDeletedliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M208.62,-495.85C227.83,-494.07 247.96,-492.22 266.76,-490.51 346.44,-483.3 438.72,-475.22 495.9,-470.25" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="503.09,-469.63 495.91,-473.64 500.69,-469.89 495.62,-470.33 495.62,-470.28 495.61,-470.23 500.68,-469.79 495.32,-466.92 503.09,-469.63" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-494.26" font-family="Arial" font-size="15.00" fill="#24292e">is deleted</text>
+</g>
+
+<g id="node3" class="node">
+<title>https://w3id.org/ogc/rim/ConceptVersion</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="115.38" cy="-184.51" rx="115.38" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="115.38" y="-177.34" font-family="Arial" font-size="19.00" fill="#353c43">Concept version</text>
+</g>
+
+<g id="node4" class="node">
+<title>https://w3id.org/ogc/rim/ConceptVersionobjectIdentifierliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="580.74,-108.03 522.57,-108.03 522.57,-69 580.74,-69 580.74,-108.03" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-81.34" font-family="Arial" font-size="19.00" fill="#353c43">URI</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>https://w3id.org/ogc/rim/ConceptVersion-&gt;https://w3id.org/ogc/rim/ConceptVersionobjectIdentifierliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M172.94,-160.14C200.74,-149.01 235.03,-136.56 266.76,-128.51 353.59,-106.51 458.65,-95.67 513.39,-91.18" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="520.72,-90.59 513.51,-94.56 518.32,-90.84 513.24,-91.24 513.24,-91.19 513.24,-91.14 518.31,-90.74 512.97,-87.83 520.72,-90.59" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-132.26" font-family="Arial" font-size="15.00" fill="#24292e">object identifier</text>
+</g>
+
+<g id="node6" class="node">
+<title>https://w3id.org/ogc/rim/ConceptVersionfunctionalIdentifierliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="580.74,-39.03 522.57,-39.03 522.57,0 580.74,0 580.74,-39.03" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-12.34" font-family="Arial" font-size="19.00" fill="#353c43">URI</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>https://w3id.org/ogc/rim/ConceptVersion-&gt;https://w3id.org/ogc/rim/ConceptVersionfunctionalIdentifierliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M146.98,-157.54C175.9,-133.49 221.47,-99.14 266.76,-79.52 350.56,-43.2 458.05,-28.23 513.65,-22.58" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="520.78,-21.89 513.64,-25.98 518.39,-22.17 513.32,-22.67 513.32,-22.62 513.31,-22.57 518.38,-22.07 512.99,-19.26 520.78,-21.89" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-83.27" font-family="Arial" font-size="15.00" fill="#24292e">functional identifier</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>https://w3id.org/ogc/rim/ConceptVersion-&gt;https://w3id.org/ogc/rim/ValidityStatus</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M184.22,-207.18C209.96,-215.52 239.61,-224.8 266.76,-232.51 286.15,-238.03 390.62,-264 467.22,-282.94" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="474.18,-284.66 466.08,-286.13 471.82,-284.13 466.88,-282.9 466.89,-282.86 466.91,-282.81 471.85,-284.03 467.7,-279.58 474.18,-284.66" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-267.09" font-family="Arial" font-size="15.00" fill="#24292e">validity status</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>https://w3id.org/ogc/rim/ConceptVersion-&gt;https://w3id.org/ogc/rim/PublicationStatus</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M149.88,-211.26C179.26,-233.65 223.87,-265.12 266.76,-285.51 319.01,-310.36 338.73,-299.27 391.26,-323.51 408.5,-331.47 410.15,-338.29 427.26,-346.51 439.96,-352.62 453.78,-358.25 467.43,-363.26" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="474.18,-365.68 465.98,-366.32 471.89,-364.91 467.1,-363.19 467.12,-363.14 467.13,-363.1 471.92,-364.82 468.26,-359.97 474.18,-365.68" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-327.26" font-family="Arial" font-size="15.00" fill="#24292e">publication status</text>
+</g>
+
+<g id="node10" class="node">
+<title>https://w3id.org/ogc/rim/ConceptVersionisRedactedliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="598.36,-177.03 504.94,-177.03 504.94,-138 598.36,-138 598.36,-177.03" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-150.34" font-family="Arial" font-size="19.00" fill="#353c43">boolean</text>
+</g>
+
+<g id="edge10" class="edge">
+<title>https://w3id.org/ogc/rim/ConceptVersion-&gt;https://w3id.org/ogc/rim/ConceptVersionisRedactedliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M205.11,-166.63C225.3,-163.28 246.7,-160.27 266.76,-158.51 346.15,-151.56 438.51,-152.99 495.78,-154.99" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="502.98,-155.25 495.36,-158.35 500.57,-155.22 495.48,-155.03 495.49,-154.98 495.49,-154.93 500.58,-155.12 495.61,-151.61 502.98,-155.25" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-162.26" font-family="Arial" font-size="15.00" fill="#24292e">is redacted</text>
+</g>
+
+<g id="node12" class="node">
+<title>https://w3id.org/ogc/rim/ConceptVersionisDeletedliteral</title>
+<polygon fill="none" stroke="#48515a" stroke-width="1.3" points="598.36,-246.03 504.94,-246.03 504.94,-207 598.36,-207 598.36,-246.03" />
+<text xml:space="preserve" text-anchor="middle" x="551.65" y="-219.34" font-family="Arial" font-size="19.00" fill="#353c43">boolean</text>
+</g>
+
+<g id="edge12" class="edge">
+<title>https://w3id.org/ogc/rim/ConceptVersion-&gt;https://w3id.org/ogc/rim/ConceptVersionisDeletedliteral</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M223.17,-194.84C309.63,-203.21 427.88,-214.64 496.08,-221.24" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="503.22,-221.93 495.43,-224.56 500.81,-221.75 495.75,-221.26 495.75,-221.21 495.76,-221.16 500.82,-221.65 496.08,-217.85 503.22,-221.93" />
+<text xml:space="preserve" text-anchor="middle" x="329.01" y="-214.26" font-family="Arial" font-size="15.00" fill="#24292e">is deleted</text>
+</g>
+</g>
+</svg><text x="1122.5" y="719.1854166666667" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#353c43">Actions</text><svg width="1032.5" height="536.399730820996" viewBox="0.00 0.00 743.00 386.00" x="1122.5" y="744.1854166666667">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(21.6 364.8)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-21.6,21.6 -21.6,-364.8 721,-364.8 721,21.6 -21.6,21.6" />
+
+<g id="node1" class="node">
+<title>https://w3id.org/ogc/rim/RegisterAction</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="107.95" cy="-131.6" rx="107.95" ry="42.98" />
+<text xml:space="preserve" text-anchor="middle" x="107.95" y="-135.3" font-family="Arial" font-size="19.00" fill="#353c43">Register action</text>
+<text xml:space="preserve" text-anchor="middle" x="107.95" y="-113.55" font-family="Arial" font-size="19.00" fill="#353c43">(prov:Activity)</text>
+</g>
+
+<g id="node2" class="node">
+<title>http://www.w3.org/ns/prov#Agent</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="562.28" cy="-315.6" rx="83.03" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="562.28" y="-308.42" font-family="Arial" font-size="19.00" fill="#353c43">prov:Agent</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterAction-&gt;http://www.w3.org/ns/prov#Agent</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M164.03,-168.78C189.94,-185.21 221.72,-203.86 251.91,-217.6 325.56,-251.12 347.99,-249.22 425.16,-273.6 446.71,-280.4 470.21,-287.7 491.54,-294.27" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="498.62,-296.46 490.46,-297.47 496.3,-295.79 491.44,-294.3 491.45,-294.25 491.47,-294.2 496.33,-295.7 492.45,-291.02 498.62,-296.46" />
+<text xml:space="preserve" text-anchor="middle" x="320.53" y="-266.38" font-family="Arial" font-size="15.00" fill="#24292e">proposer</text>
+</g>
+
+<g id="node3" class="node">
+<title>https://w3id.org/ogc/rim/RegisterActionType</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="562.28" cy="-230.6" rx="137.12" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="562.28" y="-223.42" font-family="Arial" font-size="19.00" fill="#353c43">Register action type</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterAction-&gt;https://w3id.org/ogc/rim/RegisterActionType</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M203.5,-152.29C278.34,-168.67 382.67,-191.51 459.36,-208.29" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="466.32,-209.82 458.27,-211.51 463.96,-209.35 458.99,-208.26 459,-208.21 459.01,-208.16 463.98,-209.25 459.72,-204.91 466.32,-209.82" />
+<text xml:space="preserve" text-anchor="middle" x="320.53" y="-196.63" font-family="Arial" font-size="15.00" fill="#24292e">action type</text>
+</g>
+
+<g id="node4" class="node">
+<title>https://w3id.org/ogc/rim/ChangeClassification</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="562.28" cy="-129.6" rx="95.76" ry="42.98" />
+<text xml:space="preserve" text-anchor="middle" x="562.28" y="-133.3" font-family="Arial" font-size="19.00" fill="#353c43">Change</text>
+<text xml:space="preserve" text-anchor="middle" x="562.28" y="-111.55" font-family="Arial" font-size="19.00" fill="#353c43">classification</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterAction-&gt;https://w3id.org/ogc/rim/ChangeClassification</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M216.44,-131.12C289.37,-130.8 385.29,-130.38 457.44,-130.06" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="464.78,-130.03 457.29,-133.43 462.37,-130.09 457.28,-130.11 457.28,-130.06 457.28,-130.01 462.37,-129.99 457.26,-126.68 464.78,-130.03" />
+<text xml:space="preserve" text-anchor="middle" x="320.53" y="-134.7" font-family="Arial" font-size="15.00" fill="#24292e">change classification</text>
+</g>
+
+<g id="node5" class="node">
+<title>https://w3id.org/ogc/rim/RegisterItem</title>
+<ellipse fill="none" stroke="#48515a" stroke-width="1.3" cx="562.28" cy="-27.6" rx="97.35" ry="27.6" />
+<text xml:space="preserve" text-anchor="middle" x="562.28" y="-20.42" font-family="Arial" font-size="19.00" fill="#353c43">Register item</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterAction-&gt;https://w3id.org/ogc/rim/RegisterItem</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M202.4,-110.11C283.27,-91.52 399.18,-64.87 477.18,-46.93" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="484.25,-45.31 477.7,-50.28 481.91,-45.9 476.95,-47.04 476.94,-46.99 476.93,-46.94 481.89,-45.8 476.19,-43.7 484.25,-45.31" />
+<text xml:space="preserve" text-anchor="middle" x="320.53" y="-101.71" font-family="Arial" font-size="15.00" fill="#24292e">applies to</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>https://w3id.org/ogc/rim/RegisterItem-&gt;https://w3id.org/ogc/rim/RegisterAction</title>
+<path fill="none" stroke="#48515a" stroke-width="1.1" d="M468.12,-20.06C405.58,-17.9 322.1,-20.68 251.91,-42.6 220.66,-52.36 189.4,-70.6 164.11,-88.05" />
+<polygon fill="#48515a" stroke="#48515a" stroke-width="1.1" points="158.24,-92.17 162.44,-85.1 160.19,-90.74 164.35,-87.82 164.38,-87.86 164.41,-87.9 160.24,-90.83 166.32,-90.62 158.24,-92.17" />
+<text xml:space="preserve" text-anchor="middle" x="320.53" y="-46.35" font-family="Arial" font-size="15.00" fill="#24292e">has action</text>
+</g>
+</g>
+</svg><text x="45" y="1880.1854166666667" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#353c43">Source: _sources/core-ontology/owl.ttl • All 30 declared object and datatype properties shown.</text></svg>
