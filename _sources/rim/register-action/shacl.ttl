@@ -1,0 +1,30 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+rim:RegisterActionShape a sh:NodeShape;
+  sh:targetClass rim:RegisterAction;
+  sh:property [
+    sh:path rim:actionType;
+    sh:class rim:RegisterActionType;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:changeClassification;
+    sh:class rim:ChangeClassification;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:appliesTo;
+    sh:class rim:RegisterItem;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path prov:startedAtTime;
+    sh:datatype xsd:dateTime;
+    sh:maxCount 1;
+  ].
+

@@ -1,0 +1,15 @@
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix ex: <https://example.org/rim/>.
+
+ex:uc a rim:RegisterItemClass;
+  rim:objectIdentifier <urn:uuid:33333333-3333-4333-8333-333333333333>;
+  rim:functionalIdentifier <https://example.org/classes/unit>;
+  dct:title "Unit"@en;
+  rim:definedIn ex:r;
+  rim:realizes ex:c;
+  rim:validatedBy <https://example.org/rules/unit>.
+
+ex:r a rim:Register.
+ex:c a rim:Concept.
+

@@ -1,0 +1,16 @@
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix ex: <https://example.org/rim/>.
+
+ex:i a rim:RegisterItem;
+  rim:objectIdentifier <urn:uuid:44444444-4444-4444-8444-444444444444>;
+  rim:functionalIdentifier <https://example.org/items/metre>;
+  rim:itemClass ex:uc;
+  rim:inRegister ex:r;
+  rim:realizes ex:cv;
+  dct:title "metre"@en.
+
+ex:uc a rim:RegisterItemClass.
+ex:r a rim:Register.
+ex:cv a rim:ConceptVersion.
+

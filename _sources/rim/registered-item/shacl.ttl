@@ -1,0 +1,57 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+rim:TextShape a sh:NodeShape;
+  sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ).
+
+rim:RegisterItemShape a sh:NodeShape;
+  sh:targetClass rim:RegisterItem;
+  sh:property [
+    sh:path rim:objectIdentifier;
+    sh:datatype xsd:anyURI;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:functionalIdentifier;
+    sh:datatype xsd:anyURI;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:itemClass;
+    sh:class rim:RegisterItemClass;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:inRegister;
+    sh:class rim:Register;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:realizes;
+    sh:class rim:ConceptVersion;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:relatedItem;
+    sh:class rim:RegisterItem;
+  ];
+  sh:property [
+    sh:path rim:supersededBy;
+    sh:class rim:RegisterItem;
+  ];
+  sh:property [
+    sh:path rim:supersedes;
+    sh:class rim:RegisterItem;
+  ];
+  sh:property [
+    sh:path dct:title;
+    sh:node rim:TextShape;
+  ].
+

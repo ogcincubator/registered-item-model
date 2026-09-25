@@ -1,0 +1,25 @@
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+rim:RegisterAction a owl:Class;
+  rdfs:label "Register action"@en.
+
+rim:RegisterActionType a owl:Class.
+rim:ChangeClassification a owl:Class.
+rim:actionType a owl:ObjectProperty;
+  rdfs:domain rim:RegisterAction;
+  rdfs:range rim:RegisterActionType.
+
+rim:changeClassification a owl:ObjectProperty;
+  rdfs:domain rim:RegisterAction;
+  rdfs:range rim:ChangeClassification.
+
+rim:appliesTo a owl:ObjectProperty;
+  rdfs:domain rim:RegisterAction;
+  rdfs:range rim:RegisterItem.
+
+rim:hasAction a owl:ObjectProperty;
+  rdfs:domain rim:RegisterItem;
+  rdfs:range rim:RegisterAction.
+
