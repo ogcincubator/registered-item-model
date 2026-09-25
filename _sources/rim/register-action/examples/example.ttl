@@ -1,0 +1,12 @@
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix ex: <https://example.org/rim/>.
+
+ex:a a rim:RegisterAction;
+  rim:actionType ex:addition;
+  rim:appliesTo ex:i;
+  prov:startedAtTime "2026-09-25T10:00:00Z"^^xsd:dateTime.
+
+ex:addition a rim:RegisterActionType.
+ex:i a rim:RegisterItem.
+

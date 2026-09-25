@@ -1,0 +1,23 @@
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+rim:Register a owl:Class;
+  rdfs:label "Register"@en.
+
+rim:RegisterSystem a owl:Class;
+  rdfs:label "Register system"@en.
+
+rim:objectIdentifier a owl:DatatypeProperty;
+  rdfs:domain rim:Register;
+  rdfs:range xsd:anyURI.
+
+rim:functionalIdentifier a owl:DatatypeProperty;
+  rdfs:domain rim:Register;
+  rdfs:range xsd:anyURI.
+
+rim:runsOn a owl:ObjectProperty;
+  rdfs:domain rim:Register;
+  rdfs:range rim:RegisterSystem.
+

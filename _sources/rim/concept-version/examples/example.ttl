@@ -1,0 +1,19 @@
+
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ex: <https://example.org/rim/>.
+
+ex:c a rim:Concept;
+  skos:prefLabel "metre"@en.
+
+ex:cv a rim:ConceptVersion;
+  rim:versionOf ex:c;
+  rim:version "1.0";
+  rim:objectIdentifier <urn:uuid:22222222-2222-4222-8222-222222222222>;
+  rim:functionalIdentifier <https://example.org/concepts/metre/1.0>;
+  rim:validityStatus ex:valid;
+  rim:publicationStatus ex:published.
+
+ex:valid a rim:ValidityStatus.
+ex:published a rim:PublicationStatus.
+

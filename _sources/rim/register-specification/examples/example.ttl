@@ -1,0 +1,10 @@
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix ex: <https://example.org/rim/>.
+
+ex:s a rim:RegisterSpecification;
+  dct:title "Units register specification"@en.
+
+ex:r a rim:Register;
+  rim:hasSpecification ex:s.
+

@@ -1,0 +1,26 @@
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+rim:RegisterSpecification a owl:Class;
+  rdfs:label "Register specification"@en.
+
+rim:Commitment a owl:Class;
+  rdfs:label "Commitment"@en.
+
+rim:CommitmentCategory a owl:Class.
+rim:hasSpecification a owl:ObjectProperty;
+  rdfs:domain rim:Register;
+  rdfs:range rim:RegisterSpecification.
+
+rim:hasCommitment a owl:ObjectProperty;
+  rdfs:domain rim:RegisterSpecification;
+  rdfs:range rim:Commitment.
+
+rim:commitmentCategory a owl:ObjectProperty;
+  rdfs:domain rim:Commitment;
+  rdfs:range rim:CommitmentCategory.
+
+rim:definesSubstantiveChange a owl:DatatypeProperty;
+  rdfs:domain rim:RegisterSpecification.
+

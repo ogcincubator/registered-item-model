@@ -1,0 +1,51 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+rim:ConceptShape a sh:NodeShape;
+  sh:targetClass rim:Concept;
+  sh:property [
+    sh:path skos:prefLabel;
+    sh:minCount 1;
+  ].
+
+rim:ConceptVersionShape a sh:NodeShape;
+  sh:targetClass rim:ConceptVersion;
+  sh:property [
+    sh:path rim:versionOf;
+    sh:class rim:Concept;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:version;
+    sh:datatype xsd:string;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:objectIdentifier;
+    sh:datatype xsd:anyURI;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:functionalIdentifier;
+    sh:datatype xsd:anyURI;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:validityStatus;
+    sh:class rim:ValidityStatus;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ];
+  sh:property [
+    sh:path rim:publicationStatus;
+    sh:class rim:PublicationStatus;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ].
+

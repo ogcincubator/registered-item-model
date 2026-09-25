@@ -1,0 +1,36 @@
+{
+  "name": "Activity Type Register Profile",
+  "title": "Registers of prov:Activity types, profiled from the Register Model",
+  "abstract": "A profile of the Register Item Class for registers whose items are types of prov:Activity, each able to declare the types of PROV entities, agents and activities it relates to and an optional prov:Plan of required steps.",
+  "description": "An activity type register governs a set of activity types — kinds of prov:Activity such as a quality review, a reprojection or a model inference run — with the same identifiers, statuses and change history as any other register item. This block narrows the domain of rim:itemClass for such a register: each item is an acttype:ActivityType, which is simultaneously a rim:RegisterItem and a class declared rdfs:subClassOf prov:Activity, so individual activities are typed directly with the registered item. Each activity type may declare, at the type level, the kinds of entity it uses and generates, the kinds of agent it is associated with and the kinds of activity that inform it, and may point to one prov:Plan (P-Plan recommended) describing its required steps. Further profiles specialise this one — adding a root activity class and constraining the related types its sub-types must declare.",
+  "status": "under-development",
+  "version": "0.2",
+  "itemClass": "model",
+  "isProfileOf": [
+    "bblocks://ogc.model.registered-item.rim.register-item-class"
+  ],
+  "dependsOn": [
+    "ogc.model.cross-domain.prov"
+  ],
+  "concept": [
+    "https://w3id.org/ogc/rim/activity-type/ActivityType"
+  ],
+  "sources": [
+    {
+      "title": "W3C PROV-O",
+      "link": "https://www.w3.org/TR/prov-o/"
+    },
+    {
+      "title": "P-Plan Ontology",
+      "link": "https://www.opmw.org/model/p-plan/"
+    }
+  ],
+  "tags": [
+    "register",
+    "provenance",
+    "activity type",
+    "plan"
+  ],
+  "dateTimeAddition": "2026-09-23T00:00:00Z",
+  "dateOfLastChange": "2026-09-23"
+}

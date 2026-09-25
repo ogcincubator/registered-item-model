@@ -1,0 +1,8 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ISO 19135 Registered Item
+type: object
+properties:
+  id: {type: string, format: uri}
+  type: {const: "rim:RegisterItem"}
+required: [id, type]
+additionalProperties: true

@@ -1,0 +1,37 @@
+@prefix rim: <https://w3id.org/ogc/rim/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+rim:Concept a owl:Class;
+  rdfs:label "Concept"@en.
+
+rim:ConceptVersion a owl:Class;
+  rdfs:label "Concept version"@en.
+
+rim:ValidityStatus a owl:Class.
+rim:PublicationStatus a owl:Class.
+rim:versionOf a owl:ObjectProperty;
+  rdfs:domain rim:ConceptVersion;
+  rdfs:range rim:Concept.
+
+rim:version a owl:DatatypeProperty;
+  rdfs:domain rim:ConceptVersion;
+  rdfs:range xsd:string.
+
+rim:objectIdentifier a owl:DatatypeProperty;
+  rdfs:domain rim:ConceptVersion;
+  rdfs:range xsd:anyURI.
+
+rim:functionalIdentifier a owl:DatatypeProperty;
+  rdfs:domain rim:ConceptVersion;
+  rdfs:range xsd:anyURI.
+
+rim:validityStatus a owl:ObjectProperty;
+  rdfs:domain rim:ConceptVersion;
+  rdfs:range rim:ValidityStatus.
+
+rim:publicationStatus a owl:ObjectProperty;
+  rdfs:domain rim:ConceptVersion;
+  rdfs:range rim:PublicationStatus.
+

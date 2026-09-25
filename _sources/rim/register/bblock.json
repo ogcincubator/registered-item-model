@@ -1,0 +1,8 @@
+{
+  "name": "Register",
+  "abstract": "Modular RDF implementation profile based on ISO/FDIS 19135:2026.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-09-25T00:00:00Z",
+  "itemClass": "schema",
+  "version": "0.2"
+}
