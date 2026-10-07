@@ -1,34 +1,69 @@
-Validation report for ogc.model.registered-item.core-ontology - Registered Item Model
-Generated 2026-10-07T06:38:40.070924+00:00
+Validation report for ogc.model.registered-item.geoprocessing-activity-type - Geoprocessing Activity Types Profile
+Generated 2026-10-07T06:38:42.231744+00:00
 === Files ===
-Using example_2_1.ttl from examples
-Output Turtle example_2_1.ttl created
+Using example_1_1.ttl from examples
+Output Turtle example_1_1.ttl created
 === End Files ===
 
 === Turtle ===
-Prefixes are defined for rim, dct, skos, prov, xsd, ex
+Prefixes are defined for geoproc, acttype, rim, prov, p-plan, geo, dct, rdfs, owl, xsd, ex
 === End Turtle ===
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - /github/workspace/_sources/core-ontology/ontology.ttl
+ - /github/workspace/_sources/geoprocessing-activity-type/ontology.ttl
  - https://www.w3.org/ns/prov-o
+ - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle
+ - /github/workspace/_sources/core-ontology/ontology.ttl
+ - /github/workspace/_sources/activity-type/ontology.ttl
+Validation result for _sources/geoprocessing-activity-type/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/geoprocessing-activity-type/shapes.shacl:
+ - Shape geoproc:SpatialDataTypeShape/sh:property/sh:qualifiedValueShape: *none*
+ - Shape geoproc:GeoprocessingActivityTypeShape: *none*
+ - Shape _:n733f961603a14bfba76c108dd5048644b21: *none*
+ - Shape geoproc:GeoprocessingActivityTypesShape: geoproc:GeoprocessingActivity
+ - Shape _:n733f961603a14bfba76c108dd5048644b20: *none*
+ - Shape geoproc:SpatialDataTypeShape: *none*
+ - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:first: *none*
+ - Shape geoproc:GeoprocessingActivityTypesShape/sh:property/sh:node: *none*
+ - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:rest/rdf:first: *none*
+
+
+** Validation error **
+Validation result for _sources/activity-type/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:hasValue prov:Activity ; sh:message Literal("An activity type must be a sub-class (directly or indirectly) of prov:Activity.") ; sh:path [ sh:oneOrMorePath rdfs:subClassOf ] ]
+  	Focus Node: ex:NdviComputation
+  	Result Path: [ sh:oneOrMorePath rdfs:subClassOf ]
+  	Message: An activity type must be a sub-class (directly or indirectly) of prov:Activity.
+  
+Focus nodes for _sources/activity-type/shapes.shacl:
+ - Shape acttype:ActivityTypeShape: ex:NdviComputation
+ - Shape acttype:ActivityTypeItemClassShape: acttype:activityTypeItemClass
+
 Validation result for _sources/core-ontology/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/core-ontology/shapes.shacl:
- - Shape rim:RegisterItemShape: ex:code42
- - Shape rim:RegisterShape: *none*
- - Shape rim:RegisterItemClassShape: ex:codeListItemClass
+ - Shape rim:RegisterItemShape: *none*
+ - Shape rim:RegisterShape: ex:eoProcessingRegister
+ - Shape rim:RegisterItemClassShape: *none*
  - Shape rim:ConceptShape: *none*
  - Shape rim:CommitmentShape: *none*
  - Shape rim:RegisterActionShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape rim:ConceptVersionShape: *none*
  - Shape rim:TextShape: *none*
  - Shape rim:RegisterSpecificationShape: *none*
  - Shape rim:TextShape/sh:or/rdf:first: *none*
- - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
 
 Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
   Validation Report
@@ -73,7 +108,7 @@ Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/
  - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: ex:ndviPlan
  - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*

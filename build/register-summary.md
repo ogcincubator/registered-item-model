@@ -47,29 +47,23 @@ Modular RDF implementation profile based on ISO/FDIS 19135:2026.
 
 Modular RDF implementation profile based on ISO/FDIS 19135:2026.
 
-### `ogc.model.registered-item.activity-types.prov-activities` — Activity Type Register Profile
-
-**Type:** model
-
-A profile of the Register Item Class for registers whose items are types of prov:Activity, each able to declare the types of PROV entities, agents and activities it relates to and an optional prov:Plan of required steps.
-
 ### `ogc.model.registered-item.core-ontology` — Registered Item Model
 
 **Type:** model
 
 A base RDF and SHACL model for register items, register item classes and register governance metadata, based on ISO 19135:2026.
 
-### `ogc.model.registered-item.geoprocessing-activity` — Geoprocessing Activity Profile
+### `ogc.model.registered-item.geoprocessing-activity-type` — Geoprocessing Activity Types Profile
 
 **Type:** model
 
 A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivity, each required to use or generate at least one GeoSPARQL spatial data type.
 
-### `ogc.model.registered-item.ml-activity-profile` — ML Activity Profile
+### `ogc.model.registered-item.ml-activity-profile` — ML Activity Types Profile
 
 **Type:** model
 
-A profile of the Geoprocessing Activity Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
+A profile of the Geoprocessing Activity Types Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
 
 ### `ogc.model.registered-item.rim.register-item-class` — Register Item Class
 

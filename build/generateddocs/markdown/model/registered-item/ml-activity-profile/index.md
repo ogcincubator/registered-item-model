@@ -1,9 +1,9 @@
 
-# ML Activity Profile (Model)
+# ML Activity Types Profile (Model)
 
 `ogc.model.registered-item.ml-activity-profile` *v0.1*
 
-A profile of the Geoprocessing Activity Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
+A profile of the Geoprocessing Activity Types Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 

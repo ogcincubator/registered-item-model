@@ -2,11 +2,11 @@
 
 {
   "itemIdentifier": "ogc.model.registered-item.ml-activity-profile",
-  "name": "ML Activity Profile",
+  "name": "ML Activity Types Profile",
   "group": "Example: Activity Types",
   "highlighted": true,
   "title": "Machine learning training/inference activities, profiled from the Registered Item Model",
-  "abstract": "A profile of the Geoprocessing Activity Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.",
+  "abstract": "A profile of the Geoprocessing Activity Types Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.",
   "description": "The STAC Machine Learning Model (MLM) extension describes a model as a static artifact \u2014 a STAC Item or Collection with declared inputs, outputs and requirements \u2014 but has no notion of a particular run of that model. This block adds that: mlact:MLActivity (with mlact:TrainingActivity and mlact:InferenceActivity sub-types) is a geoproc:GeoprocessingActivity recording one execution, and so can be specialised into ML activity types held in an activity type register. It is also a rim:RegisterAction. In this ecosystem, running a model is itself a governed act \u2014 typically the one that adds a derived product to a register as a new rim:RegisterItem \u2014 so the run belongs in the same audit trail as any other register action. The activity's task, framework and accelerator are drawn from the MLM extension's own SKOS schemes rather than redefined, and its recorded inputs/outputs (mlact:ActivityInput / mlact:ActivityOutput, both prov:Entity) each declare via dct:conformsTo which of the model's own declared mlm:ModelInput/mlm:ModelOutput specifications they realise. Registered ML activity types must declare at least one mlact:ActivityInput sub-type as a used entity type, and registered inference types at least one mlact:ActivityOutput sub-type as a generated entity type.",
   "status": "under-development",
   "version": "0.1",
@@ -26,18 +26,6 @@
     ],
     "ogc.contrib.stac.extensions.mlm-ontology": [
       "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm-ontology/shapes.shacl"
-    ],
-    "ogc.model.registered-item.geoprocessing-activity": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
-    ],
-    "ogc.model.registered-item.activity-type": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
-    ],
-    "ogc.model.registered-item.core-ontology": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-    ],
-    "ogc.model.cross-domain.prov": [
-      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
     ]
   },
   "sources": [
@@ -62,7 +50,7 @@
     "activity type"
   ],
   "dateTimeAddition": "2026-09-17T00:00:00Z",
-  "dateOfLastChange": "2026-09-30",
+  "dateOfLastChange": "2026-10-07",
   "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/ml-activity-profile/ontology.ttl",
   "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/ml-activity-profile/",
   "validationPassed": true,

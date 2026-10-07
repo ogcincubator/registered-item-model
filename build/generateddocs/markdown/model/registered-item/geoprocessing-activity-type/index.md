@@ -1,7 +1,7 @@
 
-# Geoprocessing Activity Profile (Model)
+# Geoprocessing Activity Types Profile (Model)
 
-`ogc.model.registered-item.geoprocessing-activity` *v0.1*
+`ogc.model.registered-item.geoprocessing-activity-type` *v0.1*
 
 A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivity, each required to use or generate at least one GeoSPARQL spatial data type.
 
@@ -73,5 +73,5 @@ ex:computeIndex a p-plan:Step ;
 The source code for this Building Block can be found in the following repository:
 
 * URL: [https://github.com/ogcincubator/registered-item-model](https://github.com/ogcincubator/registered-item-model)
-* Path: `_sources/geoprocessing-activity`
+* Path: `_sources/geoprocessing-activity-type`
 

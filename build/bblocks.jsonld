@@ -213,12 +213,12 @@
   "name": "Building Blocks - Registered Item Model",
   "abstract": "A base RDF and SHACL model for register items, register item classes and register\ngovernance metadata, aligned with ISO 19135:2026 (*Geographic information \u2014 Registration\nand register governance*). Sub-registers profile this model rather than inventing their own.\n",
   "description": "A register is a catalogue with systematic governance: a content information model\n(what an item looks like) plus management metadata (who governs it, what state it is\nin, how it changes). ISO 19135:2026 defines one such register model \u2014 separating a\n**concept plane** (meaning: concepts and concept versions) from a **content plane**\n(representation: register item classes and register items) and adding a governance\nlayer of roles, statuses, actions and commitments.\n\nThis repository publishes that model as a single base [OGC Building\nBlock](https://ogcincubator.github.io/bblocks-docs/), independent of any one register's\nown content schema. Any register \u2014 a CSV catalogue, the OGC Definitions Server, a\nGitHub-managed vocabulary, or a Building Blocks register itself \u2014 maps its own\nschema's identifiers, statuses and roles onto this base model via a JSON-LD context,\nso that management metadata from otherwise unrelated registers becomes one queryable\ngraph. A sub-register's rules are expressed as a profile of this base block (null,\nadditive, or constrained), always validating against it.\n\nRegister vs. registry: the **register** is the governed information (items,\nidentifiers, statuses, roles, processes); the **register system** \u2014 often loosely\ncalled the \"registry\" \u2014 is merely the information system it happens to run on. This\nmodel describes the former, independent of the latter.\n",
-  "modified": "2026-09-30T09:07:19.084932",
+  "modified": "2026-10-07T06:38:34.952526",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"6411aed037da38c6d9079d9350eca33d004a4d0c",
-      "shortCommitId": "\"6411ae",
-      "date": "2026-09-23T12:30:49+00:00\""
+      "commitId": "\"61586a2bc19ebf936b761c53d9a886e719c1f312",
+      "shortCommitId": "\"61586a",
+      "date": "2026-10-06T15:23:00+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/registered-item-model",
@@ -323,7 +323,7 @@
         "plan"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
+      "dateOfLastChange": "2026-10-07",
       "ontology": {
         "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -509,86 +509,6 @@
       }
     },
     {
-      "itemIdentifier": "ogc.model.registered-item.activity-types.prov-activities",
-      "name": "Activity Type Register Profile",
-      "title": "Registers of prov:Activity types, profiled from the Register Model",
-      "abstract": "A profile of the Register Item Class for registers whose items are types of prov:Activity, each able to declare the types of PROV entities, agents and activities it relates to and an optional prov:Plan of required steps.",
-      "description": "An activity type register governs a set of activity types \u2014 kinds of prov:Activity such as a quality review, a reprojection or a model inference run \u2014 with the same identifiers, statuses and change history as any other register item. This block narrows the domain of rim:itemClass for such a register: each item is an acttype:ActivityType, which is simultaneously a rim:RegisterItem and a class declared rdfs:subClassOf prov:Activity, so individual activities are typed directly with the registered item. Each activity type may declare, at the type level, the kinds of entity it uses and generates, the kinds of agent it is associated with and the kinds of activity that inform it, and may point to one prov:Plan (P-Plan recommended) describing its required steps. Further profiles specialise this one \u2014 adding a root activity class and constraining the related types its sub-types must declare.",
-      "status": "under-development",
-      "version": "0.2",
-      "itemClass": "model",
-      "isProfileOf": [
-        "bblocks://ogc.model.registered-item.rim.register-item-class"
-      ],
-      "dependsOn": [
-        "bblocks://ogc.model.cross-domain.prov"
-      ],
-      "concept": [
-        "https://w3id.org/ogc/rim/activity-type/ActivityType"
-      ],
-      "sources": [
-        {
-          "title": "W3C PROV-O",
-          "link": "https://www.w3.org/TR/prov-o/"
-        },
-        {
-          "title": "P-Plan Ontology",
-          "link": "https://www.opmw.org/model/p-plan/"
-        }
-      ],
-      "tags": [
-        "register",
-        "provenance",
-        "activity type",
-        "plan"
-      ],
-      "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
-      "shaclShapes": [
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        }
-      ],
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/activity-types/prov-activities/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/activity-types/prov-activities/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/activity-types/prov-activities/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.activity-types.prov-activities"
-        }
-      },
-      "@id": "bblocks://ogc.model.registered-item.activity-types.prov-activities",
-      "@type": [
-        "bblocks:Model",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Activity Type Register Profile",
-      "ldContext": null,
-      "schema": null,
-      "openAPIDocument": null,
-      "ontology": null,
-      "rdfData": [],
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
-      }
-    },
-    {
       "itemIdentifier": "ogc.model.registered-item.core-ontology",
       "name": "Registered Item Model",
       "highlighted": true,
@@ -642,7 +562,7 @@
         "metadata"
       ],
       "dateTimeAddition": "2026-09-17T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
+      "dateOfLastChange": "2026-10-07",
       "ontology": {
         "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -684,13 +604,13 @@
       }
     },
     {
-      "itemIdentifier": "ogc.model.registered-item.geoprocessing-activity",
-      "name": "Geoprocessing Activity Profile",
+      "itemIdentifier": "ogc.model.registered-item.geoprocessing-activity-type",
+      "name": "Geoprocessing Activity Types Profile",
       "group": "Example: Activity Types",
       "highlighted": true,
       "title": "Registers of geoprocessing activity types, profiled from the Activity Type Register Profile",
       "abstract": "A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivity, each required to use or generate at least one GeoSPARQL spatial data type.",
-      "description": "Geoprocessing activities (reprojection, clipping, index computation, classification, model inference over imagery) are distinguished from other activities by the kind of data they use and produce. This block adds geoproc:GeoprocessingActivity, a sub-class of prov:Activity that every registered geoprocessing activity type specialises. It also constrains the related PROV object types such a type declares: at least one acttype:usedEntityType or acttype:generatedEntityType must be a GeoSPARQL 1.1 spatial type (geo:SpatialObject or geo:SpatialObjectCollection, or a sub-class of either). Further profiles, such as the ML Activity Profile, specialise geoproc:GeoprocessingActivity in turn and add their own constraints.",
+      "description": "Geoprocessing activities (reprojection, clipping, index computation, classification, model inference over imagery) are distinguished from other activities by the kind of data they use and produce. This block adds geoproc:GeoprocessingActivity, a sub-class of prov:Activity that every registered geoprocessing activity type specialises. It also constrains the related PROV object types such a type declares: at least one acttype:usedEntityType or acttype:generatedEntityType must be a GeoSPARQL 1.1 spatial type (geo:SpatialObject or geo:SpatialObjectCollection, or a sub-class of either). Further profiles, such as the ML Activity Types Profile, specialise geoproc:GeoprocessingActivity in turn and add their own constraints.",
       "status": "under-development",
       "version": "0.1",
       "itemClass": "model",
@@ -706,9 +626,9 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
+            "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity-type/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.geoprocessing-activity",
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.geoprocessing-activity-type",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -758,38 +678,38 @@
         "register"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
+      "dateOfLastChange": "2026-10-07",
       "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity/ontology.ttl",
+        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-type/ontology.ttl",
         "prof:hasRole": "role:specification",
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity/",
+      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity-type/",
+      "validationPassed": false,
+      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity-type/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/geoprocessing-activity/index.md"
+          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/geoprocessing-activity-type/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/geoprocessing-activity/index.json"
+          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/geoprocessing-activity-type/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.geoprocessing-activity"
+          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.geoprocessing-activity-type"
         }
       },
-      "@id": "bblocks://ogc.model.registered-item.geoprocessing-activity",
+      "@id": "bblocks://ogc.model.registered-item.geoprocessing-activity-type",
       "@type": [
         "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset",
         "bblocks:BBlock"
       ],
-      "skos:prefLabel": "Geoprocessing Activity Profile",
+      "skos:prefLabel": "Geoprocessing Activity Types Profile",
       "ldContext": null,
       "schema": null,
       "openAPIDocument": null,
@@ -800,11 +720,11 @@
     },
     {
       "itemIdentifier": "ogc.model.registered-item.ml-activity-profile",
-      "name": "ML Activity Profile",
+      "name": "ML Activity Types Profile",
       "group": "Example: Activity Types",
       "highlighted": true,
       "title": "Machine learning training/inference activities, profiled from the Registered Item Model",
-      "abstract": "A profile of the Geoprocessing Activity Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.",
+      "abstract": "A profile of the Geoprocessing Activity Types Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.",
       "description": "The STAC Machine Learning Model (MLM) extension describes a model as a static artifact \u2014 a STAC Item or Collection with declared inputs, outputs and requirements \u2014 but has no notion of a particular run of that model. This block adds that: mlact:MLActivity (with mlact:TrainingActivity and mlact:InferenceActivity sub-types) is a geoproc:GeoprocessingActivity recording one execution, and so can be specialised into ML activity types held in an activity type register. It is also a rim:RegisterAction. In this ecosystem, running a model is itself a governed act \u2014 typically the one that adds a derived product to a register as a new rim:RegisterItem \u2014 so the run belongs in the same audit trail as any other register action. The activity's task, framework and accelerator are drawn from the MLM extension's own SKOS schemes rather than redefined, and its recorded inputs/outputs (mlact:ActivityInput / mlact:ActivityOutput, both prov:Entity) each declare via dct:conformsTo which of the model's own declared mlm:ModelInput/mlm:ModelOutput specifications they realise. Registered ML activity types must declare at least one mlact:ActivityInput sub-type as a used entity type, and registered inference types at least one mlact:ActivityOutput sub-type as a generated entity type.",
       "status": "under-development",
       "version": "0.1",
@@ -836,42 +756,6 @@
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.geoprocessing-activity",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.activity-type",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
         }
       ],
       "sources": [
@@ -896,7 +780,7 @@
         "activity type"
       ],
       "dateTimeAddition": "2026-09-17T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
+      "dateOfLastChange": "2026-10-07",
       "ontology": {
         "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/ml-activity-profile/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -927,7 +811,7 @@
         "dcat:Dataset",
         "bblocks:BBlock"
       ],
-      "skos:prefLabel": "ML Activity Profile",
+      "skos:prefLabel": "ML Activity Types Profile",
       "ldContext": null,
       "schema": null,
       "openAPIDocument": null,
@@ -1247,13 +1131,10 @@
       "@id": "bblocks://ogc.model.registered-item.rim.register"
     },
     {
-      "@id": "bblocks://ogc.model.registered-item.activity-types.prov-activities"
-    },
-    {
       "@id": "bblocks://ogc.model.registered-item.core-ontology"
     },
     {
-      "@id": "bblocks://ogc.model.registered-item.geoprocessing-activity"
+      "@id": "bblocks://ogc.model.registered-item.geoprocessing-activity-type"
     },
     {
       "@id": "bblocks://ogc.model.registered-item.ml-activity-profile"

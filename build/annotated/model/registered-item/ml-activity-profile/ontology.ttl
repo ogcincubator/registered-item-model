@@ -95,13 +95,13 @@ mlact:MLActivity a owl:Class ;
     rdfs:comment "A recorded activity that trains or runs a machine learning model. The model itself is described elsewhere as a STAC Item/Collection per the MLM extension; this class records one execution against it." ;
     rdfs:isDefinedBy mlact: ;
     rdfs:subClassOf rim:RegisterAction,
-        geoproc:GeoprocessingActivity .
+        geoproc:GeoprocessingActivityType .
 
 mlact: a owl:Ontology ;
     dct:creator "Rob Atkinson, OGC" ;
-    dct:description "A profile of the Geoprocessing Activity Profile (and so of the Registered Item Model), describing machine learning model training and inference runs as sub-classes of geoproc:GeoprocessingActivity and rim:RegisterAction, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary." ;
+    dct:description "A profile of the Geoprocessing Activity Types Profile (and so of the Registered Item Model), describing machine learning model training and inference runs as sub-classes of geoproc:GeoprocessingActivity and rim:RegisterAction, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary." ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:title "ML Activity Profile" ;
+    dct:title "ML Activity Types Profile" ;
     owl:imports rim:,
         geoproc:,
         mlm: .

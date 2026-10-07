@@ -42,7 +42,7 @@
     "metadata"
   ],
   "dateTimeAddition": "2026-09-17T00:00:00Z",
-  "dateOfLastChange": "2026-09-30",
+  "dateOfLastChange": "2026-10-07",
   "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl",
   "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/",
   "validationPassed": true,

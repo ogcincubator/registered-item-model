@@ -1,5 +1,5 @@
 Validation report for ogc.model.registered-item.rim.register-action - Register Action
-Generated 2026-09-30T09:07:41.700747+00:00
+Generated 2026-10-07T06:38:42.684799+00:00
 === Turtle ===
 
 ** Validation error **
