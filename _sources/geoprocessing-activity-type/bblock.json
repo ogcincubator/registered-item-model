@@ -1,10 +1,10 @@
 {
-  "name": "Geoprocessing Activity Profile",
+  "name": "Geoprocessing Activity Types Profile",
   "group": "Example: Activity Types",
   "highlighted": true,
   "title": "Registers of geoprocessing activity types, profiled from the Activity Type Register Profile",
   "abstract": "A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivity, each required to use or generate at least one GeoSPARQL spatial data type.",
-  "description": "Geoprocessing activities (reprojection, clipping, index computation, classification, model inference over imagery) are distinguished from other activities by the kind of data they use and produce. This block adds geoproc:GeoprocessingActivity, a sub-class of prov:Activity that every registered geoprocessing activity type specialises. It also constrains the related PROV object types such a type declares: at least one acttype:usedEntityType or acttype:generatedEntityType must be a GeoSPARQL 1.1 spatial type (geo:SpatialObject or geo:SpatialObjectCollection, or a sub-class of either). Further profiles, such as the ML Activity Profile, specialise geoproc:GeoprocessingActivity in turn and add their own constraints.",
+  "description": "Geoprocessing activities (reprojection, clipping, index computation, classification, model inference over imagery) are distinguished from other activities by the kind of data they use and produce. This block adds geoproc:GeoprocessingActivity, a sub-class of prov:Activity that every registered geoprocessing activity type specialises. It also constrains the related PROV object types such a type declares: at least one acttype:usedEntityType or acttype:generatedEntityType must be a GeoSPARQL 1.1 spatial type (geo:SpatialObject or geo:SpatialObjectCollection, or a sub-class of either). Further profiles, such as the ML Activity Types Profile, specialise geoproc:GeoprocessingActivity in turn and add their own constraints.",
   "status": "under-development",
   "version": "0.1",
   "itemClass": "model",

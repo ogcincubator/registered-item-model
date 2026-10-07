@@ -1,7 +1,7 @@
-# ML Activity Profile
+# ML Activity Types Profile
 
 A [profile](https://ogcincubator.github.io/bblocks-docs/) of the
-[Geoprocessing Activity Profile](../geoprocessing-activity), and so of the
+[Geoprocessing Activity Types Profile](../geoprocessing-activity), and so of the
 [Activity Type Register Profile](../activity-type) and the
 [Registered Item Model](../core-ontology). It describes machine learning training and inference
 runs as typed register actions, built on the

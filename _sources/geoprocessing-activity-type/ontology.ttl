@@ -1,0 +1,24 @@
+PREFIX acttype: <https://w3id.org/ogc/rim/activity-type/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geoproc: <https://w3id.org/ogc/rim/geoprocessing/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+geoproc:GeoprocessingActivityType
+    a owl:Class ;
+    rdfs:label "Geoprocessing activity" ;
+    rdfs:comment "An activity that uses or generates spatial data: entities of a type that is a geo:SpatialObject or geo:SpatialObjectCollection (GeoSPARQL 1.1), such as features, geometries, coverages described as features, or collections of them. Registered geoprocessing activity types are sub-classes of this class, and must declare at least one spatial acttype:usedEntityType or acttype:generatedEntityType." ;
+    rdfs:isDefinedBy geoproc: ;
+    rdfs:seeAlso geo:SpatialObject ;
+    rdfs:subClassOf acttype:ActivityType ;
+.
+
+geoproc:
+    a owl:Ontology ;
+    dct:creator "Rob Atkinson, OGC" ;
+    dct:description "A profile of the Activity Type Register Profile for geoprocessing activity types: types of prov:Activity that use or generate spatial data, where spatial data is anything typed with a GeoSPARQL spatial object or spatial object collection class." ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dct:title "Geoprocessing Activity Types Profile" ;
+    owl:imports acttype: ;
+.

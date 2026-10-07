@@ -91,7 +91,7 @@ mlact:ActivityOutputShape a sh:NodeShape ;
         sh:maxCount 1 ;
     ] .
 
-# Activity-type-level shapes. The Geoprocessing Activity Profile's shapes
+# Activity-type-level shapes. The Geoprocessing Activity Types Profile's shapes
 # still apply to registered ML activity types (mlact:MLActivity is a
 # geoproc:GeoprocessingActivity); these narrow the related PROV object
 # types further. Sub-classes that are not registered as
