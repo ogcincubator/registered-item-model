@@ -9,29 +9,30 @@
   "abstract": "A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivityType, each required to use or generate at least one GeoSPARQL spatial data type.",
   "description": "Geoprocessing activities (reprojection, clipping, index computation, classification, model inference over imagery) are distinguished from other activities by the kind of data they use and produce. This block adds geoproc:GeoprocessingActivityType, a sub-class of acttype:ActivityType that every registered geoprocessing activity type specialises. It also constrains the related PROV object types such a type declares: at least one acttype:usedEntityType or acttype:generatedEntityType must be a GeoSPARQL 1.1 spatial type (geo:SpatialObject or geo:SpatialObjectCollection, or a sub-class of either). Further profiles, such as the ML Activity Types Profile, specialise geoproc:GeoprocessingActivityType in turn and add their own constraints.",
   "status": "under-development",
-  "version": "0.1",
+  "version": "0.3",
   "itemClass": "model",
   "isProfileOf": [
     "ogc.model.registered-item.activity-type"
   ],
   "dependsOn": [
-    "ogc.model.cross-domain.geosparql"
+    "ogc.model.cross-domain.geosparql",
+    "ogc.model.registered-item.activity-type"
   ],
   "concept": [
     "https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType"
   ],
   "shaclShapes": {
     "ogc.model.registered-item.geoprocessing-activity-types": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity-types/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/shapes.shacl"
     ],
     "ogc.model.registered-item.activity-type": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
-    ],
-    "ogc.model.registered-item.core-ontology": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
     ],
     "ogc.model.cross-domain.prov": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.model.registered-item.core-ontology": [
+      "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ]
   },
   "sources": [
@@ -51,11 +52,19 @@
     "register"
   ],
   "dateTimeAddition": "2026-09-23T00:00:00Z",
-  "dateOfLastChange": "2026-10-21",
-  "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/ontology.ttl",
-  "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity-types/",
+  "dateOfLastChange": "2026-10-23",
+  "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/context.jsonld",
+  "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/schema.yaml",
+    "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/schema.json"
+  },
+  "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/schema.yaml",
+  "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/context.jsonld",
+  "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/resolvedProperties.json",
+  "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity-types/",
+  "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity-types/",
   "examples": [
     {
       "title": "A registered NDVI computation activity type",
@@ -63,40 +72,40 @@
       "snippets": [
         {
           "language": "turtle",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/geoprocessing-activity-types/example_1_1.ttl",
-          "sizeBytes": 1720,
-          "code": "ex:eoProcessingRegister a rim:Register ;\n    dct:title \"EO Processing Activity Types\" .\n\nex:NdviComputation a acttype:ActivityType , owl:Class ;\n    rdfs:subClassOf geoproc:GeoprocessingActivityType ;\n    rdfs:label \"NDVI computation\" ;\n    dct:title \"NDVI computation\" ;\n    dct:description \"Computes the Normalized Difference Vegetation Index from the red and near-infrared bands of a multispectral scene.\" ;\n    rim:inRegister ex:eoProcessingRegister ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://example.org/registers/geoprocessing/ndvi-computation/v1\"^^xsd:anyURI ;\n    rim:validityStatus rim:valid ;\n    rim:publicationStatus rim:published ;\n    acttype:usedEntityType ex:MultispectralScene ;\n    acttype:generatedEntityType ex:NdviRaster ;\n    acttype:associatedAgentType prov:SoftwareAgent ;\n    acttype:plan ex:ndviPlan .\n\nex:MultispectralScene a owl:Class ;\n    rdfs:subClassOf geo:Feature , prov:Entity ;\n    rdfs:label \"Multispectral scene\" .\n\nex:NdviRaster a owl:Class ;\n    rdfs:subClassOf geo:Feature , prov:Entity ;\n    rdfs:label \"NDVI raster\" .\n\nex:ndviPlan a prov:Plan , p-plan:Plan ;\n    dct:title \"NDVI computation procedure\" .\n\nex:cloudMask a p-plan:Step ;\n    p-plan:isStepOfPlan ex:ndviPlan ;\n    dct:description \"Mask cloud and cloud-shadow pixels using the scene's quality band.\" .\n\nex:reproject a p-plan:Step ;\n    p-plan:isStepOfPlan ex:ndviPlan ;\n    p-plan:isPrecededBy ex:cloudMask ;\n    dct:description \"Reproject the red and near-infrared bands to the target grid.\" .\n\nex:computeIndex a p-plan:Step ;\n    p-plan:isStepOfPlan ex:ndviPlan ;\n    p-plan:isPrecededBy ex:reproject ;\n    dct:description \"Compute (NIR - Red) / (NIR + Red) per pixel.\" .\n"
+          "ref": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/examples/ndvi.ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/geoprocessing-activity-types/example_1_1.ttl",
+          "sizeBytes": 2636,
+          "code": "@prefix geoproc: <https://w3id.org/ogc/rim/geoprocessing/> .\n@prefix  acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix  rim: <https://w3id.org/ogc/rim/> .\n@prefix  prov: <http://www.w3.org/ns/prov#> .\n@prefix  p-plan: <http://purl.org/net/p-plan#>.\n@prefix  geo: <http://www.opengis.net/ont/geosparql#>.\n@prefix  dct: <http://purl.org/dc/terms/>.\n@prefix  rdfs: <http://www.w3.org/2000/01/rdf-schema#>.\n@prefix  owl: <http://www.w3.org/2002/07/owl#>.\n@prefix  xsd: <http://www.w3.org/2001/XMLSchema#>.\n@prefix  ex: <https://example.org/registers/geoprocessing/>.\n\nex:eoProcessingRegister a rim:Register ;\n              dct:title \"EO Processing Activity Types\" .\n\n          ex:NdviComputation a acttype:ActivityType , owl:Class ;\n              rdfs:subClassOf geoproc:GeoprocessingActivityType ;\n              rdfs:label \"NDVI computation\" ;\n              dct:title \"NDVI computation\" ;\n              dct:description \"Computes the Normalized Difference Vegetation Index from the red and near-infrared bands of a multispectral scene.\" ;\n              rim:inRegister ex:eoProcessingRegister ;\n              rim:itemClass acttype:activityTypeItemClass ;\n              rim:objectIdentifier \"https://example.org/registers/geoprocessing/ndvi-computation/v1\"^^xsd:anyURI ;\n              rim:validityStatus rim:valid ;\n              rim:publicationStatus rim:published ;\n              acttype:usedEntityType ex:MultispectralScene ;\n              acttype:generatedEntityType ex:NdviRaster ;\n              acttype:associatedAgentType prov:SoftwareAgent ;\n              acttype:plan ex:ndviPlan .\n\n          ex:MultispectralScene a owl:Class ;\n              rdfs:subClassOf geo:Feature , prov:Entity ;\n              rdfs:label \"Multispectral scene\" .\n\n          ex:NdviRaster a owl:Class ;\n              rdfs:subClassOf geo:Feature , prov:Entity ;\n              rdfs:label \"NDVI raster\" .\n\n          ex:ndviPlan a prov:Plan , p-plan:Plan ;\n              dct:title \"NDVI computation procedure\" .\n\n          ex:cloudMask a p-plan:Step ;\n              p-plan:isStepOfPlan ex:ndviPlan ;\n              dct:description \"Mask cloud and cloud-shadow pixels using the scene's quality band.\" .\n\n          ex:reproject a p-plan:Step ;\n              p-plan:isStepOfPlan ex:ndviPlan ;\n              p-plan:isPrecededBy ex:cloudMask ;\n              dct:description \"Reproject the red and near-infrared bands to the target grid.\" .\n\n          ex:computeIndex a p-plan:Step ;\n              p-plan:isStepOfPlan ex:ndviPlan ;\n              p-plan:isPrecededBy ex:reproject ;\n              dct:description \"Compute (NIR - Red) / (NIR + Red) per pixel.\" .\n"
         }
-      ],
-      "prefixes": {
-        "geoproc": "https://w3id.org/ogc/rim/geoprocessing/",
-        "acttype": "https://w3id.org/ogc/rim/activity-type/",
-        "rim": "https://w3id.org/ogc/rim/",
-        "prov": "http://www.w3.org/ns/prov#",
-        "p-plan": "http://purl.org/net/p-plan#",
-        "geo": "http://www.opengis.net/ont/geosparql#",
-        "dct": "http://purl.org/dc/terms/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "ex": "https://example.org/registers/geoprocessing/"
-      }
+      ]
+    },
+    {
+      "title": "example Buffer Geoprocessing Activity Type",
+      "content": "A buffer geoprocessing activity type",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/examples/buffer.json",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/geoprocessing-activity-types/example_2_1.json",
+          "sizeBytes": 578,
+          "code": " {\n    \"id\": \"Buffer\",\n    \"title\": \"Create a buffer around a polygon. \",\n    \"description\": \"This service shall return a feature collection representing the buffer of geometry InputPolygon at distance BufferDistance. The buffer of a geometry at distance d is the Polygon or MultiPolygon which contains all points within a distance d of the geometry.\",\n    \"version\": \"2.0.0\",\n    \"type\": \"rim:RegisterItemClass\",\n    \"usedEntityType\" : \"point\",\n    \"generatedEntityType\": \"polygon\",\n    \"associatedAgentType\": \"Geoprocessing library ...\",\n    \"informedByActivityType\": \"none\"\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/geoprocessing-activity-types/example_2_1.jsonld",
+          "sizeBytes": 711,
+          "code": "{\n  \"@context\": \"https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/context.jsonld\",\n  \"id\": \"Buffer\",\n  \"title\": \"Create a buffer around a polygon. \",\n  \"description\": \"This service shall return a feature collection representing the buffer of geometry InputPolygon at distance BufferDistance. The buffer of a geometry at distance d is the Polygon or MultiPolygon which contains all points within a distance d of the geometry.\",\n  \"version\": \"2.0.0\",\n  \"type\": \"rim:RegisterItemClass\",\n  \"usedEntityType\": \"point\",\n  \"generatedEntityType\": \"polygon\",\n  \"associatedAgentType\": \"Geoprocessing library ...\",\n  \"informedByActivityType\": \"none\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/geoprocessing-activity-types/example_2_1.ttl",
+          "sizeBytes": 883,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n\n<file:///github/workspace/Buffer> a rim:RegisterItemClass ;\n    dct:description \"This service shall return a feature collection representing the buffer of geometry InputPolygon at distance BufferDistance. The buffer of a geometry at distance d is the Polygon or MultiPolygon which contains all points within a distance d of the geometry.\" ;\n    dct:title \"Create a buffer around a polygon. \" ;\n    owl:versionInfo \"2.0.0\" ;\n    acttype:associatedAgentType <file:///github/workspace/> ;\n    acttype:generatedEntityType <file:///github/workspace/polygon> ;\n    acttype:informedByActivityType <file:///github/workspace/none> ;\n    acttype:usedEntityType <file:///github/workspace/point> .\n\n"
+        }
+      ]
     }
   ],
-  "examplePrefixes": {
-    "geoproc": "https://w3id.org/ogc/rim/geoprocessing/",
-    "acttype": "https://w3id.org/ogc/rim/activity-type/",
-    "rim": "https://w3id.org/ogc/rim/",
-    "prov": "http://www.w3.org/ns/prov#",
-    "p-plan": "http://purl.org/net/p-plan#",
-    "geo": "http://www.opengis.net/ont/geosparql#",
-    "dct": "http://purl.org/dc/terms/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "ex": "https://example.org/registers/geoprocessing/"
-  },
-  "annotatedSchema": null,
-  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Geoprocessing Activity Type\ndescription: 'A profile of the Activity Type Register Profile for geoprocessing activity\n  types\n\n  '\nallOf:\n- $ref: https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/schema.yaml\nx-jsonld-extra-terms:\n  id: '@id'\n  type: '@type'\n  title: http://purl.org/dc/terms/title\n  description: http://purl.org/dc/terms/description\n  version: http://www.w3.org/2002/07/owl#versionInfo\n  usedEntityType:\n    x-jsonld-id: https://w3id.org/ogc/rim/activity-type/usedEntityType\n    x-jsonld-type: '@id'\n  generatedEntityType:\n    x-jsonld-id: https://w3id.org/ogc/rim/activity-type/generatedEntityType\n    x-jsonld-type: '@id'\n  associatedAgentType:\n    x-jsonld-id: https://w3id.org/ogc/rim/activity-type/associatedAgentType\n    x-jsonld-type: '@id'\n  informedByActivityType:\n    x-jsonld-id: https://w3id.org/ogc/rim/activity-type/informedByActivityType\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  dct: http://purl.org/dc/terms/\n  owl: http://www.w3.org/2002/07/owl#\n  acttype: https://w3id.org/ogc/rim/activity-type/\n  rim: https://w3id.org/ogc/rim#\nx-bblocks-metadata:\n  itemIdentifier: ogc.model.registered-item.geoprocessing-activity-types\n  register: https://nielshoffmann.github.io/registered-item-model/build/register.json\n  version: '0.3'\n  dateOfLastChange: '2026-10-23'\n",
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
   "gitPath": "_sources/geoprocessing-activity-types"
 }

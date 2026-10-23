@@ -1,0 +1,7 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: SpatioTemporal ML Activity Types Profile
+description: >
+  A profile of the Activity Type Register Profile for SpatioTemporal ML Activity Types
+
+allOf:
+  - $ref: bblocks://ogc.model.registered-item.geoprocessing-activity-types

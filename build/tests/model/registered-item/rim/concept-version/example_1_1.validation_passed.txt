@@ -1,7 +1,30 @@
 Validation report for ogc.model.registered-item.rim.concept-version - Concept Version
-Generated 2026-10-21T12:09:49.455303+00:00
+Generated 2026-10-23T15:42:24.559485+00:00
 === Files ===
 Using examples/example.ttl from examples
 Output Turtle example_1_1.ttl created
 === End Files ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/rim/concept-version/ontology.ttl
+ - /github/workspace/_sources/core-ontology/ontology.ttl
+Validation result for _sources/core-ontology/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/core-ontology/shapes.shacl:
+ - Shape rim:ConceptShape: ex:c
+ - Shape rim:ConceptVersionShape: ex:cv
+ - Shape rim:CommitmentShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape rim:RegisterItemClassShape: *none*
+ - Shape rim:RegisterItemShape: *none*
+ - Shape rim:RegisterActionShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:RegisterShape: *none*
+ - Shape rim:TextShape: *none*
+ - Shape rim:RegisterSpecificationShape: *none*
+
+=== End SHACL ===
 

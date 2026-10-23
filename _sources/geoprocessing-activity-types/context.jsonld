@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+
+    "rim": "https://w3id.org/ogc/rim#",
+    "acttype": "https://w3id.org/ogc/rim/activity-type/",
+    "dct": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+
+    "title": "dct:title",
+    "description": "dct:description",
+    "version": "owl:versionInfo",
+
+    "usedEntityType": {
+      "@id": "acttype:usedEntityType",
+      "@type": "@id"
+    },
+
+    "generatedEntityType": {
+      "@id": "acttype:generatedEntityType",
+      "@type": "@id"
+    },
+
+    "associatedAgentType": {
+      "@id": "acttype:associatedAgentType",
+      "@type": "@id"
+    },
+
+    "informedByActivityType": {
+      "@id": "acttype:informedByActivityType",
+      "@type": "@id"
+    }
+  }
+}

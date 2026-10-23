@@ -1,0 +1,7 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Geoprocessing Activity Type
+description: >
+  A profile of the Activity Type Register Profile for geoprocessing activity types
+
+allOf:
+  - $ref: bblocks://ogc.model.registered-item.activity-type

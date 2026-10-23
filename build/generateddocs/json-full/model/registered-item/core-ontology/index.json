@@ -11,18 +11,9 @@
   "status": "under-development",
   "version": "0.1",
   "itemClass": "model",
-  "dependsOn": [
-    "ogc.model.cross-domain.prov"
-  ],
-  "concept": [
-    "https://w3id.org/ogc/rim/RegisterItem"
-  ],
   "shaclShapes": {
     "ogc.model.registered-item.core-ontology": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-    ],
-    "ogc.model.cross-domain.prov": [
-      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ]
   },
   "sources": [
@@ -42,11 +33,11 @@
     "metadata"
   ],
   "dateTimeAddition": "2026-09-17T00:00:00Z",
-  "dateOfLastChange": "2026-10-21",
-  "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl",
-  "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/",
+  "dateOfLastChange": "2026-10-23",
+  "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl",
+  "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/core-ontology/",
+  "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/core-ontology/",
   "examples": [
     {
       "title": "A governed concept register",
@@ -54,7 +45,7 @@
       "snippets": [
         {
           "language": "turtle",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/core-ontology/example_1_1.ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/core-ontology/example_1_1.ttl",
           "sizeBytes": 2915,
           "code": "ex:plantRegister a rim:Register ;\n    dct:title \"National Plant Taxa Register\" ;\n    rim:runsOn ex:plantRegisterSystem ;\n    rim:hasSpecification ex:plantRegisterSpec ;\n    rim:registerOwner ex:nationalHerbarium ;\n    rim:registerManager ex:vocabServiceTeam ;\n    rim:controlBody ex:taxonomyEditorialBoard ;\n    rim:registerSystemManager ex:itOperations ;\n    rim:hasCommitment ex:persistenceCommitmentA .\n\nex:plantRegisterSystem a rim:RegisterSystem .\n\nex:plantRegisterSpec a rim:RegisterSpecification ;\n    dct:title \"National Plant Taxa Register Specification\" ;\n    rim:definesSubstantiveChange \"A change is substantive if it alters a taxon's accepted name or its placement in the classification hierarchy.\" .\n\nex:persistenceCommitmentA a rim:Commitment ;\n    rim:commitmentCategory rim:persistenceCommitment ;\n    dct:description \"Object identifiers, once assigned, are never reused or reassigned.\" .\n\nex:nationalHerbarium a prov:Agent ; dct:title \"National Herbarium\" .\nex:vocabServiceTeam a prov:Agent ; dct:title \"Vocabulary Service Team\" .\nex:taxonomyEditorialBoard a prov:Agent ; dct:title \"Taxonomy Editorial Board\" .\nex:itOperations a prov:Agent ; dct:title \"IT Operations\" .\n\nex:taxonSystem a rim:ConceptSystem ;\n    skos:prefLabel \"Plant taxa\"@en .\n\nex:quercusRoburConcept a rim:Concept ;\n    skos:inScheme ex:taxonSystem ;\n    skos:prefLabel \"Quercus robur\"@en ;\n    skos:definition \"The pedunculate oak, a species of oak in the family Fagaceae.\"@en .\n\nex:quercusRoburV2 a rim:ConceptVersion ;\n    rim:versionOf ex:quercusRoburConcept ;\n    rim:objectIdentifier \"https://example.org/registers/plants/concepts/quercus-robur/v2\"^^xsd:anyURI ;\n    rim:functionalIdentifier \"https://example.org/registers/plants/concepts/quercus-robur/current\"^^xsd:anyURI ;\n    rim:validityStatus rim:valid ;\n    rim:publicationStatus rim:published .\n\nex:taxonItemClass a rim:RegisterItemClass ;\n    dct:title \"Taxon record\" ;\n    dct:description \"The register item class for a single accepted plant taxon.\" ;\n    rim:definedIn ex:plantRegister ;\n    rim:validatedBy <https://example.org/registers/plants/shapes#TaxonRecordShape> .\n\nex:quercusRoburItem a rim:RegisterItem ;\n    rim:inRegister ex:plantRegister ;\n    rim:itemClass ex:taxonItemClass ;\n    rim:objectIdentifier \"https://example.org/registers/plants/items/quercus-robur/v2\"^^xsd:anyURI ;\n    rim:functionalIdentifier \"https://example.org/registers/plants/items/quercus-robur/current\"^^xsd:anyURI ;\n    dct:title \"Quercus robur\"@en ;\n    rim:realizes ex:quercusRoburV2 ;\n    rim:validityStatus rim:valid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction ex:action2024-06 .\n\nex:action2024-06 a rim:RegisterAction ;\n    rim:actionType rim:publishAction ;\n    rim:changeClassification rim:clarifyingChange ;\n    rim:appliesTo ex:quercusRoburItem ;\n    rim:proposer ex:vocabServiceTeam ;\n    prov:startedAtTime \"2024-06-01T00:00:00Z\"^^xsd:dateTime .\n"
         }
@@ -74,7 +65,7 @@
       "snippets": [
         {
           "language": "turtle",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/core-ontology/example_2_1.ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/core-ontology/example_2_1.ttl",
           "sizeBytes": 348,
           "code": "ex:codeListItemClass a rim:RegisterItemClass ;\n    dct:title \"Code list entry\" .\n\nex:code42 a rim:RegisterItem ;\n    rim:itemClass ex:codeListItemClass ;\n    rim:objectIdentifier \"https://example.org/registers/codes/42\"^^xsd:anyURI ;\n    dct:title \"Example code 42\"@en ;\n    rim:validityStatus rim:valid ;\n    rim:publicationStatus rim:published .\n"
         }
@@ -98,6 +89,6 @@
     "ex": "https://example.org/registers/plants/"
   },
   "annotatedSchema": null,
-  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
   "gitPath": "_sources/core-ontology"
 }

@@ -101,7 +101,7 @@ mlact: a owl:Ontology ;
     dct:creator "Rob Atkinson, OGC" ;
     dct:description "A profile of the Geoprocessing Activity Types Profile (and so of the Registered Item Model), describing machine learning model training and inference runs as sub-classes of geoproc:GeoprocessingActivityType and rim:RegisterAction, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary." ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:title "ML Activity Types Profile" ;
+    dct:title "SpatioTemporal ML Activity Types Profile" ;
     owl:imports rim:,
         geoproc:,
         mlm: .

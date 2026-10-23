@@ -1,9 +1,9 @@
 
-# ML Activity Types Profile (Model)
+# SpatioTemporal ML Activity Types Profile (Model)
 
-`ogc.model.registered-item.ml-activity-types` *v0.1*
+`ogc.model.registered-item.st-ml-activity-types` *v0.3*
 
-A profile of the Geoprocessing Activity Types Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
+A profile of the SpatioTemporal Machine learning Activity Types Profile describing spatiotemporal machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
@@ -23,10 +23,10 @@ which of the model's declared `mlm:ModelInput`/`mlm:ModelOutput` specifications 
 ex:landCoverModel a stac:Item ;
     mlm:name "Land Cover Classifier" ;
     mlm:architecture "U-Net" ;
-    mlm:tasks mlm:semantic-segmentation ;
+    mlm:performsTask mlm:semantic-segmentation ;
     mlm:framework "PyTorch" ;
-    mlm:input ex:landCoverInputSpec ;
-    mlm:output ex:landCoverOutputSpec .
+    mlm:ActivityInput ex:landCoverInputSpec ;
+    mlm:ActivityOutput ex:landCoverOutputSpec .
 
 ex:landCoverInputSpec a mlm:ModelInput ;
     mlm:io_name "sentinel2_bands" ;
@@ -139,6 +139,71 @@ ex:mosaicMask a p-plan:Step ;
 
 ```
 
+## Schema
+
+```yaml
+$schema: https://json-schema.org/draft/2020-12/schema
+title: SpatioTemporal ML Activity Types Profile
+description: 'A profile of the Activity Type Register Profile for SpatioTemporal ML
+  Activity Types
+
+  '
+allOf:
+- $ref: https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.model.registered-item.st-ml-activity-types
+  register: https://nielshoffmann.github.io/registered-item-model/build/register.json
+  version: '0.3'
+  dateOfLastChange: '2026-10-23'
+
+```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/st-ml-activity-types/schema.json)
+* JSON version: [schema.json](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/st-ml-activity-types/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "usedEntityType": {
+      "@id": "rim:activity-type/usedEntityType",
+      "@type": "@id"
+    },
+    "generatedEntityType": {
+      "@id": "rim:activity-type/generatedEntityType",
+      "@type": "@id"
+    },
+    "associatedAgentType": {
+      "@id": "rim:activity-type/associatedAgentType",
+      "@type": "@id"
+    },
+    "informedByActivityType": {
+      "@id": "rim:activity-type/informedByActivityType",
+      "@type": "@id"
+    },
+    "title": "dct:title",
+    "description": "dct:description",
+    "version": "owl:versionInfo",
+    "rim": "https://w3id.org/ogc/rim/",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "acttype": "rim:activity-type/",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/st-ml-activity-types/context.jsonld)
+
 ## Sources
 
 * [STAC Machine Learning Model (MLM) Extension Ontology building block](https://github.com/ogcincubator/bblocks-stac/tree/master/_sources/extensions/mlm-ontology)
@@ -149,6 +214,6 @@ ex:mosaicMask a p-plan:Step ;
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/registered-item-model](https://github.com/ogcincubator/registered-item-model)
-* Path: `_sources/ml-activity-types`
+* URL: [https://github.com/NielsHoffmann/registered-item-model](https://github.com/NielsHoffmann/registered-item-model)
+* Path: `_sources/st-ml-activity-types`
 

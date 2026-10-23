@@ -1,6 +1,6 @@
 {
   "name": "Registered Item",
-    "highlighted": true,
+    "highlighted": false,
   "group": "Core Model",
   "abstract": "A REGISTER ITEM model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. This provides a canonical schema for a register entry, that can be extended according the REGISTER ITEM CLASS defined for the register.",
 

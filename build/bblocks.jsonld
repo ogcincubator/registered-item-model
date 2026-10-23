@@ -1,7 +1,7 @@
 {
   "@context": [
     {
-      "@base": "https://ogcincubator.github.io/registered-item-model"
+      "@base": "https://nielshoffmann.github.io/registered-item-model"
     },
     {
       "bblocks": "https://www.opengis.net/def/bblocks/",
@@ -213,7 +213,7 @@
   "name": "Building Blocks - Registered Item Model",
   "abstract": "A base RDF and SHACL model for register items, register item classes and register\ngovernance metadata, aligned with ISO 19135:2026 (*Geographic information \u2014 Registration\nand register governance*). Sub-registers profile this model rather than inventing their own.\n",
   "description": "A register is a catalogue with systematic governance: a content information model\n(what an item looks like) plus management metadata (who governs it, what state it is\nin, how it changes). ISO 19135:2026 defines one such register model \u2014 separating a\n**concept plane** (meaning: concepts and concept versions) from a **content plane**\n(representation: register item classes and register items) and adding a governance\nlayer of roles, statuses, actions and commitments.\n\nThis repository publishes that model as a single base [OGC Building\nBlock](https://ogcincubator.github.io/bblocks-docs/), independent of any one register's\nown content schema. Any register \u2014 a CSV catalogue, the OGC Definitions Server, a\nGitHub-managed vocabulary, or a Building Blocks register itself \u2014 maps its own\nschema's identifiers, statuses and roles onto this base model via a JSON-LD context,\nso that management metadata from otherwise unrelated registers becomes one queryable\ngraph. A sub-register's rules are expressed as a profile of this base block (null,\nadditive, or constrained), always validating against it.\n\nRegister vs. registry: the **register** is the governed information (items,\nidentifiers, statuses, roles, processes); the **register system** \u2014 often loosely\ncalled the \"registry\" \u2014 is merely the information system it happens to run on. This\nmodel describes the former, independent of the latter.\n",
-  "modified": "2026-10-21T12:09:46.049423",
+  "modified": "2026-10-23T15:42:19.586333",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"dc0fd35d6cd8801a5efabb93634cef74ca14d45d",
@@ -221,34 +221,34 @@
       "date": "2026-10-21T09:10:03+00:00\""
     }
   },
-  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
-  "gitHubRepository": "https://github.com/ogcincubator/registered-item-model/blob/master/",
-  "baseURL": "https://ogcincubator.github.io/registered-item-model/",
-  "viewerURL": "https://ogcincubator.github.io/registered-item-model/",
-  "validationReport": "https://ogcincubator.github.io/registered-item-model/build/tests/report.html",
-  "validationReportJson": "https://ogcincubator.github.io/registered-item-model/build/tests/report.json",
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
+  "gitHubRepository": "https://github.com/NielsHoffmann/registered-item-model/blob/master/",
+  "baseURL": "https://nielshoffmann.github.io/registered-item-model/",
+  "viewerURL": "https://nielshoffmann.github.io/registered-item-model/",
+  "validationReport": "https://nielshoffmann.github.io/registered-item-model/build/tests/report.html",
+  "validationReportJson": "https://nielshoffmann.github.io/registered-item-model/build/tests/report.json",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://ogcincubator.github.io/cross-domain-model/build/register.json",
     "https://ogcincubator.github.io/bblocks-stac/build/register.json"
   ],
-  "remoteCacheDir": "https://ogcincubator.github.io/registered-item-model/build/annotated/_cache",
+  "remoteCacheDir": "https://nielshoffmann.github.io/registered-item-model/build/annotated/_cache",
   "links": [
     {
       "rel": "self",
-      "href": "https://ogcincubator.github.io/registered-item-model/build/register.json",
+      "href": "https://nielshoffmann.github.io/registered-item-model/build/register.json",
       "type": "application/json",
       "title": "This Building Blocks Register in JSON format"
     },
     {
       "rel": "self",
-      "href": "https://ogcincubator.github.io/registered-item-model/build/bblocks.ttl",
+      "href": "https://nielshoffmann.github.io/registered-item-model/build/bblocks.ttl",
       "type": "text/turtle",
       "title": "This Building Blocks Register in RDF Turtle format"
     },
     {
       "rel": "self",
-      "href": "https://ogcincubator.github.io/registered-item-model/build/bblocks.jsonld",
+      "href": "https://nielshoffmann.github.io/registered-item-model/build/bblocks.jsonld",
       "type": "application/ld+json",
       "title": "This Building Blocks Register in JSON-LD format"
     }
@@ -261,256 +261,6 @@
   "skos:prefLabel": "Building Blocks - Registered Item Model",
   "hasConcepts": [
     {
-      "itemIdentifier": "ogc.model.registered-item.activity-type",
-      "name": "Activity Type Register Profile",
-      "group": "Example: Activity Types",
-      "highlighted": true,
-      "title": "Registers of activity types, profiled from the Registered Item Model",
-      "abstract": "A profile of the Registered Item Model for governed activity type records in the acttype:ActivityType hierarchy, with related PROV object types and an optional plan.",
-      "description": "An activity type register governs activity types with identifiers, statuses and change history. Specific activity type classes specialise acttype:ActivityType, a sub-class of rim:RegisterItem. Registered types may be classes used to type individual activity records; those records also inherit register item requirements. Every activity type record uses acttype:activityTypeItemClass and belongs to the acttype:ActivityType hierarchy through rdf:type. Related entity, agent and activity types and an optional prov:Plan describe the expected activity. Further profiles specialise the root and constrain these related types.",
-      "status": "under-development",
-      "version": "0.1",
-      "itemClass": "model",
-      "isProfileOf": [
-        "bblocks://ogc.model.registered-item.core-ontology"
-      ],
-      "concept": [
-        "https://w3id.org/ogc/rim/activity-type/ActivityType"
-      ],
-      "shaclShapes": [
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.activity-type",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        }
-      ],
-      "sources": [
-        {
-          "title": "W3C PROV-O",
-          "link": "https://www.w3.org/TR/prov-o/"
-        },
-        {
-          "title": "P-Plan Ontology",
-          "link": "https://www.opmw.org/model/p-plan/"
-        }
-      ],
-      "tags": [
-        "register",
-        "provenance",
-        "activity type",
-        "plan"
-      ],
-      "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-10-21",
-      "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/ontology.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/activity-type/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/activity-type/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/activity-type/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.activity-type"
-        }
-      },
-      "@id": "bblocks://ogc.model.registered-item.activity-type",
-      "@type": [
-        "bblocks:Model",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Activity Type Register Profile",
-      "ldContext": null,
-      "schema": null,
-      "openAPIDocument": null,
-      "rdfData": [],
-      "dependsOn": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.model.registered-item.rim.concept-version",
-      "name": "Concept Version",
-      "abstract": "Modular RDF implementation profile based on ISO/FDIS 19135:2026.",
-      "status": "under-development",
-      "dateTimeAddition": "2026-09-25T00:00:00Z",
-      "itemClass": "schema",
-      "version": "0.2",
-      "shaclShapes": null,
-      "dateOfLastChange": "2026-10-21",
-      "ldContext": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/ontology.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "schema": [
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/concept-version/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/concept-version/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/concept-version/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/concept-version/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/concept-version/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/concept-version/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.concept-version"
-        }
-      },
-      "@id": "bblocks://ogc.model.registered-item.rim.concept-version",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Concept Version",
-      "openAPIDocument": null,
-      "rdfData": [],
-      "dependsOn": null,
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.model.registered-item.rim.register",
-      "name": "Register",
-      "highlighted": true,
-      "group": "Core Model",
-      "abstract": "A REGISTER description model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register",
-      "status": "under-development",
-      "dateTimeAddition": "2026-09-25T00:00:00Z",
-      "itemClass": "schema",
-      "version": "0.2",
-      "shaclShapes": null,
-      "dateOfLastChange": "2026-10-21",
-      "ldContext": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/ontology.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "schema": [
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register"
-        }
-      },
-      "@id": "bblocks://ogc.model.registered-item.rim.register",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Register",
-      "openAPIDocument": null,
-      "rdfData": [],
-      "dependsOn": null,
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
-      }
-    },
-    {
       "itemIdentifier": "ogc.model.registered-item.core-ontology",
       "name": "Registered Item Model",
       "highlighted": true,
@@ -521,27 +271,12 @@
       "status": "under-development",
       "version": "0.1",
       "itemClass": "model",
-      "dependsOn": [
-        "bblocks://ogc.model.cross-domain.prov"
-      ],
-      "concept": [
-        "https://w3id.org/ogc/rim/RegisterItem"
-      ],
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -564,28 +299,28 @@
         "metadata"
       ],
       "dateTimeAddition": "2026-09-17T00:00:00Z",
-      "dateOfLastChange": "2026-10-21",
+      "dateOfLastChange": "2026-10-23",
       "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl",
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl",
         "prof:hasRole": "role:specification",
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/core-ontology/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/core-ontology/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/core-ontology/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/core-ontology/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/core-ontology/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/core-ontology/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.core-ontology"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.core-ontology"
         }
       },
       "@id": "bblocks://ogc.model.registered-item.core-ontology",
@@ -600,9 +335,566 @@
       "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
+      "dependsOn": null,
       "isProfileOf": null,
       "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.model.registered-item.rim.concept-version",
+      "name": "Concept Version",
+      "abstract": "Modular RDF implementation profile based on ISO/FDIS 19135:2026.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-09-25T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.2",
+      "dependsOn": [
+        "bblocks://ogc.model.registered-item.core-ontology"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dateOfLastChange": "2026-10-23",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "ontology": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/concept-version/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/concept-version/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/concept-version/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/concept-version/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/concept-version/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/concept-version/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.concept-version"
+        }
+      },
+      "@id": "bblocks://ogc.model.registered-item.rim.concept-version",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Concept Version",
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.model.registered-item.rim.register",
+      "name": "Register",
+      "highlighted": true,
+      "group": "Core Model",
+      "abstract": "A REGISTER description model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register",
+      "status": "under-development",
+      "dateTimeAddition": "2026-09-25T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.2",
+      "dependsOn": [
+        "bblocks://ogc.model.registered-item.core-ontology"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dateOfLastChange": "2026-10-23",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "ontology": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register"
+        }
+      },
+      "@id": "bblocks://ogc.model.registered-item.rim.register",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Register",
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.model.registered-item.rim.register-item-class",
+      "name": "Register Item Class",
+      "highlighted": false,
+      "group": "Core Model",
+      "abstract": "A REGISTER ITEM CLASS model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. (describes the type of object in a register) Modular Building Block to support interoperable profiles of register",
+      "status": "under-development",
+      "dateTimeAddition": "2026-09-25T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.2",
+      "dependsOn": [
+        "bblocks://ogc.model.registered-item.rim.concept-version",
+        "bblocks://ogc.model.registered-item.rim.register"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dateOfLastChange": "2026-10-23",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "ontology": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-item-class/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-item-class/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-item-class/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-item-class"
+        }
+      },
+      "@id": "bblocks://ogc.model.registered-item.rim.register-item-class",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Register Item Class",
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.model.registered-item.rim.register-specification",
+      "name": "Register Specification",
+      "abstract": "Modular RDF implementation profile based on ISO/FDIS 19135:2026.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-09-25T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.2",
+      "dependsOn": [
+        "bblocks://ogc.model.registered-item.rim.register"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dateOfLastChange": "2026-10-23",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "ontology": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-specification/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-specification/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-specification/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-specification/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-specification/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-specification/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-specification"
+        }
+      },
+      "@id": "bblocks://ogc.model.registered-item.rim.register-specification",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Register Specification",
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.model.registered-item.activity-type",
+      "name": "Activity Type Register Profile",
+      "group": "Example: Activity Types",
+      "highlighted": true,
+      "title": "Registers of activity types, profiled from the Registered Item Model",
+      "abstract": "A profile of the Registered Item Model for governed activity type records in the acttype:ActivityType hierarchy, with related PROV object types and an optional plan.",
+      "description": "An activity type register governs activity types with identifiers, statuses and change history. Specific activity type classes specialise acttype:ActivityType, a sub-class of rim:RegisterItem. Registered types may be classes used to type individual activity records; those records also inherit register item requirements. Every activity type record uses acttype:activityTypeItemClass and belongs to the acttype:ActivityType hierarchy through rdf:type. Related entity, agent and activity types and an optional prov:Plan describe the expected activity. Further profiles specialise the root and constrain these related types.",
+      "status": "under-development",
+      "version": "0.3",
+      "itemClass": "model",
+      "isProfileOf": [
+        "bblocks://ogc.model.registered-item.rim.register-item-class"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.model.cross-domain.prov",
+        "bblocks://ogc.model.registered-item.rim.register-item-class"
+      ],
+      "concept": [
+        "https://w3id.org/ogc/rim/activity-type/ActivityType"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.activity-type",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "sources": [
+        {
+          "title": "W3C PROV-O",
+          "link": "https://www.w3.org/TR/prov-o/"
+        },
+        {
+          "title": "P-Plan Ontology",
+          "link": "https://www.opmw.org/model/p-plan/"
+        }
+      ],
+      "tags": [
+        "register",
+        "provenance",
+        "activity type",
+        "plan"
+      ],
+      "dateTimeAddition": "2026-09-23T00:00:00Z",
+      "dateOfLastChange": "2026-10-23",
+      "ontology": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/activity-type/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/activity-type/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/activity-type/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.activity-type"
+        }
+      },
+      "@id": "bblocks://ogc.model.registered-item.activity-type",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Activity Type Register Profile",
+      "openAPIDocument": null,
+      "rdfData": [],
+      "skos:topConceptOf": {
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.model.registered-item.rim.registered-item",
+      "name": "Registered Item",
+      "highlighted": false,
+      "group": "Core Model",
+      "abstract": "A REGISTER ITEM model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. This provides a canonical schema for a register entry, that can be extended according the REGISTER ITEM CLASS defined for the register.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-09-25T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.2",
+      "dependsOn": [
+        "bblocks://ogc.model.registered-item.rim.concept-version",
+        "bblocks://ogc.model.registered-item.rim.register",
+        "bblocks://ogc.model.registered-item.rim.register-item-class"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dateOfLastChange": "2026-10-23",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "ontology": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/registered-item/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/registered-item/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/registered-item/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/registered-item/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/registered-item/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/registered-item/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.registered-item"
+        }
+      },
+      "@id": "bblocks://ogc.model.registered-item.rim.registered-item",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Registered Item",
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
       }
     },
     {
@@ -614,13 +906,14 @@
       "abstract": "A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivityType, each required to use or generate at least one GeoSPARQL spatial data type.",
       "description": "Geoprocessing activities (reprojection, clipping, index computation, classification, model inference over imagery) are distinguished from other activities by the kind of data they use and produce. This block adds geoproc:GeoprocessingActivityType, a sub-class of acttype:ActivityType that every registered geoprocessing activity type specialises. It also constrains the related PROV object types such a type declares: at least one acttype:usedEntityType or acttype:generatedEntityType must be a GeoSPARQL 1.1 spatial type (geo:SpatialObject or geo:SpatialObjectCollection, or a sub-class of either). Further profiles, such as the ML Activity Types Profile, specialise geoproc:GeoprocessingActivityType in turn and add their own constraints.",
       "status": "under-development",
-      "version": "0.1",
+      "version": "0.3",
       "itemClass": "model",
       "isProfileOf": [
         "bblocks://ogc.model.registered-item.activity-type"
       ],
       "dependsOn": [
-        "bblocks://ogc.model.cross-domain.geosparql"
+        "bblocks://ogc.model.cross-domain.geosparql",
+        "bblocks://ogc.model.registered-item.activity-type"
       ],
       "concept": [
         "https://w3id.org/ogc/rim/geoprocessing/GeoprocessingActivityType"
@@ -628,7 +921,7 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity-types/shapes.shacl"
+            "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.model.registered-item.geoprocessing-activity-types",
           "prof:hasRole": "role:validation",
@@ -637,18 +930,9 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+            "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.model.registered-item.activity-type",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -658,6 +942,15 @@
             "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -680,28 +973,51 @@
         "register"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-10-21",
+      "dateOfLastChange": "2026-10-23",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
       "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/ontology.ttl",
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/ontology.ttl",
         "prof:hasRole": "role:specification",
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity-types/",
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity-types/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity-types/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/geoprocessing-activity-types/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/geoprocessing-activity-types/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/geoprocessing-activity-types/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/geoprocessing-activity-types/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.geoprocessing-activity-types"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.geoprocessing-activity-types"
         }
       },
       "@id": "bblocks://ogc.model.registered-item.geoprocessing-activity-types",
@@ -712,40 +1028,135 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Geoprocessing Activity Types Profile",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
       }
     },
     {
-      "itemIdentifier": "ogc.model.registered-item.ml-activity-types",
-      "name": "ML Activity Types Profile",
+      "itemIdentifier": "ogc.model.registered-item.rim.register-action",
+      "name": "Register Action",
+      "highlighted": true,
+      "group": "Core Model",
+      "abstract": "A REGISTER interaction activity model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register",
+      "status": "under-development",
+      "dateTimeAddition": "2026-09-25T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.2",
+      "dependsOn": [
+        "bblocks://ogc.model.cross-domain.prov",
+        "bblocks://ogc.model.registered-item.rim.registered-item"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "dateOfLastChange": "2026-10-23",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "ontology": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-action/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-action/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-action/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-action"
+        }
+      },
+      "@id": "bblocks://ogc.model.registered-item.rim.register-action",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Register Action",
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
+      }
+    },
+    {
+      "itemIdentifier": "ogc.model.registered-item.st-ml-activity-types",
+      "name": "SpatioTemporal ML Activity Types Profile",
       "group": "Example: Activity Types",
       "highlighted": true,
-      "title": "Machine learning training/inference activities, profiled from the Registered Item Model",
-      "abstract": "A profile of the Geoprocessing Activity Types Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.",
+      "title": "SpatioTemporal Machine learning training/inference activities, profiled from the Registered Item Model",
+      "abstract": "A profile of the SpatioTemporal Machine learning Activity Types Profile describing spatiotemporal machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.",
       "description": "The STAC Machine Learning Model (MLM) extension describes a model as a static artifact \u2014 a STAC Item or Collection with declared inputs, outputs and requirements \u2014 but has no notion of a particular run of that model. This block adds that: mlact:MLActivityType (with mlact:TrainingActivityType and mlact:InferenceActivityType sub-types) is a geoproc:GeoprocessingActivityType recording one execution, and so can be specialised into ML activity types held in an activity type register. It is also a rim:RegisterAction. In this ecosystem, running a model is itself a governed act \u2014 typically the one that adds a derived product to a register as a new rim:RegisterItem \u2014 so the run belongs in the same audit trail as any other register action. The activity's task, framework and accelerator are drawn from the MLM extension's own SKOS schemes rather than redefined, and its recorded inputs/outputs (mlact:ActivityInput / mlact:ActivityOutput, both prov:Entity) each declare via dct:conformsTo which of the model's own declared mlm:ModelInput/mlm:ModelOutput specifications they realise. Registered ML activity types must declare at least one mlact:ActivityInput sub-type as a used entity type, and registered inference types at least one mlact:ActivityOutput sub-type as a generated entity type.",
       "status": "under-development",
-      "version": "0.1",
+      "version": "0.3",
       "itemClass": "model",
       "isProfileOf": [
         "bblocks://ogc.model.registered-item.geoprocessing-activity-types"
       ],
       "dependsOn": [
-        "bblocks://ogc.contrib.stac.extensions.mlm-ontology"
+        "bblocks://ogc.contrib.stac.extensions.mlm-ontology",
+        "bblocks://ogc.model.registered-item.geoprocessing-activity-types"
       ],
       "concept": [
-        "https://w3id.org/ogc/rim/ml-activity/MLActivityType"
+        "https://w3id.org/ogc/rim/ml-activity/STMLActivityType"
       ],
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/ml-activity-types/shapes.shacl"
+            "https://nielshoffmann.github.io/registered-item-model/_sources/st-ml-activity-types/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.ml-activity-types",
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.st-ml-activity-types",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -761,7 +1172,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity-types/shapes.shacl"
+            "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity-types/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.model.registered-item.geoprocessing-activity-types",
           "prof:hasRole": "role:validation",
@@ -770,18 +1181,9 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+            "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.model.registered-item.activity-type",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
-            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -791,6 +1193,15 @@
             "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.core-ontology",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -818,355 +1229,70 @@
         "activity type"
       ],
       "dateTimeAddition": "2026-09-17T00:00:00Z",
-      "dateOfLastChange": "2026-10-21",
+      "dateOfLastChange": "2026-10-23",
       "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/ml-activity-types/ontology.ttl",
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/st-ml-activity-types/ontology.ttl",
         "prof:hasRole": "role:specification",
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/ml-activity-types/",
-      "validationPassed": false,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/ml-activity-types/",
+      "schema": [
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/st-ml-activity-types/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/st-ml-activity-types/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/st-ml-activity-types/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/st-ml-activity-types/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/st-ml-activity-types/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/st-ml-activity-types/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/st-ml-activity-types/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/ml-activity-types/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/st-ml-activity-types/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/ml-activity-types/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/st-ml-activity-types/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.ml-activity-types"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.st-ml-activity-types"
         }
       },
-      "@id": "bblocks://ogc.model.registered-item.ml-activity-types",
+      "@id": "bblocks://ogc.model.registered-item.st-ml-activity-types",
       "@type": [
         "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset",
         "bblocks:BBlock"
       ],
-      "skos:prefLabel": "ML Activity Types Profile",
-      "ldContext": null,
-      "schema": null,
+      "skos:prefLabel": "SpatioTemporal ML Activity Types Profile",
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.model.registered-item.rim.register-item-class",
-      "name": "Register Item Class",
-      "highlighted": true,
-      "group": "Core Model",
-      "abstract": "A REGISTER ITEM CLASS model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. (describes the type of object in a register) Modular Building Block to support interoperable profiles of register",
-      "status": "under-development",
-      "dateTimeAddition": "2026-09-25T00:00:00Z",
-      "itemClass": "schema",
-      "version": "0.2",
-      "dependsOn": [
-        "bblocks://ogc.model.registered-item.rim.concept-version",
-        "bblocks://ogc.model.registered-item.rim.register"
-      ],
-      "shaclShapes": null,
-      "dateOfLastChange": "2026-10-21",
-      "ldContext": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/ontology.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "schema": [
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-item-class/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-item-class/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-item-class/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-item-class"
-        }
-      },
-      "@id": "bblocks://ogc.model.registered-item.rim.register-item-class",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Register Item Class",
-      "openAPIDocument": null,
-      "rdfData": [],
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.model.registered-item.rim.register-specification",
-      "name": "Register Specification",
-      "abstract": "Modular RDF implementation profile based on ISO/FDIS 19135:2026.",
-      "status": "under-development",
-      "dateTimeAddition": "2026-09-25T00:00:00Z",
-      "itemClass": "schema",
-      "version": "0.2",
-      "dependsOn": [
-        "bblocks://ogc.model.registered-item.rim.register"
-      ],
-      "shaclShapes": null,
-      "dateOfLastChange": "2026-10-21",
-      "ldContext": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/ontology.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "schema": [
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-specification/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-specification/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-specification/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-specification/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-specification/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-specification/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-specification"
-        }
-      },
-      "@id": "bblocks://ogc.model.registered-item.rim.register-specification",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Register Specification",
-      "openAPIDocument": null,
-      "rdfData": [],
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.model.registered-item.rim.registered-item",
-      "name": "Registered Item",
-      "highlighted": true,
-      "group": "Core Model",
-      "abstract": "A REGISTER ITEM model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. This provides a canonical schema for a register entry, that can be extended according the REGISTER ITEM CLASS defined for the register.",
-      "status": "under-development",
-      "dateTimeAddition": "2026-09-25T00:00:00Z",
-      "itemClass": "schema",
-      "version": "0.2",
-      "dependsOn": [
-        "bblocks://ogc.model.registered-item.rim.concept-version",
-        "bblocks://ogc.model.registered-item.rim.register",
-        "bblocks://ogc.model.registered-item.rim.register-item-class"
-      ],
-      "shaclShapes": null,
-      "dateOfLastChange": "2026-10-21",
-      "ldContext": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/ontology.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "schema": [
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/registered-item/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/registered-item/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/registered-item/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/registered-item/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/registered-item/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/registered-item/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.registered-item"
-        }
-      },
-      "@id": "bblocks://ogc.model.registered-item.rim.registered-item",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Registered Item",
-      "openAPIDocument": null,
-      "rdfData": [],
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
-      }
-    },
-    {
-      "itemIdentifier": "ogc.model.registered-item.rim.register-action",
-      "name": "Register Action",
-      "highlighted": true,
-      "group": "Core Model",
-      "abstract": "A REGISTER interaction activity model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register",
-      "status": "under-development",
-      "dateTimeAddition": "2026-09-25T00:00:00Z",
-      "itemClass": "schema",
-      "version": "0.2",
-      "dependsOn": [
-        "bblocks://ogc.model.registered-item.rim.registered-item"
-      ],
-      "shaclShapes": null,
-      "dateOfLastChange": "2026-10-21",
-      "ldContext": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "ontology": {
-        "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/ontology.ttl",
-        "prof:hasRole": "role:specification",
-        "dct:format": "text/turtle",
-        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
-      },
-      "schema": [
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-action/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-action/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-action/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-action"
-        }
-      },
-      "@id": "bblocks://ogc.model.registered-item.rim.register-action",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Register Action",
-      "openAPIDocument": null,
-      "rdfData": [],
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://ogcincubator.github.io/registered-item-model/"
+        "@id": "https://nielshoffmann.github.io/registered-item-model/"
       }
     }
   ],
   "skos:hasTopConcept": [
     {
-      "@id": "bblocks://ogc.model.registered-item.activity-type"
+      "@id": "bblocks://ogc.model.registered-item.core-ontology"
     },
     {
       "@id": "bblocks://ogc.model.registered-item.rim.concept-version"
@@ -1175,25 +1301,25 @@
       "@id": "bblocks://ogc.model.registered-item.rim.register"
     },
     {
-      "@id": "bblocks://ogc.model.registered-item.core-ontology"
-    },
-    {
-      "@id": "bblocks://ogc.model.registered-item.geoprocessing-activity-types"
-    },
-    {
-      "@id": "bblocks://ogc.model.registered-item.ml-activity-types"
-    },
-    {
       "@id": "bblocks://ogc.model.registered-item.rim.register-item-class"
     },
     {
       "@id": "bblocks://ogc.model.registered-item.rim.register-specification"
     },
     {
+      "@id": "bblocks://ogc.model.registered-item.activity-type"
+    },
+    {
       "@id": "bblocks://ogc.model.registered-item.rim.registered-item"
     },
     {
+      "@id": "bblocks://ogc.model.registered-item.geoprocessing-activity-types"
+    },
+    {
       "@id": "bblocks://ogc.model.registered-item.rim.register-action"
+    },
+    {
+      "@id": "bblocks://ogc.model.registered-item.st-ml-activity-types"
     }
   ]
 }

@@ -28,12 +28,12 @@ ex:inference2026-09-01 a mlact:InferenceActivityType ;
     rim:validityStatus rim:valid .
 
 ex:landCoverModel a stac:Item ;
+    mlm:ActivityInput ex:landCoverInputSpec ;
+    mlm:ActivityOutput ex:landCoverOutputSpec ;
     mlm:architecture "U-Net" ;
     mlm:framework "PyTorch" ;
-    mlm:input ex:landCoverInputSpec ;
     mlm:name "Land Cover Classifier" ;
-    mlm:output ex:landCoverOutputSpec ;
-    mlm:tasks mlm:semantic-segmentation .
+    mlm:performsTask mlm:semantic-segmentation .
 
 ex:predictedItem a rim:RegisterItem ;
     dct:title "Predicted land cover mask, scene S2A_2026-09-01" ;

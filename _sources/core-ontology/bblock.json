@@ -8,12 +8,6 @@
   "status": "under-development",
   "version": "0.1",
   "itemClass": "model",
-  "dependsOn": [
-    "ogc.model.cross-domain.prov"
-  ],
-  "concept": [
-    "https://w3id.org/ogc/rim/RegisterItem"
-  ],
   "shaclShapes": [
     "shapes.shacl"
   ],
@@ -34,5 +28,5 @@
     "metadata"
   ],
   "dateTimeAddition": "2026-09-17T00:00:00Z",
-  "dateOfLastChange": "2026-09-17"
+  "dateOfLastChange": "2026-10-23"
 }

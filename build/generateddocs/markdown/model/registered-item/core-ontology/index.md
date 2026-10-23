@@ -115,6 +115,6 @@ ex:code42 a rim:RegisterItem ;
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/registered-item-model](https://github.com/ogcincubator/registered-item-model)
+* URL: [https://github.com/NielsHoffmann/registered-item-model](https://github.com/NielsHoffmann/registered-item-model)
 * Path: `_sources/core-ontology`
 

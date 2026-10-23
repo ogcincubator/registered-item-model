@@ -11,22 +11,30 @@
   "itemClass": "schema",
   "version": "0.2",
   "dependsOn": [
+    "ogc.model.cross-domain.prov",
     "ogc.model.registered-item.rim.registered-item"
   ],
-  "shaclShapes": {},
-  "dateOfLastChange": "2026-10-21",
-  "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/context.jsonld",
-  "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/ontology.ttl",
-  "schema": {
-    "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.yaml",
-    "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.json"
+  "shaclShapes": {
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.model.registered-item.core-ontology": [
+      "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
   },
-  "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/schema.yaml",
-  "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/context.jsonld",
-  "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/resolvedProperties.json",
-  "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/",
+  "dateOfLastChange": "2026-10-23",
+  "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/context.jsonld",
+  "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.yaml",
+    "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.json"
+  },
+  "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/schema.yaml",
+  "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/context.jsonld",
+  "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/resolvedProperties.json",
+  "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-action/",
+  "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-action/",
   "description": "# Register Action\n\n## Purpose\n\nA **Register Action** records a governed operation that applies to a Registered Item. Actions make changes explicit and support traceability of how managed register content evolves.\n\nKeeping actions separate from registered items avoids embedding process history directly in the item model and allows action vocabularies to evolve independently.\n\n## Scope\n\nThis block introduces:\n\n- `rim:RegisterAction`\n- `rim:RegisterActionType`\n- `rim:ChangeClassification`\n- `rim:actionType`\n- `rim:changeClassification`\n- `rim:appliesTo`\n- `rim:hasAction`\n\nIt also uses `prov:startedAtTime` for action timing.\n\n## Conceptual position\n\n```text\nRegistered Item\n  `-- hasAction --> Register Action\n                       |-- actionType\n                       |-- changeClassification\n                       |-- appliesTo --> Registered Item\n                       `-- startedAtTime\n```\n\n## Dependencies\n\n- `registered-item`\n\n## SHACL validation\n\nA register action requires exactly one action type and exactly one target registered item. It may have one change classification and one start time.\n\n## Typical examples\n\n- addition of a new registered item\n- supersession of an existing item\n- invalidation or retirement\n- publication-state change\n- correctional or substantive change\n\n## ISO 19135 alignment\n\nThis block provides the structural representation of an action record. Authorization, approval, evidence retention and other governance-process requirements require tests beyond the local SHACL shape.\n",
   "examples": [
     {
@@ -34,10 +42,10 @@
       "snippets": [
         {
           "language": "turtle",
-          "ref": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/examples/example.ttl",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/rim/register-action/example_1_1.ttl",
-          "sizeBytes": 330,
-          "code": "@prefix rim: <https://w3id.org/ogc/rim/>.\n@prefix prov: <http://www.w3.org/ns/prov#>.\n@prefix ex: <https://example.org/rim/>.\n\nex:a a rim:RegisterAction;\n  rim:actionType ex:addition;\n  rim:appliesTo ex:i;\n  prov:startedAtTime \"2026-09-25T10:00:00Z\"^^xsd:dateTime.\n\nex:addition a rim:RegisterActionType.\nex:i a rim:RegisterItem.\n\n"
+          "ref": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/examples/example.ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/rim/register-action/example_1_1.ttl",
+          "sizeBytes": 1765,
+          "code": "@prefix rim: <https://w3id.org/ogc/rim/>.\n@prefix prov: <http://www.w3.org/ns/prov#>.\n@prefix dct: <http://purl.org/dc/terms/>.\n@prefix ex: <https://example.org/rim/>.\n@prefix skos: <http://www.w3.org/2004/02/skos/core#>.\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.\n\nex:a a rim:RegisterAction;\n  rim:actionType ex:addition;\n  rim:appliesTo ex:i;\n  prov:startedAtTime \"2026-09-25T10:00:00Z\"^^xsd:dateTime.\n\nex:addition a rim:RegisterActionType.\n\nex:i a rim:RegisterItem;\n  rim:objectIdentifier \"urn:uuid:44444444-4444-4444-8444-444444444444\"^^xsd:anyURI;\n  rim:functionalIdentifier \"https://example.org/items/metre\"^^xsd:anyURI;\n  rim:itemClass ex:uc;\n  rim:inRegister ex:r;\n  rim:realizes ex:cv;\n  rim:validityStatus ex:valid;\n  rim:publicationStatus ex:published;\n  dct:title \"metre\"@en.\n\nex:valid a rim:ValidityStatus .\n\nex:published a rim:PublicationStatus .\n\nex:uc a rim:RegisterItemClass;\n  rim:objectIdentifier \"urn:uuid:33333333-3333-4333-8333-333333333333\"^^xsd:anyURI;\n  rim:functionalIdentifier \"https://example.org/classes/unit\"^^xsd:anyURI;\n  dct:title \"Unit\"@en;\n  rim:definedIn ex:r;\n  rim:realizes ex:c;\n  rim:validatedBy \"https://example.org/rules/unit\"^^xsd:anyURI.\n\nex:r a rim:Register;\n  rim:objectIdentifier \"urn:uuid:11111111-1111-4111-8111-111111111111\"^^xsd:anyURI;\n  rim:functionalIdentifier \"https://example.org/registers/units\"^^xsd:anyURI;\n  dct:title \"Register of Units\"@en.\n\nex:cv a rim:ConceptVersion;\n  rim:versionOf ex:c;\n  rim:version \"1.0\";\n  rim:objectIdentifier \"urn:uuid:22222222-2222-4222-8222-222222222222\"^^xsd:anyURI;\n  rim:functionalIdentifier \"https://example.org/concepts/metre/1.0\"^^xsd:anyURI;\n  rim:validityStatus ex:valid;\n  rim:publicationStatus ex:published.\n\nex:c a rim:Concept;\n  skos:prefLabel \"metre\"@en ."
         }
       ],
       "prefixes": {
@@ -48,7 +56,7 @@
   "examplePrefixes": {
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: ISO 19135 Register Action\ntype: object\nproperties:\n  id:\n    type: string\n    format: uri\n    x-jsonld-id: '@id'\n  type:\n    const: rim:RegisterAction\n    x-jsonld-id: '@type'\nrequired:\n- id\n- type\nadditionalProperties: true\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  dct: http://purl.org/dc/terms/\n  skos: http://www.w3.org/2004/02/skos/core#\n  prov: http://www.w3.org/ns/prov#\nx-bblocks-metadata:\n  itemIdentifier: ogc.model.registered-item.rim.register-action\n  register: https://ogcincubator.github.io/registered-item-model/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-09-25'\n",
-  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: ISO 19135 Register Action\ntype: object\nproperties:\n  id:\n    type: string\n    format: uri\n    x-jsonld-id: '@id'\n  type:\n    const: rim:RegisterAction\n    x-jsonld-id: '@type'\nrequired:\n- id\n- type\nadditionalProperties: true\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  dct: http://purl.org/dc/terms/\n  skos: http://www.w3.org/2004/02/skos/core#\n  prov: http://www.w3.org/ns/prov#\nx-bblocks-metadata:\n  itemIdentifier: ogc.model.registered-item.rim.register-action\n  register: https://nielshoffmann.github.io/registered-item-model/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-09-25'\n",
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
   "gitPath": "_sources/rim/register-action"
 }

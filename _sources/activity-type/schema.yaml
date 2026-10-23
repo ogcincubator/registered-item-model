@@ -1,0 +1,33 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Activity Type
+description: >
+  A registered activity type based on the Registered Item Model.
+
+allOf:
+  - $ref: bblocks://ogc.model.registered-item.rim.register-item-class
+
+  - type: object
+
+    properties:
+
+      usedEntityType:
+        type: string
+        format: uri
+        description: A type of prov:Entity that activities of this type use (prov:used) — for example a type of input dataset.
+
+      generatedEntityType:
+        type: string
+        format: uri
+        description: A type of prov:Entity that activities of this type generate (prov:generated) — for example a type of output product.
+
+      associatedAgentType:
+        type: string
+        format: uri
+        description: A type of prov:Agent (for example prov:Person, prov:SoftwareAgent, or a narrower role-bearing type) that activities of this type are associated with (prov:wasAssociatedWith).
+
+      informedByActivityType:
+        type: string
+        format: uri
+        description: A type of acttype:ActivityType whose instances typically inform activities of this type (prov:wasInformedBy) — for example an upstream preparation activity type.
+
+    unevaluatedProperties: true

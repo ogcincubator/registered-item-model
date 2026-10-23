@@ -1,7 +1,7 @@
 
 # Activity Type Register Profile (Model)
 
-`ogc.model.registered-item.activity-type` *v0.1*
+`ogc.model.registered-item.activity-type` *v0.3*
 
 A profile of the Registered Item Model for governed activity type records in the acttype:ActivityType hierarchy, with related PROV object types and an optional plan.
 
@@ -81,6 +81,74 @@ ex:report-2026-09-20 a ex:QualityReport , prov:Entity ;
 
 ```
 
+## Schema
+
+```yaml
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Activity Type
+description: 'A registered activity type based on the Registered Item Model.
+
+  '
+allOf:
+- $ref: https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.yaml
+- type: object
+  properties:
+    usedEntityType:
+      type: string
+      format: uri
+      description: "A type of prov:Entity that activities of this type use (prov:used)
+        \u2014 for example a type of input dataset."
+    generatedEntityType:
+      type: string
+      format: uri
+      description: "A type of prov:Entity that activities of this type generate (prov:generated)
+        \u2014 for example a type of output product."
+    associatedAgentType:
+      type: string
+      format: uri
+      description: A type of prov:Agent (for example prov:Person, prov:SoftwareAgent,
+        or a narrower role-bearing type) that activities of this type are associated
+        with (prov:wasAssociatedWith).
+    informedByActivityType:
+      type: string
+      format: uri
+      description: "A type of acttype:ActivityType whose instances typically inform
+        activities of this type (prov:wasInformedBy) \u2014 for example an upstream
+        preparation activity type."
+  unevaluatedProperties: true
+x-bblocks-metadata:
+  itemIdentifier: ogc.model.registered-item.activity-type
+  register: https://nielshoffmann.github.io/registered-item-model/build/register.json
+  version: '0.3'
+  dateOfLastChange: '2026-10-23'
+
+```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/schema.json)
+* JSON version: [schema.json](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "rim": "https://w3id.org/ogc/rim/",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/context.jsonld)
+
 ## Sources
 
 * [W3C PROV-O](https://www.w3.org/TR/prov-o/)
@@ -90,6 +158,6 @@ ex:report-2026-09-20 a ex:QualityReport , prov:Entity ;
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/registered-item-model](https://github.com/ogcincubator/registered-item-model)
+* URL: [https://github.com/NielsHoffmann/registered-item-model](https://github.com/NielsHoffmann/registered-item-model)
 * Path: `_sources/activity-type`
 

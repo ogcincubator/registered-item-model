@@ -29,11 +29,11 @@ model describes the former, independent of the latter.
 
 ## Building Blocks
 
-### `ogc.model.registered-item.activity-type` — Activity Type Register Profile
+### `ogc.model.registered-item.core-ontology` — Registered Item Model
 
 **Type:** model
 
-A profile of the Registered Item Model for governed activity type records in the acttype:ActivityType hierarchy, with related PROV object types and an optional plan.
+A base RDF and SHACL model for register items, register item classes and register governance metadata, based on ISO 19135:2026.
 
 ### `ogc.model.registered-item.rim.concept-version` — Concept Version
 
@@ -47,24 +47,6 @@ Modular RDF implementation profile based on ISO/FDIS 19135:2026.
 
 A REGISTER description model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register
 
-### `ogc.model.registered-item.core-ontology` — Registered Item Model
-
-**Type:** model
-
-A base RDF and SHACL model for register items, register item classes and register governance metadata, based on ISO 19135:2026.
-
-### `ogc.model.registered-item.geoprocessing-activity-types` — Geoprocessing Activity Types Profile
-
-**Type:** model
-
-A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivityType, each required to use or generate at least one GeoSPARQL spatial data type.
-
-### `ogc.model.registered-item.ml-activity-types` — ML Activity Types Profile
-
-**Type:** model
-
-A profile of the Geoprocessing Activity Types Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
-
 ### `ogc.model.registered-item.rim.register-item-class` — Register Item Class
 
 **Type:** schema
@@ -77,15 +59,33 @@ A REGISTER ITEM CLASS model with JSON/LD/RDF implementation as defined by ISO/FD
 
 Modular RDF implementation profile based on ISO/FDIS 19135:2026.
 
+### `ogc.model.registered-item.activity-type` — Activity Type Register Profile
+
+**Type:** model
+
+A profile of the Registered Item Model for governed activity type records in the acttype:ActivityType hierarchy, with related PROV object types and an optional plan.
+
 ### `ogc.model.registered-item.rim.registered-item` — Registered Item
 
 **Type:** schema
 
 A REGISTER ITEM model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. This provides a canonical schema for a register entry, that can be extended according the REGISTER ITEM CLASS defined for the register.
 
+### `ogc.model.registered-item.geoprocessing-activity-types` — Geoprocessing Activity Types Profile
+
+**Type:** model
+
+A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivityType, each required to use or generate at least one GeoSPARQL spatial data type.
+
 ### `ogc.model.registered-item.rim.register-action` — Register Action
 
 **Type:** schema
 
 A REGISTER interaction activity model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register
+
+### `ogc.model.registered-item.st-ml-activity-types` — SpatioTemporal ML Activity Types Profile
+
+**Type:** model
+
+A profile of the SpatioTemporal Machine learning Activity Types Profile describing spatiotemporal machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
 

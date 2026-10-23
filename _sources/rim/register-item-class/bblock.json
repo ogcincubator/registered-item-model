@@ -1,6 +1,6 @@
 {
   "name": "Register Item Class",
-  "highlighted": true,
+  "highlighted": false,
   "group": "Core Model",
   "abstract": "A REGISTER ITEM CLASS model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. (describes the type of object in a register) Modular Building Block to support interoperable profiles of register",
   "status": "under-development",

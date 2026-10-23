@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.model.registered-item.rim.registered-item - Registered Item",
   "bblockName": "Registered Item",
   "bblockId": "ogc.model.registered-item.rim.registered-item",
-  "generated": "2026-10-21T12:09:56.486869+00:00",
+  "generated": "2026-10-23T15:42:25.842324+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/model/registered-item/rim/registered-item/example_1_1.ttl",
-        "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/rim/registered-item/example_1_1.ttl",
+        "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/rim/registered-item/example_1_1.ttl",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "text/turtle"
@@ -29,9 +29,76 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 10,
+              "size": 31,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core-ontology/ontology.ttl\n - /github/workspace/_sources/rim/concept-version/ontology.ttl\n - /github/workspace/_sources/rim/register/ontology.ttl\n - /github/workspace/_sources/rim/registered-item/ontology.ttl\n - /github/workspace/_sources/rim/register-item-class/ontology.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/core-ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/core-ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/core-ontology/shapes.shacl",
+              "focusNodes": {
+                "rim:ConceptShape": {
+                  "nodes": [
+                    "ex:c"
+                  ]
+                },
+                "rim:ConceptVersionShape": {
+                  "nodes": [
+                    "ex:cv"
+                  ]
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": [
+                    "ex:uc"
+                  ]
+                },
+                "rim:RegisterItemShape": {
+                  "nodes": [
+                    "ex:i"
+                  ]
+                },
+                "rim:RegisterActionShape": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": [
+                    "ex:r"
+                  ]
+                },
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:ConceptShape: ex:c\n - Shape rim:ConceptVersionShape: ex:cv\n - Shape rim:CommitmentShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: ex:uc\n - Shape rim:RegisterItemShape: ex:i\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n"
             }
           ]
         }

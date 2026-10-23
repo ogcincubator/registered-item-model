@@ -3,7 +3,7 @@
 {
   "itemIdentifier": "ogc.model.registered-item.rim.register-item-class",
   "name": "Register Item Class",
-  "highlighted": true,
+  "highlighted": false,
   "group": "Core Model",
   "abstract": "A REGISTER ITEM CLASS model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. (describes the type of object in a register) Modular Building Block to support interoperable profiles of register",
   "status": "under-development",
@@ -14,20 +14,24 @@
     "ogc.model.registered-item.rim.concept-version",
     "ogc.model.registered-item.rim.register"
   ],
-  "shaclShapes": {},
-  "dateOfLastChange": "2026-10-21",
-  "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/context.jsonld",
-  "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/ontology.ttl",
-  "schema": {
-    "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.yaml",
-    "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.json"
+  "shaclShapes": {
+    "ogc.model.registered-item.core-ontology": [
+      "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
   },
-  "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/schema.yaml",
-  "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/context.jsonld",
-  "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/resolvedProperties.json",
-  "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/",
+  "dateOfLastChange": "2026-10-23",
+  "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/context.jsonld",
+  "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.yaml",
+    "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.json"
+  },
+  "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/schema.yaml",
+  "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/context.jsonld",
+  "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/resolvedProperties.json",
+  "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-item-class/",
+  "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-item-class/",
   "description": "# Register Item Class\n\n## Purpose\n\nA **Register Item Class** is a defined abstraction for register items that share common characteristics. It acts as the type or template against which individual registered items are structured and validated.\n\nThe distinction is comparable to a class and its instances: the Register Item Class defines what a kind of item is, while Registered Items are the actual managed entries.\n\n## Scope\n\nThis block introduces:\n\n- `rim:RegisterItemClass`\n- class-level object and functional identifiers\n- `rim:definedIn`\n- `rim:realizes`\n- `rim:validatedBy`\n\n## Conceptual position\n\n```text\nConcept\n  `-- realized as --> Register Item Class\n                         `-- instantiated by --> Register Items\n```\n\n## Dependencies\n\n- `register`\n- `concept-version`\n\nThese dependencies provide the containing register and the concept-plane terms referenced by this block.\n\n## SHACL validation\n\nA Register Item Class requires one object identifier, one functional identifier, at least one title, exactly one containing register and at least one validation resource. It may realize a concept.\n\n## Typical examples\n\n- Dataset class\n- Coordinate Reference System class\n- API specification class\n- Code-list entry class\n\n## Design guidance\n\nUse this block for reusable requirements applying to a category of items. Do not place the values of an individual registered entry here. Those belong in a Registered Item.\n\n## ISO 19135 alignment\n\nThis block represents the content-plane abstraction used to define coherent requirements for individual register items.\n",
   "examples": [
     {
@@ -35,15 +39,15 @@
       "snippets": [
         {
           "language": "turtle",
-          "ref": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/examples/example.ttl",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/rim/register-item-class/example_1_1.ttl",
-          "sizeBytes": 452,
-          "code": "@prefix rim: <https://w3id.org/ogc/rim/>.\n@prefix dct: <http://purl.org/dc/terms/>.\n@prefix ex: <https://example.org/rim/>.\n\nex:uc a rim:RegisterItemClass;\n  rim:objectIdentifier <urn:uuid:33333333-3333-4333-8333-333333333333>;\n  rim:functionalIdentifier <https://example.org/classes/unit>;\n  dct:title \"Unit\"@en;\n  rim:definedIn ex:r;\n  rim:realizes ex:c;\n  rim:validatedBy <https://example.org/rules/unit>.\n\nex:r a rim:Register.\nex:c a rim:Concept.\n\n"
+          "ref": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/examples/example.ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/rim/register-item-class/example_1_1.ttl",
+          "sizeBytes": 538,
+          "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#>.\n@prefix rim: <https://w3id.org/ogc/rim/>.\n@prefix dct: <http://purl.org/dc/terms/>.\n@prefix ex: <https://example.org/rim/>.\n\nex:uc a rim:RegisterItemClass;\n  rim:objectIdentifier <urn:uuid:33333333-3333-4333-8333-333333333333>;\n  rim:functionalIdentifier <https://example.org/classes/unit>;\n  dct:title \"Unit\"@en;\n  rim:definedIn ex:r;\n  rim:realizes ex:c;\n  rim:validatedBy <https://example.org/rules/unit>.\n\nex:r a rim:Register.\n\nex:c a rim:Concept ;\n  skos:prefLabel \"metre\"@en\n.\n\n"
         }
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: ISO 19135 Register Item Class\ntype: object\nproperties:\n  id:\n    type: string\n    format: uri\n    x-jsonld-id: '@id'\n  type:\n    const: rim:RegisterItemClass\n    x-jsonld-id: '@type'\nrequired:\n- id\n- type\nadditionalProperties: true\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  dct: http://purl.org/dc/terms/\n  skos: http://www.w3.org/2004/02/skos/core#\n  prov: http://www.w3.org/ns/prov#\nx-bblocks-metadata:\n  itemIdentifier: ogc.model.registered-item.rim.register-item-class\n  register: https://ogcincubator.github.io/registered-item-model/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-09-25'\n",
-  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: ISO 19135 Register Item Class\ntype: object\nproperties:\n  id:\n    type: string\n    format: uri\n    x-jsonld-id: '@id'\n  type:\n    const: rim:RegisterItemClass\n    x-jsonld-id: '@type'\nrequired:\n- id\n- type\nadditionalProperties: true\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  dct: http://purl.org/dc/terms/\n  skos: http://www.w3.org/2004/02/skos/core#\n  prov: http://www.w3.org/ns/prov#\nx-bblocks-metadata:\n  itemIdentifier: ogc.model.registered-item.rim.register-item-class\n  register: https://nielshoffmann.github.io/registered-item-model/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-09-25'\n",
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
   "gitPath": "_sources/rim/register-item-class"
 }

@@ -69,7 +69,10 @@ This block provides the structural representation of an action record. Authoriza
 ```turtle
 @prefix rim: <https://w3id.org/ogc/rim/>.
 @prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix dct: <http://purl.org/dc/terms/>.
 @prefix ex: <https://example.org/rim/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 ex:a a rim:RegisterAction;
   rim:actionType ex:addition;
@@ -77,9 +80,44 @@ ex:a a rim:RegisterAction;
   prov:startedAtTime "2026-09-25T10:00:00Z"^^xsd:dateTime.
 
 ex:addition a rim:RegisterActionType.
-ex:i a rim:RegisterItem.
 
+ex:i a rim:RegisterItem;
+  rim:objectIdentifier "urn:uuid:44444444-4444-4444-8444-444444444444"^^xsd:anyURI;
+  rim:functionalIdentifier "https://example.org/items/metre"^^xsd:anyURI;
+  rim:itemClass ex:uc;
+  rim:inRegister ex:r;
+  rim:realizes ex:cv;
+  rim:validityStatus ex:valid;
+  rim:publicationStatus ex:published;
+  dct:title "metre"@en.
 
+ex:valid a rim:ValidityStatus .
+
+ex:published a rim:PublicationStatus .
+
+ex:uc a rim:RegisterItemClass;
+  rim:objectIdentifier "urn:uuid:33333333-3333-4333-8333-333333333333"^^xsd:anyURI;
+  rim:functionalIdentifier "https://example.org/classes/unit"^^xsd:anyURI;
+  dct:title "Unit"@en;
+  rim:definedIn ex:r;
+  rim:realizes ex:c;
+  rim:validatedBy "https://example.org/rules/unit"^^xsd:anyURI.
+
+ex:r a rim:Register;
+  rim:objectIdentifier "urn:uuid:11111111-1111-4111-8111-111111111111"^^xsd:anyURI;
+  rim:functionalIdentifier "https://example.org/registers/units"^^xsd:anyURI;
+  dct:title "Register of Units"@en.
+
+ex:cv a rim:ConceptVersion;
+  rim:versionOf ex:c;
+  rim:version "1.0";
+  rim:objectIdentifier "urn:uuid:22222222-2222-4222-8222-222222222222"^^xsd:anyURI;
+  rim:functionalIdentifier "https://example.org/concepts/metre/1.0"^^xsd:anyURI;
+  rim:validityStatus ex:valid;
+  rim:publicationStatus ex:published.
+
+ex:c a rim:Concept;
+  skos:prefLabel "metre"@en .
 ```
 
 ## Schema
@@ -107,7 +145,7 @@ x-jsonld-prefixes:
   prov: http://www.w3.org/ns/prov#
 x-bblocks-metadata:
   itemIdentifier: ogc.model.registered-item.rim.register-action
-  register: https://ogcincubator.github.io/registered-item-model/build/register.json
+  register: https://nielshoffmann.github.io/registered-item-model/build/register.json
   version: '0.2'
   dateOfLastChange: '2026-09-25'
 
@@ -115,8 +153,8 @@ x-bblocks-metadata:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.yaml)
+* YAML version: [schema.yaml](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.json)
+* JSON version: [schema.json](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.yaml)
 
 
 # JSON-LD Context
@@ -136,13 +174,13 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/context.jsonld)
+[context.jsonld](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/context.jsonld)
 
 
 # For developers
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/registered-item-model](https://github.com/ogcincubator/registered-item-model)
+* URL: [https://github.com/NielsHoffmann/registered-item-model](https://github.com/NielsHoffmann/registered-item-model)
 * Path: `_sources/rim/register-action`
 

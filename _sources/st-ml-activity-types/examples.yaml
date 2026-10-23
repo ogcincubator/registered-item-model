@@ -29,10 +29,10 @@ examples:
           ex:landCoverModel a stac:Item ;
               mlm:name "Land Cover Classifier" ;
               mlm:architecture "U-Net" ;
-              mlm:tasks mlm:semantic-segmentation ;
+              mlm:performsTask mlm:semantic-segmentation ;
               mlm:framework "PyTorch" ;
-              mlm:input ex:landCoverInputSpec ;
-              mlm:output ex:landCoverOutputSpec .
+              mlm:ActivityInput ex:landCoverInputSpec ;
+              mlm:ActivityOutput ex:landCoverOutputSpec .
 
           ex:landCoverInputSpec a mlm:ModelInput ;
               mlm:io_name "sentinel2_bands" ;

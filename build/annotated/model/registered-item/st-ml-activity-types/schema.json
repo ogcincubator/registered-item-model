@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SpatioTemporal ML Activity Types Profile",
+  "description": "A profile of the Activity Type Register Profile for SpatioTemporal ML Activity Types\n",
+  "allOf": [
+    {
+      "$ref": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity-types/schema.json"
+    }
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.model.registered-item.st-ml-activity-types",
+    "register": "https://nielshoffmann.github.io/registered-item-model/build/register.json",
+    "version": "0.3",
+    "dateOfLastChange": "2026-10-23"
+  }
+}

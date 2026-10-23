@@ -1,6 +1,8 @@
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix ex: <https://example.org/rim/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:a a rim:RegisterAction ;
@@ -10,5 +12,41 @@ ex:a a rim:RegisterAction ;
 
 ex:addition a rim:RegisterActionType .
 
-ex:i a rim:RegisterItem .
+ex:cv a rim:ConceptVersion ;
+    rim:functionalIdentifier "https://example.org/concepts/metre/1.0"^^xsd:anyURI ;
+    rim:objectIdentifier "urn:uuid:22222222-2222-4222-8222-222222222222"^^xsd:anyURI ;
+    rim:publicationStatus ex:published ;
+    rim:validityStatus ex:valid ;
+    rim:version "1.0" ;
+    rim:versionOf ex:c .
+
+ex:i a rim:RegisterItem ;
+    dct:title "metre"@en ;
+    rim:functionalIdentifier "https://example.org/items/metre"^^xsd:anyURI ;
+    rim:inRegister ex:r ;
+    rim:itemClass ex:uc ;
+    rim:objectIdentifier "urn:uuid:44444444-4444-4444-8444-444444444444"^^xsd:anyURI ;
+    rim:publicationStatus ex:published ;
+    rim:realizes ex:cv ;
+    rim:validityStatus ex:valid .
+
+ex:uc a rim:RegisterItemClass ;
+    dct:title "Unit"@en ;
+    rim:definedIn ex:r ;
+    rim:functionalIdentifier "https://example.org/classes/unit"^^xsd:anyURI ;
+    rim:objectIdentifier "urn:uuid:33333333-3333-4333-8333-333333333333"^^xsd:anyURI ;
+    rim:realizes ex:c ;
+    rim:validatedBy "https://example.org/rules/unit"^^xsd:anyURI .
+
+ex:c a rim:Concept ;
+    skos:prefLabel "metre"@en .
+
+ex:published a rim:PublicationStatus .
+
+ex:r a rim:Register ;
+    dct:title "Register of Units"@en ;
+    rim:functionalIdentifier "https://example.org/registers/units"^^xsd:anyURI ;
+    rim:objectIdentifier "urn:uuid:11111111-1111-4111-8111-111111111111"^^xsd:anyURI .
+
+ex:valid a rim:ValidityStatus .
 

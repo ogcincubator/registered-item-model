@@ -70,6 +70,7 @@ This block captures the ISO 19135 separation between semantic identity and concr
 @prefix rim: <https://w3id.org/ogc/rim/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix ex: <https://example.org/rim/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 ex:c a rim:Concept;
   skos:prefLabel "metre"@en.
@@ -77,12 +78,13 @@ ex:c a rim:Concept;
 ex:cv a rim:ConceptVersion;
   rim:versionOf ex:c;
   rim:version "1.0";
-  rim:objectIdentifier <urn:uuid:22222222-2222-4222-8222-222222222222>;
-  rim:functionalIdentifier <https://example.org/concepts/metre/1.0>;
+  rim:objectIdentifier "urn:uuid:22222222-2222-4222-8222-222222222222"^^xsd:anyURI;
+  rim:functionalIdentifier "https://example.org/concepts/metre/1.0"^^xsd:anyURI;
   rim:validityStatus ex:valid;
   rim:publicationStatus ex:published.
 
 ex:valid a rim:ValidityStatus.
+
 ex:published a rim:PublicationStatus.
 
 
@@ -113,7 +115,7 @@ x-jsonld-prefixes:
   prov: http://www.w3.org/ns/prov#
 x-bblocks-metadata:
   itemIdentifier: ogc.model.registered-item.rim.concept-version
-  register: https://ogcincubator.github.io/registered-item-model/build/register.json
+  register: https://nielshoffmann.github.io/registered-item-model/build/register.json
   version: '0.2'
   dateOfLastChange: '2026-09-25'
 
@@ -121,8 +123,8 @@ x-bblocks-metadata:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.yaml)
+* YAML version: [schema.yaml](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.json)
+* JSON version: [schema.json](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.yaml)
 
 
 # JSON-LD Context
@@ -142,13 +144,13 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/context.jsonld)
+[context.jsonld](https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/context.jsonld)
 
 
 # For developers
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/registered-item-model](https://github.com/ogcincubator/registered-item-model)
+* URL: [https://github.com/NielsHoffmann/registered-item-model](https://github.com/NielsHoffmann/registered-item-model)
 * Path: `_sources/rim/concept-version`
 

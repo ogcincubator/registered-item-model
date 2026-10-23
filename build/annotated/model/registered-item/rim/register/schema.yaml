@@ -20,6 +20,6 @@ x-jsonld-prefixes:
   prov: http://www.w3.org/ns/prov#
 x-bblocks-metadata:
   itemIdentifier: ogc.model.registered-item.rim.register
-  register: https://ogcincubator.github.io/registered-item-model/build/register.json
+  register: https://nielshoffmann.github.io/registered-item-model/build/register.json
   version: '0.2'
   dateOfLastChange: '2026-09-25'

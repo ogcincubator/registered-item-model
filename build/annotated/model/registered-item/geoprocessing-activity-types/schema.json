@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Geoprocessing Activity Type",
+  "description": "A profile of the Activity Type Register Profile for geoprocessing activity types\n",
+  "allOf": [
+    {
+      "$ref": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/schema.json"
+    }
+  ],
+  "x-jsonld-extra-terms": {
+    "id": "@id",
+    "type": "@type",
+    "title": "http://purl.org/dc/terms/title",
+    "description": "http://purl.org/dc/terms/description",
+    "version": "http://www.w3.org/2002/07/owl#versionInfo",
+    "usedEntityType": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/activity-type/usedEntityType",
+      "x-jsonld-type": "@id"
+    },
+    "generatedEntityType": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/activity-type/generatedEntityType",
+      "x-jsonld-type": "@id"
+    },
+    "associatedAgentType": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/activity-type/associatedAgentType",
+      "x-jsonld-type": "@id"
+    },
+    "informedByActivityType": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/activity-type/informedByActivityType",
+      "x-jsonld-type": "@id"
+    }
+  },
+  "x-jsonld-prefixes": {
+    "dct": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "acttype": "https://w3id.org/ogc/rim/activity-type/",
+    "rim": "https://w3id.org/ogc/rim#"
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.model.registered-item.geoprocessing-activity-types",
+    "register": "https://nielshoffmann.github.io/registered-item-model/build/register.json",
+    "version": "0.3",
+    "dateOfLastChange": "2026-10-23"
+  }
+}

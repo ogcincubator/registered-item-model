@@ -45,3 +45,8 @@ activity type register, each with an optional plan of required steps.
 
 Nothing here modifies the MLM ontology or the base Registered Item Model — it only adds new classes
 and properties on top of both, which is what makes it a profile rather than a fork of either.
+
+
+## Note:
+
+Since this is a profile of MLM and Geoprocessing Activity types it is specifically a SpatioTemporal ML profile, not a generic ML profile.

@@ -1,0 +1,11 @@
+{
+  "id": "Buffer",
+  "title": "Create a buffer around a polygon. ",
+  "description": "This service shall return a feature collection representing the buffer of geometry InputPolygon at distance BufferDistance. The buffer of a geometry at distance d is the Polygon or MultiPolygon which contains all points within a distance d of the geometry.",
+  "version": "2.0.0",
+  "type": "rim:RegisterItemClass",
+  "usedEntityType": "point",
+  "generatedEntityType": "polygon",
+  "associatedAgentType": "Geoprocessing library ...",
+  "informedByActivityType": "none"
+}
