@@ -2,6 +2,7 @@
 @prefix dct:  <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
@@ -324,6 +325,13 @@ rim:hasAction a owl:ObjectProperty ;
     rdfs:comment "Relates a register item to a recorded action performed on it." ;
     rdfs:domain rim:RegisterItem ;
     rdfs:range rim:RegisterAction .
+
+rim:affectedProperty a owl:ObjectProperty ;
+    rdfs:isDefinedBy rim: ;
+    rdfs:label "affected property" ;
+    rdfs:comment "Indicates the property of the register item that the register action affected." ;
+    rdfs:domain rim:RegisterAction ;
+    rdfs:range rdf:property .
 
 #################################################################
 # Concept plane
