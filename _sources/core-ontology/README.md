@@ -38,3 +38,7 @@ Sub-registers are expected to declare `isProfileOf` this block — as a null pro
 elements, only tighter constraints on who may publish or which values are allowed), an additive
 profile (new item classes or properties), or a constrained profile (narrower cardinalities or
 enumerations) — and always validate against this base model.
+
+## Register Item Class
+
+![](img/rim-registeritem.svg)
