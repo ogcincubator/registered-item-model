@@ -16,7 +16,7 @@
     "ogc.model.registered-item.rim.register-item-class"
   ],
   "shaclShapes": {},
-  "dateOfLastChange": "2026-10-21",
+  "dateOfLastChange": "2026-10-29",
   "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/context.jsonld",
   "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/ontology.ttl",
   "schema": {

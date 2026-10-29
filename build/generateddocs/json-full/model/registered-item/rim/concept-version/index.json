@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "version": "0.2",
   "shaclShapes": {},
-  "dateOfLastChange": "2026-10-21",
+  "dateOfLastChange": "2026-10-29",
   "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/context.jsonld",
   "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/ontology.ttl",
   "schema": {

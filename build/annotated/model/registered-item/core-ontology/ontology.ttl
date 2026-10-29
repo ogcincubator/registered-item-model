@@ -31,6 +31,13 @@ rim:additionAction a skos:Concept,
     skos:inScheme rim:RegisterActionTypeScheme ;
     skos:prefLabel "addition"@en .
 
+rim:affectedProperty a owl:ObjectProperty ;
+    rdfs:label "affected property" ;
+    rdfs:comment "Indicates the property of the register item that the register action affected." ;
+    rdfs:domain rim:RegisterAction ;
+    rdfs:isDefinedBy rim: ;
+    rdfs:range rdf:property .
+
 rim:changeClassification a owl:ObjectProperty ;
     rdfs:label "change classification" ;
     rdfs:domain rim:RegisterAction ;

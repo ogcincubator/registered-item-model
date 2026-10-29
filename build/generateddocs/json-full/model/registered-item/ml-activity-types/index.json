@@ -62,7 +62,7 @@
     "activity type"
   ],
   "dateTimeAddition": "2026-09-17T00:00:00Z",
-  "dateOfLastChange": "2026-10-21",
+  "dateOfLastChange": "2026-10-29",
   "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/ml-activity-types/ontology.ttl",
   "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/ml-activity-types/",
   "validationPassed": false,

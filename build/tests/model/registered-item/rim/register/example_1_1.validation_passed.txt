@@ -1,5 +1,5 @@
 Validation report for ogc.model.registered-item.rim.register - Register
-Generated 2026-10-21T12:09:49.462876+00:00
+Generated 2026-10-29T11:52:48.589865+00:00
 === Files ===
 Using examples/example.ttl from examples
 Output Turtle example_1_1.ttl created
