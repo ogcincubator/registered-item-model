@@ -180,14 +180,14 @@ rim:objectIdentifier a owl:DatatypeProperty ;
     rdfs:isDefinedBy rim: ;
     rdfs:label "object identifier" ;
     rdfs:comment "An identifier permanently bound to one object; it never redirects and never comes to refer to something else." ;
-    rdfs:domain [ owl:unionOf (rim:RegisterItem rim:ConceptVersion) ] ;
+    rdfs:domain [ owl:unionOf (rim:Register rim:RegisterItemClass rim:RegisterItem rim:ConceptVersion) ] ;
     rdfs:range xsd:anyURI .
 
 rim:functionalIdentifier a owl:DatatypeProperty ;
     rdfs:isDefinedBy rim: ;
     rdfs:label "functional identifier" ;
     rdfs:comment "A redirectable identifier: what it resolves to may change over time so that it continues to serve its original intent, for example \"the current version of this concept\"." ;
-    rdfs:domain [ owl:unionOf (rim:RegisterItem rim:ConceptVersion) ] ;
+    rdfs:domain [ owl:unionOf (rim:Register rim:RegisterItemClass rim:RegisterItem rim:ConceptVersion) ] ;
     rdfs:range xsd:anyURI .
 
 #################################################################
@@ -364,6 +364,13 @@ rim:versionOf a owl:ObjectProperty ;
     rdfs:label "version of" ;
     rdfs:domain rim:ConceptVersion ;
     rdfs:range rim:Concept .
+
+rim:version a owl:DatatypeProperty ;
+    rdfs:isDefinedBy rim: ;
+    rdfs:label "version" ;
+    rdfs:comment "The version designation of a concept version, as the register's own versioning scheme (documented in its register specification) writes it." ;
+    rdfs:domain rim:ConceptVersion ;
+    rdfs:range xsd:string .
 
 rim:realizes a owl:ObjectProperty ;
     rdfs:isDefinedBy rim: ;

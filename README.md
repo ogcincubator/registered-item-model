@@ -27,6 +27,19 @@ See [`_sources/core-ontology/README.md`](_sources/core-ontology/README.md) for w
 covers, and the block's `bblock.json` `sources` for the ISO 19135:2026 reference and the companion
 design analysis this repository is grounded in.
 
+## JSON / JSON-LD binding
+
+The core block is RDF (OWL + SKOS + SHACL). The six blocks under [`_sources/rim`](_sources/rim)
+— `register`, `register-specification`, `register-item-class`, `registered-item`,
+`concept-version`, `register-action` — are its JSON binding: one JSON Schema and one JSON-LD
+context each, mapping plain JSON keys (`objectIdentifier`, `itemClass`, `validityStatus: "valid"`,
+`actionType: "addition"`, ...) onto the core terms and SKOS values. They define no term of their
+own; every class, property and status value lives once, in `core-ontology`. Their schemas pin only
+the ISO 19135:2026 required core and leave `type` open, so that a sub-register can
+`allOf`-reference `registered-item` while typing its items with its own sub-class of
+`rim:RegisterItem` — the core SHACL shapes then apply to those items through the ontology closure.
+Each block carries a JSON example and the equivalent Turtle, validated against the same shapes.
+
 ## Profiles
 
 The profiles form one chain, each a profile of the one above it:

@@ -27,7 +27,7 @@ description: |
   called the "registry" — is merely the information system it happens to run on. This
   model describes the former, independent of the latter.
 
-identifier-prefix: ogc.model.registered-item.
+identifier-prefix: ogc.rim.
 
 imports:
   - default

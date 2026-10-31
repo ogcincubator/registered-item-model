@@ -1,0 +1,34 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ISO 19135 Concept Version
+description: >-
+  A version of a concept, in a register's concept plane. Concept versions, not concepts, carry the
+  required validity and publication statuses (ISO 19135:2026). `versionOf` is the concept, as an IRI
+  or an embedded rim:Concept node (`prefLabel` required there). `type` is not pinned so that a
+  sub-register may use its own term.
+type: object
+required: [id, type, versionOf, objectIdentifier, validityStatus, publicationStatus]
+properties:
+  id: {type: string, format: uri}
+  type:
+    oneOf:
+      - type: string
+      - {type: array, minItems: 1, items: {type: string}}
+  versionOf:
+    oneOf:
+      - {type: string, format: uri}
+      - type: object
+        required: [id, prefLabel]
+        properties:
+          id: {type: string, format: uri}
+          type: {const: Concept}
+          prefLabel: {type: string}
+          definition: {type: string}
+          inScheme: {type: string, format: uri}
+  version: {type: string}
+  objectIdentifier: {type: string, format: uri}
+  functionalIdentifier: {type: string, format: uri}
+  validityStatus: {enum: [valid, invalid]}
+  publicationStatus: {enum: [published, unpublished]}
+  isRedacted: {type: boolean}
+  isDeleted: {type: boolean}
+additionalProperties: true

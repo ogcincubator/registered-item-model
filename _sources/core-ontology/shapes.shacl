@@ -38,6 +38,8 @@ rim:RegisterItemShape a sh:NodeShape ;
 
 rim:RegisterItemClassShape a sh:NodeShape ;
     sh:targetClass rim:RegisterItemClass ;
+    sh:property [ sh:path rim:objectIdentifier ;     sh:datatype xsd:anyURI ; sh:maxCount 1 ] ;
+    sh:property [ sh:path rim:functionalIdentifier ; sh:datatype xsd:anyURI ; sh:maxCount 1 ] ;
     sh:property [ sh:path dct:title ;       sh:node rim:TextShape ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path dct:description ; sh:node rim:TextShape ] ;
     sh:property [ sh:path rim:definedIn ;   sh:class rim:Register ;  sh:maxCount 1 ] ;
@@ -45,6 +47,8 @@ rim:RegisterItemClassShape a sh:NodeShape ;
 
 rim:RegisterShape a sh:NodeShape ;
     sh:targetClass rim:Register ;
+    sh:property [ sh:path rim:objectIdentifier ;     sh:datatype xsd:anyURI ; sh:maxCount 1 ] ;
+    sh:property [ sh:path rim:functionalIdentifier ; sh:datatype xsd:anyURI ; sh:maxCount 1 ] ;
     sh:property [ sh:path dct:title ;             sh:node rim:TextShape ;             sh:maxCount 1 ] ;
     sh:property [ sh:path dct:description ;       sh:node rim:TextShape ] ;
     sh:property [ sh:path rim:hasSpecification ;  sh:class rim:RegisterSpecification ; sh:maxCount 1 ] ;
@@ -64,6 +68,7 @@ rim:ConceptShape a sh:NodeShape ;
 rim:ConceptVersionShape a sh:NodeShape ;
     sh:targetClass rim:ConceptVersion ;
     sh:property [ sh:path rim:versionOf ;            sh:class rim:Concept ;            sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path rim:version ;              sh:datatype xsd:string ;          sh:maxCount 1 ] ;
     sh:property [ sh:path rim:objectIdentifier ;     sh:datatype xsd:anyURI ;          sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path rim:functionalIdentifier ; sh:datatype xsd:anyURI ;          sh:maxCount 1 ] ;
     sh:property [ sh:path rim:validityStatus ;       sh:class rim:ValidityStatus ;     sh:minCount 1 ; sh:maxCount 1 ] ;

@@ -1,4 +1,0 @@
-- title: Valid ISO 19135 Concept Version example
-  snippets:
-    - language: turtle
-      ref: examples/example.ttl

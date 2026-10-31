@@ -1,4 +1,0 @@
-- title: Valid ISO 19135 Registered Item example
-  snippets:
-    - language: turtle
-      ref: examples/example.ttl

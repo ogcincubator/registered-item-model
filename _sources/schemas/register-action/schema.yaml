@@ -1,0 +1,34 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ISO 19135 Register Action
+description: >-
+  A recorded, governed change to register content (ISO 19135:2026), a prov:Activity: what kind of
+  change, how it is classified, which item it applied to, who proposed it, when. `type` is not pinned
+  so that a sub-register may use its own term.
+type: object
+required: [id, type, actionType]
+properties:
+  id: {type: string, format: uri}
+  type:
+    oneOf:
+      - type: string
+      - {type: array, minItems: 1, items: {type: string}}
+  actionType: {enum: [addition, publish, unpublish, invalidation, supersession, redaction, deletion]}
+  changeClassification: {enum: [substantive, clarifying, correctional]}
+  appliesTo:
+    description: The register item acted upon (an IRI or an embedded node).
+    $ref: '#/$defs/ref'
+  proposer: {$ref: '#/$defs/ref'}
+  wasAssociatedWith: {$ref: '#/$defs/refs'}
+  startedAtTime: {type: string, format: date-time}
+  endedAtTime: {type: string, format: date-time}
+  description: {type: string}
+additionalProperties: true
+$defs:
+  ref:
+    oneOf:
+      - {type: string, format: uri}
+      - {type: object, required: [id], properties: {id: {type: string, format: uri}}}
+  refs:
+    oneOf:
+      - $ref: '#/$defs/ref'
+      - {type: array, items: {$ref: '#/$defs/ref'}}

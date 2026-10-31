@@ -1,0 +1,14 @@
+{
+  "name": "Register",
+    "highlighted": false,
+  "group": "Core Model",
+  "abstract": "A REGISTER description model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register",
+  "status": "under-development",
+  "dateTimeAddition": "2026-09-25T00:00:00Z",
+  "dateOfLastChange": "2026-10-28",
+  "itemClass": "schema",
+  "version": "0.2",
+  "dependsOn": [
+    "ogc.rim.core-ontology"
+  ]
+}

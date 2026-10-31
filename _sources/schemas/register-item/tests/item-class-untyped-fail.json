@@ -1,0 +1,9 @@
+{
+  "id": "https://example.org/rim/i-ungoverned",
+  "type": "RegisterItem",
+  "objectIdentifier": "urn:uuid:55555555-5555-4555-8555-555555555555",
+  "title": "metre -- must fail: its item class is not a declared rim:RegisterItemClass (passes the JSON Schema, rejected by rim:RegisterItemShape's sh:class)",
+  "validityStatus": "valid",
+  "publicationStatus": "published",
+  "itemClass": "https://example.org/rim/uc"
+}

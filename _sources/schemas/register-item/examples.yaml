@@ -1,0 +1,68 @@
+prefixes:
+  rim: https://w3id.org/ogc/rim/
+  dct: http://purl.org/dc/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  ex: https://example.org/rim/
+
+examples:
+  - title: A register item realising a concept version (JSON)
+    content: |
+      The registered "metre", with the ISO 19135:2026 required core (object identifier, item class,
+      validity and publication status) plus its register and the concept version it realises. The
+      referenced nodes are embedded with their `type` so that the base shape's `sh:class` checks
+      hold on this document alone; in a real register they would be separate resources referenced
+      by IRI.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://example.org/rim/i",
+            "type": "RegisterItem",
+            "objectIdentifier": "urn:uuid:44444444-4444-4444-8444-444444444444",
+            "functionalIdentifier": "https://example.org/items/metre",
+            "title": "metre",
+            "itemClass": { "id": "https://example.org/rim/uc", "type": "RegisterItemClass", "title": "Unit" },
+            "inRegister": { "id": "https://example.org/rim/r", "type": "Register", "title": "Register of Units" },
+            "realizes": {
+              "id": "https://example.org/rim/cv",
+              "type": "ConceptVersion",
+              "versionOf": { "id": "https://example.org/rim/c", "type": "Concept", "prefLabel": "metre" },
+              "version": "1.0",
+              "objectIdentifier": "urn:uuid:22222222-2222-4222-8222-222222222222",
+              "validityStatus": "valid",
+              "publicationStatus": "published"
+            },
+            "validityStatus": "valid",
+            "publicationStatus": "published"
+          }
+  - title: The same item in Turtle
+    snippets:
+      - language: turtle
+        code: |
+          ex:i a rim:RegisterItem ;
+              rim:objectIdentifier "urn:uuid:44444444-4444-4444-8444-444444444444"^^xsd:anyURI ;
+              rim:functionalIdentifier "https://example.org/items/metre"^^xsd:anyURI ;
+              rim:itemClass ex:uc ;
+              rim:inRegister ex:r ;
+              rim:realizes ex:cv ;
+              rim:validityStatus rim:valid ;
+              rim:publicationStatus rim:published ;
+              dct:title "metre"@en .
+
+          ex:uc a rim:RegisterItemClass ;
+              dct:title "Unit"@en ;
+              rim:definedIn ex:r .
+
+          ex:r a rim:Register ;
+              dct:title "Register of Units"@en .
+
+          ex:cv a rim:ConceptVersion ;
+              rim:versionOf ex:c ;
+              rim:version "1.0" ;
+              rim:objectIdentifier "urn:uuid:22222222-2222-4222-8222-222222222222"^^xsd:anyURI ;
+              rim:validityStatus rim:valid ;
+              rim:publicationStatus rim:published .
+
+          ex:c a rim:Concept ;
+              skos:prefLabel "metre"@en .

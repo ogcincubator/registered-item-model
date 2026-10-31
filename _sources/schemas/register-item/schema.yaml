@@ -1,0 +1,53 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ISO 19135 Register Item
+description: >-
+  A register item: the concrete record in a register's content plane (ISO 19135:2026). Pins the
+  model's required core -- object identifier, item class, validity and publication status -- and
+  nothing else, so that a sub-register can `allOf`-reference this schema and add its own content
+  properties. `type` is not pinned: a sub-register uses its own type term, declared in its ontology
+  as a sub-class of rim:RegisterItem, and the base SHACL shape then applies through that sub-class.
+type: object
+required: [id, type, objectIdentifier, itemClass, validityStatus, publicationStatus]
+properties:
+  id: {type: string, format: uri}
+  type:
+    description: rim:RegisterItem, or a sub-register's own term for a sub-class of it.
+    oneOf:
+      - type: string
+      - {type: array, minItems: 1, items: {type: string}}
+  objectIdentifier:
+    description: Permanently bound to this item; never redirects.
+    type: string
+    format: uri
+  functionalIdentifier:
+    description: Redirectable identifier serving a stable intent (e.g. "the current version").
+    type: string
+    format: uri
+  itemClass:
+    description: The item's one rim:RegisterItemClass (an IRI or an embedded node).
+    $ref: '#/$defs/ref'
+  inRegister: {$ref: '#/$defs/ref'}
+  realizes:
+    description: The rim:ConceptVersion this item represents, where the register has a concept plane.
+    $ref: '#/$defs/ref'
+  validityStatus: {enum: [valid, invalid]}
+  publicationStatus: {enum: [published, unpublished]}
+  isRedacted: {type: boolean}
+  isDeleted: {type: boolean}
+  title: {type: string}
+  description: {type: string}
+  relatedItem: {$ref: '#/$defs/refs'}
+  supersededBy: {$ref: '#/$defs/refs'}
+  supersedes: {$ref: '#/$defs/refs'}
+  hasAction: {$ref: '#/$defs/refs'}
+additionalProperties: true
+$defs:
+  ref:
+    description: An IRI, or an embedded node carrying at least its `id`.
+    oneOf:
+      - {type: string, format: uri}
+      - {type: object, required: [id], properties: {id: {type: string, format: uri}}}
+  refs:
+    oneOf:
+      - $ref: '#/$defs/ref'
+      - {type: array, items: {$ref: '#/$defs/ref'}}

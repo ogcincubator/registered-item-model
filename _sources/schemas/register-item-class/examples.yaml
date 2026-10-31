@@ -1,0 +1,38 @@
+prefixes:
+  rim: https://w3id.org/ogc/rim/
+  dct: http://purl.org/dc/terms/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  ex: https://example.org/rim/
+
+examples:
+  - title: An item class and the rule set that validates it (JSON)
+    content: |
+      The "Unit" item class of the register of units. `validatedBy` names the executable rule set
+      (here a SHACL shape) that expresses the class's data requirements; `definedIn` embeds the
+      register node so that the base shape's `sh:class rim:Register` check is satisfied by the
+      example alone.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://example.org/rim/uc",
+            "type": "RegisterItemClass",
+            "objectIdentifier": "urn:uuid:33333333-3333-4333-8333-333333333333",
+            "functionalIdentifier": "https://example.org/classes/unit",
+            "title": "Unit",
+            "description": "A unit of measure: name, symbol, dimension and conversion factor to the SI coherent unit.",
+            "definedIn": { "id": "https://example.org/rim/r", "type": "Register", "title": "Register of Units" },
+            "validatedBy": "https://example.org/rules/UnitShape"
+          }
+  - title: The same item class in Turtle
+    snippets:
+      - language: turtle
+        code: |
+          ex:uc a rim:RegisterItemClass ;
+              rim:objectIdentifier "urn:uuid:33333333-3333-4333-8333-333333333333"^^xsd:anyURI ;
+              rim:functionalIdentifier "https://example.org/classes/unit"^^xsd:anyURI ;
+              dct:title "Unit"@en ;
+              rim:definedIn ex:r ;
+              rim:validatedBy <https://example.org/rules/UnitShape> .
+
+          ex:r a rim:Register .

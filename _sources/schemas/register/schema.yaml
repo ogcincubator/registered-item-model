@@ -1,0 +1,47 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ISO 19135 Register
+description: >-
+  A register (ISO 19135:2026): the governed collection itself, distinct from the register system it
+  runs on and from the register specification that documents its governance. `type` is not pinned so
+  that a sub-register may use its own type term (a sub-class of rim:Register in its ontology).
+type: object
+required: [id, type]
+properties:
+  id: {type: string, format: uri}
+  type:
+    description: rim:Register, or a sub-register's own term for a sub-class of it.
+    oneOf:
+      - type: string
+      - {type: array, minItems: 1, items: {type: string}}
+  objectIdentifier: {type: string, format: uri}
+  functionalIdentifier: {type: string, format: uri}
+  title: {type: string}
+  description: {type: string}
+  runsOn: {$ref: '#/$defs/ref'}
+  hasSpecification: {$ref: '#/$defs/ref'}
+  registerOwner: {$ref: '#/$defs/refs'}
+  registerManager: {$ref: '#/$defs/refs'}
+  controlBody: {$ref: '#/$defs/refs'}
+  registerSystemManager: {$ref: '#/$defs/refs'}
+  registerUser: {$ref: '#/$defs/refs'}
+  hasCommitment:
+    type: array
+    items:
+      type: object
+      required: [commitmentCategory, description]
+      properties:
+        id: {type: string, format: uri}
+        type: {const: Commitment}
+        commitmentCategory: {enum: [access, persistence, transparency]}
+        description: {type: string}
+additionalProperties: true
+$defs:
+  ref:
+    description: An IRI, or an embedded node carrying at least its `id`.
+    oneOf:
+      - {type: string, format: uri}
+      - {type: object, required: [id], properties: {id: {type: string, format: uri}}}
+  refs:
+    oneOf:
+      - $ref: '#/$defs/ref'
+      - {type: array, items: {$ref: '#/$defs/ref'}}

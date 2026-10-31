@@ -1,0 +1,55 @@
+prefixes:
+  rim: https://w3id.org/ogc/rim/
+  dct: http://purl.org/dc/terms/
+  prov: http://www.w3.org/ns/prov#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  ex: https://example.org/rim/
+
+examples:
+  - title: The addition of a register item, as proposed and recorded (JSON)
+    content: |
+      The action that added the "metre" item: its type and change classification come from the
+      model's own SKOS schemes (`rim:additionAction`, `rim:substantiveChange`); the proposer is a
+      `prov:Agent`; the item acted upon is embedded with its required core.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://example.org/rim/a",
+            "type": "RegisterAction",
+            "actionType": "addition",
+            "changeClassification": "substantive",
+            "proposer": { "id": "https://example.org/org/metrology", "type": "Organization", "label": "Metrology office" },
+            "startedAtTime": "2026-09-25T10:00:00Z",
+            "appliesTo": {
+              "id": "https://example.org/rim/i",
+              "type": "RegisterItem",
+              "objectIdentifier": "urn:uuid:44444444-4444-4444-8444-444444444444",
+              "title": "metre",
+              "itemClass": { "id": "https://example.org/rim/uc", "type": "RegisterItemClass", "title": "Unit" },
+              "validityStatus": "valid",
+              "publicationStatus": "published"
+            }
+          }
+  - title: The same action in Turtle
+    snippets:
+      - language: turtle
+        code: |
+          ex:a a rim:RegisterAction ;
+              rim:actionType rim:additionAction ;
+              rim:changeClassification rim:substantiveChange ;
+              rim:proposer <https://example.org/org/metrology> ;
+              rim:appliesTo ex:i ;
+              prov:startedAtTime "2026-09-25T10:00:00Z"^^xsd:dateTime .
+
+          <https://example.org/org/metrology> a prov:Organization .
+
+          ex:i a rim:RegisterItem ;
+              rim:objectIdentifier "urn:uuid:44444444-4444-4444-8444-444444444444"^^xsd:anyURI ;
+              rim:itemClass ex:uc ;
+              rim:validityStatus rim:valid ;
+              rim:publicationStatus rim:published ;
+              dct:title "metre"@en .
+
+          ex:uc a rim:RegisterItemClass ;
+              dct:title "Unit"@en .

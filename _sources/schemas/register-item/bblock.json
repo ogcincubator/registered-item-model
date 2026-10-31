@@ -1,0 +1,17 @@
+{
+  "name": "Register Item",
+    "highlighted": true,
+  "group": "Core Model",
+  "abstract": "A REGISTER ITEM model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. This provides a canonical schema for a register entry, that can be extended according the REGISTER ITEM CLASS defined for the register.",
+
+  "status": "under-development",
+  "dateTimeAddition": "2026-09-25T00:00:00Z",
+  "dateOfLastChange": "2026-10-28",
+  "itemClass": "schema",
+  "version": "0.2",
+  "dependsOn": [
+    "ogc.rim.schemas.register",
+    "ogc.rim.schemas.register-item-class",
+    "ogc.rim.schemas.concept-version"
+  ]
+}

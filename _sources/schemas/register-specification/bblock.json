@@ -1,0 +1,12 @@
+{
+  "name": "Register Specification",
+  "abstract": "Modular RDF implementation profile based on ISO/FDIS 19135:2026.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-09-25T00:00:00Z",
+  "dateOfLastChange": "2026-10-28",
+  "itemClass": "schema",
+  "version": "0.2",
+  "dependsOn": [
+    "ogc.rim.schemas.register"
+  ]
+}
