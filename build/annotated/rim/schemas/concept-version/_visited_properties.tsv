@@ -1,0 +1,16 @@
+path	@id	schema
+/id	@id	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/type	@type	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/versionOf	https://w3id.org/ogc/rim/versionOf	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/versionOf/_oneOf/1/id	@id	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/versionOf/_oneOf/1/type	@type	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/versionOf/_oneOf/1/prefLabel	http://www.w3.org/2004/02/skos/core#prefLabel	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/versionOf/_oneOf/1/definition	http://www.w3.org/2004/02/skos/core#definition	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/versionOf/_oneOf/1/inScheme	http://www.w3.org/2004/02/skos/core#inScheme	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/version	https://w3id.org/ogc/rim/version	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/objectIdentifier	https://w3id.org/ogc/rim/objectIdentifier	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/functionalIdentifier	https://w3id.org/ogc/rim/functionalIdentifier	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/validityStatus	https://w3id.org/ogc/rim/validityStatus	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/publicationStatus	https://w3id.org/ogc/rim/publicationStatus	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/isRedacted	https://w3id.org/ogc/rim/isRedacted	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml
+/isDeleted	https://w3id.org/ogc/rim/isDeleted	/github/workspace/build/annotated/rim/schemas/concept-version/schema.yaml

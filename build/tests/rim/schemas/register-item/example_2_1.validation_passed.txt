@@ -1,0 +1,33 @@
+Validation report for ogc.rim.schemas.register-item - Register Item
+Generated 2026-10-31T04:32:57.659262+00:00
+=== Files ===
+Using example_2_1.ttl from examples
+Output Turtle example_2_1.ttl created
+=== End Files ===
+
+=== Turtle ===
+Prefixes are defined for rim, dct, skos, xsd, ex
+=== End Turtle ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/core-ontology/ontology.ttl
+Validation result for _sources/core-ontology/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/core-ontology/shapes.shacl:
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:ConceptShape: ex:c
+ - Shape rim:TextShape: *none*
+ - Shape rim:RegisterShape: ex:r
+ - Shape rim:RegisterSpecificationShape: *none*
+ - Shape rim:ConceptVersionShape: ex:cv
+ - Shape rim:RegisterItemShape: ex:i
+ - Shape rim:CommitmentShape: *none*
+ - Shape rim:RegisterItemClassShape: ex:uc
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape rim:RegisterActionShape: *none*
+
+=== End SHACL ===
+

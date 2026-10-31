@@ -1,0 +1,33 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <https://example.org/rim/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:i a rim:RegisterItem ;
+    dct:title "metre"@en ;
+    rim:functionalIdentifier "https://example.org/items/metre"^^xsd:anyURI ;
+    rim:inRegister ex:r ;
+    rim:itemClass ex:uc ;
+    rim:objectIdentifier "urn:uuid:44444444-4444-4444-8444-444444444444"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes ex:cv ;
+    rim:validityStatus rim:valid .
+
+ex:c a rim:Concept ;
+    skos:prefLabel "metre"@en .
+
+ex:cv a rim:ConceptVersion ;
+    rim:objectIdentifier "urn:uuid:22222222-2222-4222-8222-222222222222"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid ;
+    rim:version "1.0" ;
+    rim:versionOf ex:c .
+
+ex:uc a rim:RegisterItemClass ;
+    dct:title "Unit"@en ;
+    rim:definedIn ex:r .
+
+ex:r a rim:Register ;
+    dct:title "Register of Units"@en .
+

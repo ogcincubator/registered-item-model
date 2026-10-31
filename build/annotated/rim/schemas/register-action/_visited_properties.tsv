@@ -1,0 +1,12 @@
+path	@id	schema
+/id	@id	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/type	@type	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/actionType	https://w3id.org/ogc/rim/actionType	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/changeClassification	https://w3id.org/ogc/rim/changeClassification	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/appliesTo	https://w3id.org/ogc/rim/appliesTo	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/appliesTo/_oneOf/1/id	@id	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/proposer	https://w3id.org/ogc/rim/proposer	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/wasAssociatedWith	http://www.w3.org/ns/prov#wasAssociatedWith	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/startedAtTime	http://www.w3.org/ns/prov#startedAtTime	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/endedAtTime	http://www.w3.org/ns/prov#endedAtTime	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml
+/description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/rim/schemas/register-action/schema.yaml

@@ -1,0 +1,10 @@
+path	@id	schema
+/id	@id	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml
+/type	@type	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml
+/objectIdentifier	https://w3id.org/ogc/rim/objectIdentifier	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml
+/functionalIdentifier	https://w3id.org/ogc/rim/functionalIdentifier	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml
+/title	http://purl.org/dc/terms/title	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml
+/description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml
+/definedIn	https://w3id.org/ogc/rim/definedIn	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml
+/definedIn/_oneOf/1/id	@id	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml
+/validatedBy	https://w3id.org/ogc/rim/validatedBy	/github/workspace/build/annotated/rim/schemas/register-item-class/schema.yaml

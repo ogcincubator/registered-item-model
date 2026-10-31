@@ -1,0 +1,42 @@
+{
+  "@context": [
+    {
+      "rim": "https://w3id.org/ogc/rim/",
+      "dct": "http://purl.org/dc/terms/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ex": "https://example.org/rim/"
+    },
+    "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item/context.jsonld"
+  ],
+  "id": "https://example.org/rim/i",
+  "type": "RegisterItem",
+  "objectIdentifier": "urn:uuid:44444444-4444-4444-8444-444444444444",
+  "functionalIdentifier": "https://example.org/items/metre",
+  "title": "metre",
+  "itemClass": {
+    "id": "https://example.org/rim/uc",
+    "type": "RegisterItemClass",
+    "title": "Unit"
+  },
+  "inRegister": {
+    "id": "https://example.org/rim/r",
+    "type": "Register",
+    "title": "Register of Units"
+  },
+  "realizes": {
+    "id": "https://example.org/rim/cv",
+    "type": "ConceptVersion",
+    "versionOf": {
+      "id": "https://example.org/rim/c",
+      "type": "Concept",
+      "prefLabel": "metre"
+    },
+    "version": "1.0",
+    "objectIdentifier": "urn:uuid:22222222-2222-4222-8222-222222222222",
+    "validityStatus": "valid",
+    "publicationStatus": "published"
+  },
+  "validityStatus": "valid",
+  "publicationStatus": "published"
+}

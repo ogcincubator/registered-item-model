@@ -1,1 +1,0 @@
-{"defs":{},"properties":[{"path":["id"],"id":"@id","required":true,"schema_type":"string","format":"uri","sources":["bblocks://ogc.model.registered-item.rim.register-action"],"effectiveId":"@id"},{"path":["type"],"id":"@type","required":true,"const":"rim:RegisterAction","sources":["bblocks://ogc.model.registered-item.rim.register-action"],"effectiveId":"@type"}]}

@@ -1,0 +1,23 @@
+{
+  "@context": [
+    {
+      "rim": "https://w3id.org/ogc/rim/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ex": "https://example.org/rim/"
+    },
+    "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/concept-version/context.jsonld"
+  ],
+  "id": "https://example.org/rim/cv",
+  "type": "ConceptVersion",
+  "versionOf": {
+    "id": "https://example.org/rim/c",
+    "type": "Concept",
+    "prefLabel": "metre"
+  },
+  "version": "1.0",
+  "objectIdentifier": "urn:uuid:22222222-2222-4222-8222-222222222222",
+  "functionalIdentifier": "https://example.org/concepts/metre/1.0",
+  "validityStatus": "valid",
+  "publicationStatus": "published"
+}

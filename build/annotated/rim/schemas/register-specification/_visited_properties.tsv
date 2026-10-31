@@ -1,0 +1,11 @@
+path	@id	schema
+/id	@id	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/type	@type	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/title	http://purl.org/dc/terms/title	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/definesSubstantiveChange	https://w3id.org/ogc/rim/definesSubstantiveChange	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/hasCommitment	https://w3id.org/ogc/rim/hasCommitment	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/hasCommitment/id	@id	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/hasCommitment/type	@type	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/hasCommitment/commitmentCategory	https://w3id.org/ogc/rim/commitmentCategory	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml
+/hasCommitment/description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/rim/schemas/register-specification/schema.yaml

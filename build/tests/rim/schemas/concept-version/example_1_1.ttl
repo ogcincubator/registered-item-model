@@ -1,0 +1,16 @@
+@prefix ex: <https://example.org/rim/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:cv a rim:ConceptVersion ;
+    rim:functionalIdentifier "https://example.org/concepts/metre/1.0"^^xsd:anyURI ;
+    rim:objectIdentifier "urn:uuid:22222222-2222-4222-8222-222222222222"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid ;
+    rim:version "1.0" ;
+    rim:versionOf ex:c .
+
+ex:c a rim:Concept ;
+    skos:prefLabel "metre" .
+

@@ -1,0 +1,99 @@
+
+
+{
+  "itemIdentifier": "ogc.rim.schemas.register-action",
+  "name": "Register Action",
+  "highlighted": false,
+  "group": "Core Model",
+  "abstract": "A REGISTER interaction activity model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register",
+  "status": "under-development",
+  "dateTimeAddition": "2026-09-25T00:00:00Z",
+  "dateOfLastChange": "2026-10-31",
+  "itemClass": "schema",
+  "version": "0.2",
+  "dependsOn": [
+    "ogc.model.cross-domain.prov",
+    "ogc.rim.schemas.register-item"
+  ],
+  "shaclShapes": {
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-action/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-action/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-action/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/schemas/register-action/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/schemas/register-action/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-action/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/schemas/register-action/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/rim/schemas/register-action/",
+  "description": "# Register Action\n\n## Purpose\n\nA **Register Action** records a governed operation that applies to a Registered Item. Actions make changes explicit and support traceability of how managed register content evolves.\n\nKeeping actions separate from registered items avoids embedding process history directly in the item model and allows action vocabularies to evolve independently.\n\n## Scope\n\nThis block is the JSON / JSON-LD binding of the following core-ontology terms (defined once, in\n`ogc.model.registered-item.core-ontology`, not redeclared here):\n\n- `rim:RegisterAction` (a `prov:Activity`)\n- `rim:actionType` (values: the model's `rim:additionAction` ... `rim:deletionAction`)\n- `rim:changeClassification` (values: `rim:substantiveChange`, `rim:clarifyingChange`,\n  `rim:correctionalChange`)\n- `rim:appliesTo`\n- `rim:hasAction`\n- `rim:proposer`\n\nIt also uses `prov:startedAtTime` / `prov:endedAtTime` for action timing.\n\n## Conceptual position\n\n```text\nRegistered Item\n  `-- hasAction --> Register Action\n                       |-- actionType\n                       |-- changeClassification\n                       |-- appliesTo --> Registered Item\n                       `-- startedAtTime\n```\n\n## Dependencies\n\n- `registered-item`\n\n## SHACL validation\n\n`rim:RegisterActionShape` (core-ontology `shapes.shacl`): exactly one action type from the model's\nscheme; at most one change classification, one target item (a `rim:RegisterItem`) and one start\ntime.\n\n## Typical examples\n\n- addition of a new registered item\n- supersession of an existing item\n- invalidation or retirement\n- publication-state change\n- correctional or substantive change\n\n## ISO 19135 alignment\n\nThis block provides the structural representation of an action record. Authorization, approval, evidence retention and other governance-process requirements require tests beyond the local SHACL shape.\n",
+  "examples": [
+    {
+      "title": "The addition of a register item, as proposed and recorded (JSON)",
+      "content": "The action that added the \"metre\" item: its type and change classification come from the\nmodel's own SKOS schemes (`rim:additionAction`, `rim:substantiveChange`); the proposer is a\n`prov:Agent`; the item acted upon is embedded with its required core.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/rim/schemas/register-action/example_1_1.json",
+          "sizeBytes": 649,
+          "code": "{\n  \"id\": \"https://example.org/rim/a\",\n  \"type\": \"RegisterAction\",\n  \"actionType\": \"addition\",\n  \"changeClassification\": \"substantive\",\n  \"proposer\": { \"id\": \"https://example.org/org/metrology\", \"type\": \"Organization\", \"label\": \"Metrology office\" },\n  \"startedAtTime\": \"2026-09-25T10:00:00Z\",\n  \"appliesTo\": {\n    \"id\": \"https://example.org/rim/i\",\n    \"type\": \"RegisterItem\",\n    \"objectIdentifier\": \"urn:uuid:44444444-4444-4444-8444-444444444444\",\n    \"title\": \"metre\",\n    \"itemClass\": { \"id\": \"https://example.org/rim/uc\", \"type\": \"RegisterItemClass\", \"title\": \"Unit\" },\n    \"validityStatus\": \"valid\",\n    \"publicationStatus\": \"published\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/rim/schemas/register-action/example_1_1.jsonld",
+          "sizeBytes": 1053,
+          "code": "{\n  \"@context\": [\n    {\n      \"rim\": \"https://w3id.org/ogc/rim/\",\n      \"dct\": \"http://purl.org/dc/terms/\",\n      \"prov\": \"http://www.w3.org/ns/prov#\",\n      \"xsd\": \"http://www.w3.org/2001/XMLSchema#\",\n      \"ex\": \"https://example.org/rim/\"\n    },\n    \"https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-action/context.jsonld\"\n  ],\n  \"id\": \"https://example.org/rim/a\",\n  \"type\": \"RegisterAction\",\n  \"actionType\": \"addition\",\n  \"changeClassification\": \"substantive\",\n  \"proposer\": {\n    \"id\": \"https://example.org/org/metrology\",\n    \"type\": \"Organization\",\n    \"label\": \"Metrology office\"\n  },\n  \"startedAtTime\": \"2026-09-25T10:00:00Z\",\n  \"appliesTo\": {\n    \"id\": \"https://example.org/rim/i\",\n    \"type\": \"RegisterItem\",\n    \"objectIdentifier\": \"urn:uuid:44444444-4444-4444-8444-444444444444\",\n    \"title\": \"metre\",\n    \"itemClass\": {\n      \"id\": \"https://example.org/rim/uc\",\n      \"type\": \"RegisterItemClass\",\n      \"title\": \"Unit\"\n    },\n    \"validityStatus\": \"valid\",\n    \"publicationStatus\": \"published\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/rim/schemas/register-action/example_1_1.ttl",
+          "sizeBytes": 941,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix ex: <https://example.org/rim/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nex:a a rim:RegisterAction ;\n    prov:startedAtTime \"2026-09-25T10:00:00+00:00\"^^xsd:dateTime ;\n    rim:actionType rim:additionAction ;\n    rim:appliesTo ex:i ;\n    rim:changeClassification rim:substantiveChange ;\n    rim:proposer <https://example.org/org/metrology> .\n\n<https://example.org/org/metrology> a prov:Organization ;\n    rdfs:label \"Metrology office\" .\n\nex:i a rim:RegisterItem ;\n    dct:title \"metre\" ;\n    rim:itemClass ex:uc ;\n    rim:objectIdentifier \"urn:uuid:44444444-4444-4444-8444-444444444444\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n\nex:uc a rim:RegisterItemClass ;\n    dct:title \"Unit\" .\n\n"
+        }
+      ],
+      "prefixes": {
+        "rim": "https://w3id.org/ogc/rim/",
+        "dct": "http://purl.org/dc/terms/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "https://example.org/rim/"
+      }
+    },
+    {
+      "title": "The same action in Turtle",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/rim/schemas/register-action/example_2_1.ttl",
+          "sizeBytes": 625,
+          "code": "ex:a a rim:RegisterAction ;\n    rim:actionType rim:additionAction ;\n    rim:changeClassification rim:substantiveChange ;\n    rim:proposer <https://example.org/org/metrology> ;\n    rim:appliesTo ex:i ;\n    prov:startedAtTime \"2026-09-25T10:00:00Z\"^^xsd:dateTime .\n\n<https://example.org/org/metrology> a prov:Organization .\n\nex:i a rim:RegisterItem ;\n    rim:objectIdentifier \"urn:uuid:44444444-4444-4444-8444-444444444444\"^^xsd:anyURI ;\n    rim:itemClass ex:uc ;\n    rim:validityStatus rim:valid ;\n    rim:publicationStatus rim:published ;\n    dct:title \"metre\"@en .\n\nex:uc a rim:RegisterItemClass ;\n    dct:title \"Unit\"@en .\n"
+        }
+      ],
+      "prefixes": {
+        "rim": "https://w3id.org/ogc/rim/",
+        "dct": "http://purl.org/dc/terms/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "https://example.org/rim/"
+      }
+    }
+  ],
+  "examplePrefixes": {
+    "rim": "https://w3id.org/ogc/rim/",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ex": "https://example.org/rim/"
+  },
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: ISO 19135 Register Action\ndescription: 'A recorded, governed change to register content (ISO 19135:2026), a\n  prov:Activity: what kind of change, how it is classified, which item it applied\n  to, who proposed it, when. `type` is not pinned so that a sub-register may use its\n  own term.'\ntype: object\nrequired:\n- id\n- type\n- actionType\nproperties:\n  id:\n    type: string\n    format: uri\n    x-jsonld-id: '@id'\n  type:\n    oneOf:\n    - type: string\n    - type: array\n      minItems: 1\n      items:\n        type: string\n    x-jsonld-id: '@type'\n  actionType:\n    enum:\n    - addition\n    - publish\n    - unpublish\n    - invalidation\n    - supersession\n    - redaction\n    - deletion\n    x-jsonld-id: https://w3id.org/ogc/rim/actionType\n    x-jsonld-type: '@vocab'\n  changeClassification:\n    enum:\n    - substantive\n    - clarifying\n    - correctional\n    x-jsonld-id: https://w3id.org/ogc/rim/changeClassification\n    x-jsonld-type: '@vocab'\n  appliesTo:\n    description: The register item acted upon (an IRI or an embedded node).\n    $ref: '#/$defs/ref'\n    x-jsonld-id: https://w3id.org/ogc/rim/appliesTo\n    x-jsonld-type: '@id'\n  proposer:\n    $ref: '#/$defs/ref'\n    x-jsonld-id: https://w3id.org/ogc/rim/proposer\n    x-jsonld-type: '@id'\n  wasAssociatedWith:\n    $ref: '#/$defs/refs'\n    x-jsonld-id: http://www.w3.org/ns/prov#wasAssociatedWith\n    x-jsonld-type: '@id'\n  startedAtTime:\n    type: string\n    format: date-time\n    x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n  endedAtTime:\n    type: string\n    format: date-time\n    x-jsonld-id: http://www.w3.org/ns/prov#endedAtTime\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n  description:\n    type: string\n    x-jsonld-id: http://purl.org/dc/terms/description\nadditionalProperties: true\n$defs:\n  ref:\n    oneOf:\n    - type: string\n      format: uri\n    - type: object\n      required:\n      - id\n      properties:\n        id:\n          type: string\n          format: uri\n          x-jsonld-id: '@id'\n  refs:\n    oneOf:\n    - $ref: '#/$defs/ref'\n    - type: array\n      items:\n        $ref: '#/$defs/ref'\nx-jsonld-extra-terms:\n  Register: https://w3id.org/ogc/rim/Register\n  RegisterSystem: https://w3id.org/ogc/rim/RegisterSystem\n  RegisterSpecification: https://w3id.org/ogc/rim/RegisterSpecification\n  RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass\n  RegisterItem: https://w3id.org/ogc/rim/RegisterItem\n  RegisterAction: https://w3id.org/ogc/rim/RegisterAction\n  Concept: https://w3id.org/ogc/rim/Concept\n  ConceptVersion: https://w3id.org/ogc/rim/ConceptVersion\n  ConceptSystem: https://w3id.org/ogc/rim/ConceptSystem\n  Commitment: https://w3id.org/ogc/rim/Commitment\n  Agent: http://www.w3.org/ns/prov#Agent\n  Organization: http://www.w3.org/ns/prov#Organization\n  Person: http://www.w3.org/ns/prov#Person\n  title: http://purl.org/dc/terms/title\n  label: http://www.w3.org/2000/01/rdf-schema#label\n  prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel\n  definition: http://www.w3.org/2004/02/skos/core#definition\n  inScheme:\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#inScheme\n    x-jsonld-type: '@id'\n  objectIdentifier:\n    x-jsonld-id: https://w3id.org/ogc/rim/objectIdentifier\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI\n  functionalIdentifier:\n    x-jsonld-id: https://w3id.org/ogc/rim/functionalIdentifier\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI\n  runsOn:\n    x-jsonld-id: https://w3id.org/ogc/rim/runsOn\n    x-jsonld-type: '@id'\n  hasSpecification:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasSpecification\n    x-jsonld-type: '@id'\n  definesSubstantiveChange: https://w3id.org/ogc/rim/definesSubstantiveChange\n  registerOwner:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerOwner\n    x-jsonld-type: '@id'\n  registerManager:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerManager\n    x-jsonld-type: '@id'\n  controlBody:\n    x-jsonld-id: https://w3id.org/ogc/rim/controlBody\n    x-jsonld-type: '@id'\n  registerSystemManager:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerSystemManager\n    x-jsonld-type: '@id'\n  registerUser:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerUser\n    x-jsonld-type: '@id'\n  hasCommitment:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasCommitment\n    x-jsonld-type: '@id'\n  commitmentCategory:\n    x-jsonld-id: https://w3id.org/ogc/rim/commitmentCategory\n    x-jsonld-type: '@vocab'\n  access: https://w3id.org/ogc/rim/accessCommitment\n  persistence: https://w3id.org/ogc/rim/persistenceCommitment\n  transparency: https://w3id.org/ogc/rim/transparencyCommitment\n  definedIn:\n    x-jsonld-id: https://w3id.org/ogc/rim/definedIn\n    x-jsonld-type: '@id'\n  validatedBy:\n    x-jsonld-id: https://w3id.org/ogc/rim/validatedBy\n    x-jsonld-type: '@id'\n  itemClass:\n    x-jsonld-id: https://w3id.org/ogc/rim/itemClass\n    x-jsonld-type: '@id'\n  inRegister:\n    x-jsonld-id: https://w3id.org/ogc/rim/inRegister\n    x-jsonld-type: '@id'\n  realizes:\n    x-jsonld-id: https://w3id.org/ogc/rim/realizes\n    x-jsonld-type: '@id'\n  versionOf:\n    x-jsonld-id: https://w3id.org/ogc/rim/versionOf\n    x-jsonld-type: '@id'\n  version: https://w3id.org/ogc/rim/version\n  validityStatus:\n    x-jsonld-id: https://w3id.org/ogc/rim/validityStatus\n    x-jsonld-type: '@vocab'\n  publicationStatus:\n    x-jsonld-id: https://w3id.org/ogc/rim/publicationStatus\n    x-jsonld-type: '@vocab'\n  valid: https://w3id.org/ogc/rim/valid\n  invalid: https://w3id.org/ogc/rim/invalid\n  published: https://w3id.org/ogc/rim/published\n  unpublished: https://w3id.org/ogc/rim/unpublished\n  isRedacted:\n    x-jsonld-id: https://w3id.org/ogc/rim/isRedacted\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean\n  isDeleted:\n    x-jsonld-id: https://w3id.org/ogc/rim/isDeleted\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean\n  relatedItem:\n    x-jsonld-id: https://w3id.org/ogc/rim/relatedItem\n    x-jsonld-type: '@id'\n  supersededBy:\n    x-jsonld-id: https://w3id.org/ogc/rim/supersededBy\n    x-jsonld-type: '@id'\n  supersedes:\n    x-jsonld-id: https://w3id.org/ogc/rim/supersedes\n    x-jsonld-type: '@id'\n  hasAction:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasAction\n    x-jsonld-type: '@id'\n  addition: https://w3id.org/ogc/rim/additionAction\n  publish: https://w3id.org/ogc/rim/publishAction\n  unpublish: https://w3id.org/ogc/rim/unpublishAction\n  invalidation: https://w3id.org/ogc/rim/invalidationAction\n  supersession: https://w3id.org/ogc/rim/supersessionAction\n  redaction: https://w3id.org/ogc/rim/redactionAction\n  deletion: https://w3id.org/ogc/rim/deletionAction\n  substantive: https://w3id.org/ogc/rim/substantiveChange\n  clarifying: https://w3id.org/ogc/rim/clarifyingChange\n  correctional: https://w3id.org/ogc/rim/correctionalChange\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  prov: http://www.w3.org/ns/prov#\n  dct: http://purl.org/dc/terms/\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  skos: http://www.w3.org/2004/02/skos/core#\n  xsd: http://www.w3.org/2001/XMLSchema#\nx-bblocks-metadata:\n  itemIdentifier: ogc.rim.schemas.register-action\n  register: https://ogcincubator.github.io/registered-item-model/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-10-31'\n",
+  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
+  "gitPath": "_sources/schemas/register-action"
+}

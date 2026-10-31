@@ -1,0 +1,18 @@
+{
+  "id": "https://example.org/rim/s",
+  "type": "RegisterSpecification",
+  "title": "Units register specification",
+  "definesSubstantiveChange": "Any change to a unit's symbol, dimension or conversion factor is substantive; changes to its description are clarifying.",
+  "hasCommitment": [
+    {
+      "type": "Commitment",
+      "commitmentCategory": "persistence",
+      "description": "Object identifiers are never reassigned or deleted."
+    },
+    {
+      "type": "Commitment",
+      "commitmentCategory": "access",
+      "description": "Current and historic content are readable without authentication."
+    }
+  ]
+}

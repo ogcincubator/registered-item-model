@@ -1,0 +1,14 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <https://example.org/rim/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:uc a rim:RegisterItemClass ;
+    dct:title "Unit"@en ;
+    rim:definedIn ex:r ;
+    rim:functionalIdentifier "https://example.org/classes/unit"^^xsd:anyURI ;
+    rim:objectIdentifier "urn:uuid:33333333-3333-4333-8333-333333333333"^^xsd:anyURI ;
+    rim:validatedBy <https://example.org/rules/UnitShape> .
+
+ex:r a rim:Register .
+

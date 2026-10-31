@@ -1,1 +1,0 @@
-{"defs":{},"properties":[{"path":["id"],"id":"@id","required":true,"schema_type":"string","format":"uri","sources":["bblocks://ogc.model.registered-item.rim.concept-version"],"effectiveId":"@id"},{"path":["type"],"id":"@type","required":true,"const":"rim:ConceptVersion","sources":["bblocks://ogc.model.registered-item.rim.concept-version"],"effectiveId":"@type"}]}

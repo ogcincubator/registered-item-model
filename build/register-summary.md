@@ -29,61 +29,43 @@ model describes the former, independent of the latter.
 
 ## Building Blocks
 
-### `ogc.model.registered-item.activity-type` — Activity Type Register Profile
-
-**Type:** model
-
-A profile of the Registered Item Model for governed activity type records in the acttype:ActivityType hierarchy, with related PROV object types and an optional plan.
-
-### `ogc.model.registered-item.rim.concept-version` — Concept Version
-
-**Type:** schema
-
-Modular RDF implementation profile based on ISO/FDIS 19135:2026.
-
-### `ogc.model.registered-item.rim.register` — Register
-
-**Type:** schema
-
-A REGISTER description model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register
-
-### `ogc.model.registered-item.core-ontology` — Registered Item Model
+### `ogc.rim.core-ontology` — Registered Item Model
 
 **Type:** model
 
 A base RDF and SHACL model for register items, register item classes and register governance metadata, based on ISO 19135:2026.
 
-### `ogc.model.registered-item.geoprocessing-activity-types` — Geoprocessing Activity Types Profile
-
-**Type:** model
-
-A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivityType, each required to use or generate at least one GeoSPARQL spatial data type.
-
-### `ogc.model.registered-item.ml-activity-types` — ML Activity Types Profile
-
-**Type:** model
-
-A profile of the Geoprocessing Activity Types Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
-
-### `ogc.model.registered-item.rim.register-item-class` — Register Item Class
-
-**Type:** schema
-
-A REGISTER ITEM CLASS model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. (describes the type of object in a register) Modular Building Block to support interoperable profiles of register
-
-### `ogc.model.registered-item.rim.register-specification` — Register Specification
+### `ogc.rim.schemas.concept-version` — Concept Version
 
 **Type:** schema
 
 Modular RDF implementation profile based on ISO/FDIS 19135:2026.
 
-### `ogc.model.registered-item.rim.registered-item` — Registered Item
+### `ogc.rim.schemas.register` — Register
+
+**Type:** schema
+
+A REGISTER description model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. Modular Building Block to support interoperable profiles of register
+
+### `ogc.rim.schemas.register-item-class` — Register Item Class
+
+**Type:** schema
+
+A REGISTER ITEM CLASS model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. (describes the type of object in a register) Modular Building Block to support interoperable profiles of register
+
+### `ogc.rim.schemas.register-specification` — Register Specification
+
+**Type:** schema
+
+Modular RDF implementation profile based on ISO/FDIS 19135:2026.
+
+### `ogc.rim.schemas.register-item` — Register Item
 
 **Type:** schema
 
 A REGISTER ITEM model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. This provides a canonical schema for a register entry, that can be extended according the REGISTER ITEM CLASS defined for the register.
 
-### `ogc.model.registered-item.rim.register-action` — Register Action
+### `ogc.rim.schemas.register-action` — Register Action
 
 **Type:** schema
 

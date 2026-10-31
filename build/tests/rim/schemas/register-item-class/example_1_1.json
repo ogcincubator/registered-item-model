@@ -1,0 +1,14 @@
+{
+  "id": "https://example.org/rim/uc",
+  "type": "RegisterItemClass",
+  "objectIdentifier": "urn:uuid:33333333-3333-4333-8333-333333333333",
+  "functionalIdentifier": "https://example.org/classes/unit",
+  "title": "Unit",
+  "description": "A unit of measure: name, symbol, dimension and conversion factor to the SI coherent unit.",
+  "definedIn": {
+    "id": "https://example.org/rim/r",
+    "type": "Register",
+    "title": "Register of Units"
+  },
+  "validatedBy": "https://example.org/rules/UnitShape"
+}

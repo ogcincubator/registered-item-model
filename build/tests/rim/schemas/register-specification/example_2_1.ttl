@@ -1,0 +1,14 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <https://example.org/rim/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+
+ex:r a rim:Register ;
+    rim:hasSpecification ex:s .
+
+ex:s a rim:RegisterSpecification ;
+    dct:title "Units register specification"@en ;
+    rim:definesSubstantiveChange "Any change to a unit's symbol, dimension or conversion factor is substantive; changes to its description are clarifying." ;
+    rim:hasCommitment [ a rim:Commitment ;
+            dct:description "Object identifiers are never reassigned or deleted."@en ;
+            rim:commitmentCategory rim:persistenceCommitment ] .
+

@@ -1,0 +1,14 @@
+{
+  "id": "https://example.org/rim/cv",
+  "type": "ConceptVersion",
+  "versionOf": {
+    "id": "https://example.org/rim/c",
+    "type": "Concept",
+    "prefLabel": "metre"
+  },
+  "version": "1.0",
+  "objectIdentifier": "urn:uuid:22222222-2222-4222-8222-222222222222",
+  "functionalIdentifier": "https://example.org/concepts/metre/1.0",
+  "validityStatus": "valid",
+  "publicationStatus": "published"
+}

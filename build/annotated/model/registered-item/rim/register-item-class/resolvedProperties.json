@@ -1,1 +1,0 @@
-{"defs":{},"properties":[{"path":["id"],"id":"@id","required":true,"schema_type":"string","format":"uri","sources":["bblocks://ogc.model.registered-item.rim.register-item-class"],"effectiveId":"@id"},{"path":["type"],"id":"@type","required":true,"const":"rim:RegisterItemClass","sources":["bblocks://ogc.model.registered-item.rim.register-item-class"],"effectiveId":"@type"}]}

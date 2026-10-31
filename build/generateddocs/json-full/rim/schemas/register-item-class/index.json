@@ -1,0 +1,93 @@
+
+
+{
+  "itemIdentifier": "ogc.rim.schemas.register-item-class",
+  "name": "Register Item Class",
+  "highlighted": true,
+  "group": "Core Model",
+  "abstract": "A REGISTER ITEM CLASS model with JSON/LD/RDF implementation as defined by ISO/FDIS 19135:2026. (describes the type of object in a register) Modular Building Block to support interoperable profiles of register",
+  "status": "under-development",
+  "dateTimeAddition": "2026-09-25T00:00:00Z",
+  "dateOfLastChange": "2026-10-31",
+  "itemClass": "schema",
+  "version": "0.2",
+  "dependsOn": [
+    "ogc.rim.schemas.concept-version",
+    "ogc.rim.schemas.register"
+  ],
+  "shaclShapes": {
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/schemas/register-item-class/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/schemas/register-item-class/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/schemas/register-item-class/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/rim/schemas/register-item-class/",
+  "description": "# Register Item Class\n\n## Purpose\n\nA **Register Item Class** is a defined abstraction for register items that share common characteristics. It acts as the type or template against which individual registered items are structured and validated.\n\nThe distinction is comparable to a class and its instances: the Register Item Class defines what a kind of item is, while Registered Items are the actual managed entries.\n\n## Scope\n\nThis block is the JSON / JSON-LD binding of the following core-ontology terms (defined once, in\n`ogc.model.registered-item.core-ontology`, not redeclared here):\n\n- `rim:RegisterItemClass`\n- class-level object and functional identifiers\n- `rim:definedIn`\n- `rim:validatedBy`\n\n`rim:realizes` is **not** a property of an item class: its domain is `rim:RegisterItem` and its range\n`rim:ConceptVersion`. Whether an item class should relate to a concept of its own is an open\nquestion for the model; until it is settled no such property is offered here.\n\n## Conceptual position\n\n```text\nRegister\n  `-- definedIn (inverse) --> Register Item Class\n                                 `-- instantiated by --> Register Items\n```\n\n## Dependencies\n\n- `register`\n- `concept-version`\n\nThese dependencies provide the containing register and the concept-plane terms referenced by this block.\n\n## SHACL validation\n\n`rim:RegisterItemClassShape` (core-ontology `shapes.shacl`): exactly one title; at most one object\nand one functional identifier (`xsd:anyURI` literals), at most one defining register, which must be\na `rim:Register`. `validatedBy` is unconstrained in form (an IRI naming the rule set).\n\n## Typical examples\n\n- Dataset class\n- Coordinate Reference System class\n- API specification class\n- Code-list entry class\n\n## Design guidance\n\nUse this block for reusable requirements applying to a category of items. Do not place the values of an individual registered entry here. Those belong in a Registered Item.\n\n## ISO 19135 alignment\n\nThis block represents the content-plane abstraction used to define coherent requirements for individual register items.\n",
+  "examples": [
+    {
+      "title": "An item class and the rule set that validates it (JSON)",
+      "content": "The \"Unit\" item class of the register of units. `validatedBy` names the executable rule set\n(here a SHACL shape) that expresses the class's data requirements; `definedIn` embeds the\nregister node so that the base shape's `sh:class rim:Register` check is satisfied by the\nexample alone.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/rim/schemas/register-item-class/example_1_1.json",
+          "sizeBytes": 494,
+          "code": "{\n  \"id\": \"https://example.org/rim/uc\",\n  \"type\": \"RegisterItemClass\",\n  \"objectIdentifier\": \"urn:uuid:33333333-3333-4333-8333-333333333333\",\n  \"functionalIdentifier\": \"https://example.org/classes/unit\",\n  \"title\": \"Unit\",\n  \"description\": \"A unit of measure: name, symbol, dimension and conversion factor to the SI coherent unit.\",\n  \"definedIn\": { \"id\": \"https://example.org/rim/r\", \"type\": \"Register\", \"title\": \"Register of Units\" },\n  \"validatedBy\": \"https://example.org/rules/UnitShape\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/rim/schemas/register-item-class/example_1_1.jsonld",
+          "sizeBytes": 836,
+          "code": "{\n  \"@context\": [\n    {\n      \"rim\": \"https://w3id.org/ogc/rim/\",\n      \"dct\": \"http://purl.org/dc/terms/\",\n      \"xsd\": \"http://www.w3.org/2001/XMLSchema#\",\n      \"ex\": \"https://example.org/rim/\"\n    },\n    \"https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/context.jsonld\"\n  ],\n  \"id\": \"https://example.org/rim/uc\",\n  \"type\": \"RegisterItemClass\",\n  \"objectIdentifier\": \"urn:uuid:33333333-3333-4333-8333-333333333333\",\n  \"functionalIdentifier\": \"https://example.org/classes/unit\",\n  \"title\": \"Unit\",\n  \"description\": \"A unit of measure: name, symbol, dimension and conversion factor to the SI coherent unit.\",\n  \"definedIn\": {\n    \"id\": \"https://example.org/rim/r\",\n    \"type\": \"Register\",\n    \"title\": \"Register of Units\"\n  },\n  \"validatedBy\": \"https://example.org/rules/UnitShape\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/rim/schemas/register-item-class/example_1_1.ttl",
+          "sizeBytes": 658,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix ex: <https://example.org/rim/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nex:uc a rim:RegisterItemClass ;\n    dct:description \"A unit of measure: name, symbol, dimension and conversion factor to the SI coherent unit.\" ;\n    dct:title \"Unit\" ;\n    rim:definedIn ex:r ;\n    rim:functionalIdentifier \"https://example.org/classes/unit\"^^xsd:anyURI ;\n    rim:objectIdentifier \"urn:uuid:33333333-3333-4333-8333-333333333333\"^^xsd:anyURI ;\n    rim:validatedBy <https://example.org/rules/UnitShape> .\n\nex:r a rim:Register ;\n    dct:title \"Register of Units\" .\n\n"
+        }
+      ],
+      "prefixes": {
+        "rim": "https://w3id.org/ogc/rim/",
+        "dct": "http://purl.org/dc/terms/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "https://example.org/rim/"
+      }
+    },
+    {
+      "title": "The same item class in Turtle",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/rim/schemas/register-item-class/example_2_1.ttl",
+          "sizeBytes": 331,
+          "code": "ex:uc a rim:RegisterItemClass ;\n    rim:objectIdentifier \"urn:uuid:33333333-3333-4333-8333-333333333333\"^^xsd:anyURI ;\n    rim:functionalIdentifier \"https://example.org/classes/unit\"^^xsd:anyURI ;\n    dct:title \"Unit\"@en ;\n    rim:definedIn ex:r ;\n    rim:validatedBy <https://example.org/rules/UnitShape> .\n\nex:r a rim:Register .\n"
+        }
+      ],
+      "prefixes": {
+        "rim": "https://w3id.org/ogc/rim/",
+        "dct": "http://purl.org/dc/terms/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "https://example.org/rim/"
+      }
+    }
+  ],
+  "examplePrefixes": {
+    "rim": "https://w3id.org/ogc/rim/",
+    "dct": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ex": "https://example.org/rim/"
+  },
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: ISO 19135 Register Item Class\ndescription: The abstraction a set of register items share; the unit data requirements\n  and validation rules attach to (ISO 19135:2026). `type` is not pinned so that a\n  sub-register may use its own term.\ntype: object\nrequired:\n- id\n- type\n- title\nproperties:\n  id:\n    type: string\n    format: uri\n    x-jsonld-id: '@id'\n  type:\n    oneOf:\n    - type: string\n    - type: array\n      minItems: 1\n      items:\n        type: string\n    x-jsonld-id: '@type'\n  objectIdentifier:\n    type: string\n    format: uri\n    x-jsonld-id: https://w3id.org/ogc/rim/objectIdentifier\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI\n  functionalIdentifier:\n    type: string\n    format: uri\n    x-jsonld-id: https://w3id.org/ogc/rim/functionalIdentifier\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI\n  title:\n    type: string\n    x-jsonld-id: http://purl.org/dc/terms/title\n  description:\n    type: string\n    x-jsonld-id: http://purl.org/dc/terms/description\n  definedIn:\n    description: The register that defines this item class (an IRI or an embedded\n      rim:Register node).\n    $ref: '#/$defs/ref'\n    x-jsonld-id: https://w3id.org/ogc/rim/definedIn\n    x-jsonld-type: '@id'\n  validatedBy:\n    description: The executable rule set (e.g. a SHACL shape) expressing this class's\n      data requirements.\n    oneOf:\n    - type: string\n      format: uri\n    - type: array\n      items:\n        type: string\n        format: uri\n    x-jsonld-id: https://w3id.org/ogc/rim/validatedBy\n    x-jsonld-type: '@id'\nadditionalProperties: true\n$defs:\n  ref:\n    oneOf:\n    - type: string\n      format: uri\n    - type: object\n      required:\n      - id\n      properties:\n        id:\n          type: string\n          format: uri\n          x-jsonld-id: '@id'\nx-jsonld-extra-terms:\n  Register: https://w3id.org/ogc/rim/Register\n  RegisterSystem: https://w3id.org/ogc/rim/RegisterSystem\n  RegisterSpecification: https://w3id.org/ogc/rim/RegisterSpecification\n  RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass\n  RegisterItem: https://w3id.org/ogc/rim/RegisterItem\n  RegisterAction: https://w3id.org/ogc/rim/RegisterAction\n  Concept: https://w3id.org/ogc/rim/Concept\n  ConceptVersion: https://w3id.org/ogc/rim/ConceptVersion\n  ConceptSystem: https://w3id.org/ogc/rim/ConceptSystem\n  Commitment: https://w3id.org/ogc/rim/Commitment\n  Agent: http://www.w3.org/ns/prov#Agent\n  Organization: http://www.w3.org/ns/prov#Organization\n  Person: http://www.w3.org/ns/prov#Person\n  label: http://www.w3.org/2000/01/rdf-schema#label\n  prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel\n  definition: http://www.w3.org/2004/02/skos/core#definition\n  inScheme:\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#inScheme\n    x-jsonld-type: '@id'\n  runsOn:\n    x-jsonld-id: https://w3id.org/ogc/rim/runsOn\n    x-jsonld-type: '@id'\n  hasSpecification:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasSpecification\n    x-jsonld-type: '@id'\n  definesSubstantiveChange: https://w3id.org/ogc/rim/definesSubstantiveChange\n  registerOwner:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerOwner\n    x-jsonld-type: '@id'\n  registerManager:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerManager\n    x-jsonld-type: '@id'\n  controlBody:\n    x-jsonld-id: https://w3id.org/ogc/rim/controlBody\n    x-jsonld-type: '@id'\n  registerSystemManager:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerSystemManager\n    x-jsonld-type: '@id'\n  registerUser:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerUser\n    x-jsonld-type: '@id'\n  hasCommitment:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasCommitment\n    x-jsonld-type: '@id'\n  commitmentCategory:\n    x-jsonld-id: https://w3id.org/ogc/rim/commitmentCategory\n    x-jsonld-type: '@vocab'\n  access: https://w3id.org/ogc/rim/accessCommitment\n  persistence: https://w3id.org/ogc/rim/persistenceCommitment\n  transparency: https://w3id.org/ogc/rim/transparencyCommitment\n  itemClass:\n    x-jsonld-id: https://w3id.org/ogc/rim/itemClass\n    x-jsonld-type: '@id'\n  inRegister:\n    x-jsonld-id: https://w3id.org/ogc/rim/inRegister\n    x-jsonld-type: '@id'\n  realizes:\n    x-jsonld-id: https://w3id.org/ogc/rim/realizes\n    x-jsonld-type: '@id'\n  versionOf:\n    x-jsonld-id: https://w3id.org/ogc/rim/versionOf\n    x-jsonld-type: '@id'\n  version: https://w3id.org/ogc/rim/version\n  validityStatus:\n    x-jsonld-id: https://w3id.org/ogc/rim/validityStatus\n    x-jsonld-type: '@vocab'\n  publicationStatus:\n    x-jsonld-id: https://w3id.org/ogc/rim/publicationStatus\n    x-jsonld-type: '@vocab'\n  valid: https://w3id.org/ogc/rim/valid\n  invalid: https://w3id.org/ogc/rim/invalid\n  published: https://w3id.org/ogc/rim/published\n  unpublished: https://w3id.org/ogc/rim/unpublished\n  isRedacted:\n    x-jsonld-id: https://w3id.org/ogc/rim/isRedacted\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean\n  isDeleted:\n    x-jsonld-id: https://w3id.org/ogc/rim/isDeleted\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean\n  relatedItem:\n    x-jsonld-id: https://w3id.org/ogc/rim/relatedItem\n    x-jsonld-type: '@id'\n  supersededBy:\n    x-jsonld-id: https://w3id.org/ogc/rim/supersededBy\n    x-jsonld-type: '@id'\n  supersedes:\n    x-jsonld-id: https://w3id.org/ogc/rim/supersedes\n    x-jsonld-type: '@id'\n  hasAction:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasAction\n    x-jsonld-type: '@id'\n  appliesTo:\n    x-jsonld-id: https://w3id.org/ogc/rim/appliesTo\n    x-jsonld-type: '@id'\n  proposer:\n    x-jsonld-id: https://w3id.org/ogc/rim/proposer\n    x-jsonld-type: '@id'\n  actionType:\n    x-jsonld-id: https://w3id.org/ogc/rim/actionType\n    x-jsonld-type: '@vocab'\n  addition: https://w3id.org/ogc/rim/additionAction\n  publish: https://w3id.org/ogc/rim/publishAction\n  unpublish: https://w3id.org/ogc/rim/unpublishAction\n  invalidation: https://w3id.org/ogc/rim/invalidationAction\n  supersession: https://w3id.org/ogc/rim/supersessionAction\n  redaction: https://w3id.org/ogc/rim/redactionAction\n  deletion: https://w3id.org/ogc/rim/deletionAction\n  changeClassification:\n    x-jsonld-id: https://w3id.org/ogc/rim/changeClassification\n    x-jsonld-type: '@vocab'\n  substantive: https://w3id.org/ogc/rim/substantiveChange\n  clarifying: https://w3id.org/ogc/rim/clarifyingChange\n  correctional: https://w3id.org/ogc/rim/correctionalChange\n  startedAtTime:\n    x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n  endedAtTime:\n    x-jsonld-id: http://www.w3.org/ns/prov#endedAtTime\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n  wasAssociatedWith:\n    x-jsonld-id: http://www.w3.org/ns/prov#wasAssociatedWith\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  prov: http://www.w3.org/ns/prov#\n  dct: http://purl.org/dc/terms/\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  skos: http://www.w3.org/2004/02/skos/core#\n  xsd: http://www.w3.org/2001/XMLSchema#\nx-bblocks-metadata:\n  itemIdentifier: ogc.rim.schemas.register-item-class\n  register: https://ogcincubator.github.io/registered-item-model/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-10-31'\n",
+  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
+  "gitPath": "_sources/schemas/register-item-class"
+}

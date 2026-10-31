@@ -1,0 +1,32 @@
+{
+  "id": "https://example.org/rim/i",
+  "type": "RegisterItem",
+  "objectIdentifier": "urn:uuid:44444444-4444-4444-8444-444444444444",
+  "functionalIdentifier": "https://example.org/items/metre",
+  "title": "metre",
+  "itemClass": {
+    "id": "https://example.org/rim/uc",
+    "type": "RegisterItemClass",
+    "title": "Unit"
+  },
+  "inRegister": {
+    "id": "https://example.org/rim/r",
+    "type": "Register",
+    "title": "Register of Units"
+  },
+  "realizes": {
+    "id": "https://example.org/rim/cv",
+    "type": "ConceptVersion",
+    "versionOf": {
+      "id": "https://example.org/rim/c",
+      "type": "Concept",
+      "prefLabel": "metre"
+    },
+    "version": "1.0",
+    "objectIdentifier": "urn:uuid:22222222-2222-4222-8222-222222222222",
+    "validityStatus": "valid",
+    "publicationStatus": "published"
+  },
+  "validityStatus": "valid",
+  "publicationStatus": "published"
+}

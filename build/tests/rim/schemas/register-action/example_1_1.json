@@ -1,0 +1,25 @@
+{
+  "id": "https://example.org/rim/a",
+  "type": "RegisterAction",
+  "actionType": "addition",
+  "changeClassification": "substantive",
+  "proposer": {
+    "id": "https://example.org/org/metrology",
+    "type": "Organization",
+    "label": "Metrology office"
+  },
+  "startedAtTime": "2026-09-25T10:00:00Z",
+  "appliesTo": {
+    "id": "https://example.org/rim/i",
+    "type": "RegisterItem",
+    "objectIdentifier": "urn:uuid:44444444-4444-4444-8444-444444444444",
+    "title": "metre",
+    "itemClass": {
+      "id": "https://example.org/rim/uc",
+      "type": "RegisterItemClass",
+      "title": "Unit"
+    },
+    "validityStatus": "valid",
+    "publicationStatus": "published"
+  }
+}

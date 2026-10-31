@@ -1,0 +1,35 @@
+{
+  "@context": [
+    {
+      "rim": "https://w3id.org/ogc/rim/",
+      "dct": "http://purl.org/dc/terms/",
+      "prov": "http://www.w3.org/ns/prov#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ex": "https://example.org/rim/"
+    },
+    "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-action/context.jsonld"
+  ],
+  "id": "https://example.org/rim/a",
+  "type": "RegisterAction",
+  "actionType": "addition",
+  "changeClassification": "substantive",
+  "proposer": {
+    "id": "https://example.org/org/metrology",
+    "type": "Organization",
+    "label": "Metrology office"
+  },
+  "startedAtTime": "2026-09-25T10:00:00Z",
+  "appliesTo": {
+    "id": "https://example.org/rim/i",
+    "type": "RegisterItem",
+    "objectIdentifier": "urn:uuid:44444444-4444-4444-8444-444444444444",
+    "title": "metre",
+    "itemClass": {
+      "id": "https://example.org/rim/uc",
+      "type": "RegisterItemClass",
+      "title": "Unit"
+    },
+    "validityStatus": "valid",
+    "publicationStatus": "published"
+  }
+}

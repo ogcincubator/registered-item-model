@@ -1,0 +1,11 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/rim/i-ungoverned> a rim:RegisterItem ;
+    dct:title "metre -- must fail: its item class is not a declared rim:RegisterItemClass (passes the JSON Schema, rejected by rim:RegisterItemShape's sh:class)" ;
+    rim:itemClass <https://example.org/rim/uc> ;
+    rim:objectIdentifier "urn:uuid:55555555-5555-4555-8555-555555555555"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+

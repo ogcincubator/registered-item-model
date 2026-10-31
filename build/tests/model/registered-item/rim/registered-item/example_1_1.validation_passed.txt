@@ -1,7 +1,0 @@
-Validation report for ogc.model.registered-item.rim.registered-item - Registered Item
-Generated 2026-10-29T11:52:55.855621+00:00
-=== Files ===
-Using examples/example.ttl from examples
-Output Turtle example_1_1.ttl created
-=== End Files ===
-

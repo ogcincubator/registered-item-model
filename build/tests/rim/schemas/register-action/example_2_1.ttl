@@ -1,0 +1,25 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <https://example.org/rim/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:a a rim:RegisterAction ;
+    prov:startedAtTime "2026-09-25T10:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo ex:i ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:proposer <https://example.org/org/metrology> .
+
+<https://example.org/org/metrology> a prov:Organization .
+
+ex:i a rim:RegisterItem ;
+    dct:title "metre"@en ;
+    rim:itemClass ex:uc ;
+    rim:objectIdentifier "urn:uuid:44444444-4444-4444-8444-444444444444"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+ex:uc a rim:RegisterItemClass ;
+    dct:title "Unit"@en .
+

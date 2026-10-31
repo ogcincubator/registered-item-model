@@ -1,0 +1,202 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ISO 19135 Register Specification
+description: The document stating a register's purpose, scope, roles, processes, rules
+  and commitments (ISO 19135:2026). `type` is not pinned so that a sub-register may
+  use its own term.
+type: object
+required:
+- id
+- type
+- title
+properties:
+  id:
+    type: string
+    format: uri
+    x-jsonld-id: '@id'
+  type:
+    oneOf:
+    - type: string
+    - type: array
+      minItems: 1
+      items:
+        type: string
+    x-jsonld-id: '@type'
+  title:
+    type: string
+    x-jsonld-id: http://purl.org/dc/terms/title
+  description:
+    type: string
+    x-jsonld-id: http://purl.org/dc/terms/description
+  definesSubstantiveChange:
+    description: What counts as a substantive (not merely clarifying) change for this
+      register.
+    type: string
+    x-jsonld-id: https://w3id.org/ogc/rim/definesSubstantiveChange
+  hasCommitment:
+    type: array
+    items:
+      type: object
+      required:
+      - commitmentCategory
+      - description
+      properties:
+        id:
+          type: string
+          format: uri
+          x-jsonld-id: '@id'
+        type:
+          const: Commitment
+          x-jsonld-id: '@type'
+        commitmentCategory:
+          enum:
+          - access
+          - persistence
+          - transparency
+          x-jsonld-id: https://w3id.org/ogc/rim/commitmentCategory
+          x-jsonld-type: '@vocab'
+        description:
+          type: string
+          x-jsonld-id: http://purl.org/dc/terms/description
+    x-jsonld-id: https://w3id.org/ogc/rim/hasCommitment
+    x-jsonld-type: '@id'
+additionalProperties: true
+x-jsonld-extra-terms:
+  Register: https://w3id.org/ogc/rim/Register
+  RegisterSystem: https://w3id.org/ogc/rim/RegisterSystem
+  RegisterSpecification: https://w3id.org/ogc/rim/RegisterSpecification
+  RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass
+  RegisterItem: https://w3id.org/ogc/rim/RegisterItem
+  RegisterAction: https://w3id.org/ogc/rim/RegisterAction
+  Concept: https://w3id.org/ogc/rim/Concept
+  ConceptVersion: https://w3id.org/ogc/rim/ConceptVersion
+  ConceptSystem: https://w3id.org/ogc/rim/ConceptSystem
+  Commitment: https://w3id.org/ogc/rim/Commitment
+  Agent: http://www.w3.org/ns/prov#Agent
+  Organization: http://www.w3.org/ns/prov#Organization
+  Person: http://www.w3.org/ns/prov#Person
+  label: http://www.w3.org/2000/01/rdf-schema#label
+  prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel
+  definition: http://www.w3.org/2004/02/skos/core#definition
+  inScheme:
+    x-jsonld-id: http://www.w3.org/2004/02/skos/core#inScheme
+    x-jsonld-type: '@id'
+  objectIdentifier:
+    x-jsonld-id: https://w3id.org/ogc/rim/objectIdentifier
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  functionalIdentifier:
+    x-jsonld-id: https://w3id.org/ogc/rim/functionalIdentifier
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  runsOn:
+    x-jsonld-id: https://w3id.org/ogc/rim/runsOn
+    x-jsonld-type: '@id'
+  hasSpecification:
+    x-jsonld-id: https://w3id.org/ogc/rim/hasSpecification
+    x-jsonld-type: '@id'
+  registerOwner:
+    x-jsonld-id: https://w3id.org/ogc/rim/registerOwner
+    x-jsonld-type: '@id'
+  registerManager:
+    x-jsonld-id: https://w3id.org/ogc/rim/registerManager
+    x-jsonld-type: '@id'
+  controlBody:
+    x-jsonld-id: https://w3id.org/ogc/rim/controlBody
+    x-jsonld-type: '@id'
+  registerSystemManager:
+    x-jsonld-id: https://w3id.org/ogc/rim/registerSystemManager
+    x-jsonld-type: '@id'
+  registerUser:
+    x-jsonld-id: https://w3id.org/ogc/rim/registerUser
+    x-jsonld-type: '@id'
+  access: https://w3id.org/ogc/rim/accessCommitment
+  persistence: https://w3id.org/ogc/rim/persistenceCommitment
+  transparency: https://w3id.org/ogc/rim/transparencyCommitment
+  definedIn:
+    x-jsonld-id: https://w3id.org/ogc/rim/definedIn
+    x-jsonld-type: '@id'
+  validatedBy:
+    x-jsonld-id: https://w3id.org/ogc/rim/validatedBy
+    x-jsonld-type: '@id'
+  itemClass:
+    x-jsonld-id: https://w3id.org/ogc/rim/itemClass
+    x-jsonld-type: '@id'
+  inRegister:
+    x-jsonld-id: https://w3id.org/ogc/rim/inRegister
+    x-jsonld-type: '@id'
+  realizes:
+    x-jsonld-id: https://w3id.org/ogc/rim/realizes
+    x-jsonld-type: '@id'
+  versionOf:
+    x-jsonld-id: https://w3id.org/ogc/rim/versionOf
+    x-jsonld-type: '@id'
+  version: https://w3id.org/ogc/rim/version
+  validityStatus:
+    x-jsonld-id: https://w3id.org/ogc/rim/validityStatus
+    x-jsonld-type: '@vocab'
+  publicationStatus:
+    x-jsonld-id: https://w3id.org/ogc/rim/publicationStatus
+    x-jsonld-type: '@vocab'
+  valid: https://w3id.org/ogc/rim/valid
+  invalid: https://w3id.org/ogc/rim/invalid
+  published: https://w3id.org/ogc/rim/published
+  unpublished: https://w3id.org/ogc/rim/unpublished
+  isRedacted:
+    x-jsonld-id: https://w3id.org/ogc/rim/isRedacted
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean
+  isDeleted:
+    x-jsonld-id: https://w3id.org/ogc/rim/isDeleted
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean
+  relatedItem:
+    x-jsonld-id: https://w3id.org/ogc/rim/relatedItem
+    x-jsonld-type: '@id'
+  supersededBy:
+    x-jsonld-id: https://w3id.org/ogc/rim/supersededBy
+    x-jsonld-type: '@id'
+  supersedes:
+    x-jsonld-id: https://w3id.org/ogc/rim/supersedes
+    x-jsonld-type: '@id'
+  hasAction:
+    x-jsonld-id: https://w3id.org/ogc/rim/hasAction
+    x-jsonld-type: '@id'
+  appliesTo:
+    x-jsonld-id: https://w3id.org/ogc/rim/appliesTo
+    x-jsonld-type: '@id'
+  proposer:
+    x-jsonld-id: https://w3id.org/ogc/rim/proposer
+    x-jsonld-type: '@id'
+  actionType:
+    x-jsonld-id: https://w3id.org/ogc/rim/actionType
+    x-jsonld-type: '@vocab'
+  addition: https://w3id.org/ogc/rim/additionAction
+  publish: https://w3id.org/ogc/rim/publishAction
+  unpublish: https://w3id.org/ogc/rim/unpublishAction
+  invalidation: https://w3id.org/ogc/rim/invalidationAction
+  supersession: https://w3id.org/ogc/rim/supersessionAction
+  redaction: https://w3id.org/ogc/rim/redactionAction
+  deletion: https://w3id.org/ogc/rim/deletionAction
+  changeClassification:
+    x-jsonld-id: https://w3id.org/ogc/rim/changeClassification
+    x-jsonld-type: '@vocab'
+  substantive: https://w3id.org/ogc/rim/substantiveChange
+  clarifying: https://w3id.org/ogc/rim/clarifyingChange
+  correctional: https://w3id.org/ogc/rim/correctionalChange
+  startedAtTime:
+    x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
+  endedAtTime:
+    x-jsonld-id: http://www.w3.org/ns/prov#endedAtTime
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
+  wasAssociatedWith:
+    x-jsonld-id: http://www.w3.org/ns/prov#wasAssociatedWith
+    x-jsonld-type: '@id'
+x-jsonld-prefixes:
+  rim: https://w3id.org/ogc/rim/
+  prov: http://www.w3.org/ns/prov#
+  dct: http://purl.org/dc/terms/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+x-bblocks-metadata:
+  itemIdentifier: ogc.rim.schemas.register-specification
+  register: https://ogcincubator.github.io/registered-item-model/build/register.json
+  version: '0.2'
+  dateOfLastChange: '2026-10-31'

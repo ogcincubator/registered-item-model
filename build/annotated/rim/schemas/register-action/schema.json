@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ISO 19135 Register Action",
+  "description": "A recorded, governed change to register content (ISO 19135:2026), a prov:Activity: what kind of change, how it is classified, which item it applied to, who proposed it, when. `type` is not pinned so that a sub-register may use its own term.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "actionType"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "x-jsonld-id": "@id"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      ],
+      "x-jsonld-id": "@type"
+    },
+    "actionType": {
+      "enum": [
+        "addition",
+        "publish",
+        "unpublish",
+        "invalidation",
+        "supersession",
+        "redaction",
+        "deletion"
+      ],
+      "x-jsonld-id": "https://w3id.org/ogc/rim/actionType",
+      "x-jsonld-type": "@vocab"
+    },
+    "changeClassification": {
+      "enum": [
+        "substantive",
+        "clarifying",
+        "correctional"
+      ],
+      "x-jsonld-id": "https://w3id.org/ogc/rim/changeClassification",
+      "x-jsonld-type": "@vocab"
+    },
+    "appliesTo": {
+      "description": "The register item acted upon (an IRI or an embedded node).",
+      "$ref": "#/$defs/ref",
+      "x-jsonld-id": "https://w3id.org/ogc/rim/appliesTo",
+      "x-jsonld-type": "@id"
+    },
+    "proposer": {
+      "$ref": "#/$defs/ref",
+      "x-jsonld-id": "https://w3id.org/ogc/rim/proposer",
+      "x-jsonld-type": "@id"
+    },
+    "wasAssociatedWith": {
+      "$ref": "#/$defs/refs",
+      "x-jsonld-id": "http://www.w3.org/ns/prov#wasAssociatedWith",
+      "x-jsonld-type": "@id"
+    },
+    "startedAtTime": {
+      "type": "string",
+      "format": "date-time",
+      "x-jsonld-id": "http://www.w3.org/ns/prov#startedAtTime",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "endedAtTime": {
+      "type": "string",
+      "format": "date-time",
+      "x-jsonld-id": "http://www.w3.org/ns/prov#endedAtTime",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "description": {
+      "type": "string",
+      "x-jsonld-id": "http://purl.org/dc/terms/description"
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "ref": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uri",
+              "x-jsonld-id": "@id"
+            }
+          }
+        }
+      ]
+    },
+    "refs": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/ref"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        }
+      ]
+    }
+  },
+  "x-jsonld-extra-terms": {
+    "Register": "https://w3id.org/ogc/rim/Register",
+    "RegisterSystem": "https://w3id.org/ogc/rim/RegisterSystem",
+    "RegisterSpecification": "https://w3id.org/ogc/rim/RegisterSpecification",
+    "RegisterItemClass": "https://w3id.org/ogc/rim/RegisterItemClass",
+    "RegisterItem": "https://w3id.org/ogc/rim/RegisterItem",
+    "RegisterAction": "https://w3id.org/ogc/rim/RegisterAction",
+    "Concept": "https://w3id.org/ogc/rim/Concept",
+    "ConceptVersion": "https://w3id.org/ogc/rim/ConceptVersion",
+    "ConceptSystem": "https://w3id.org/ogc/rim/ConceptSystem",
+    "Commitment": "https://w3id.org/ogc/rim/Commitment",
+    "Agent": "http://www.w3.org/ns/prov#Agent",
+    "Organization": "http://www.w3.org/ns/prov#Organization",
+    "Person": "http://www.w3.org/ns/prov#Person",
+    "title": "http://purl.org/dc/terms/title",
+    "label": "http://www.w3.org/2000/01/rdf-schema#label",
+    "prefLabel": "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "definition": "http://www.w3.org/2004/02/skos/core#definition",
+    "inScheme": {
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#inScheme",
+      "x-jsonld-type": "@id"
+    },
+    "objectIdentifier": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/objectIdentifier",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "functionalIdentifier": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/functionalIdentifier",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "runsOn": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/runsOn",
+      "x-jsonld-type": "@id"
+    },
+    "hasSpecification": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/hasSpecification",
+      "x-jsonld-type": "@id"
+    },
+    "definesSubstantiveChange": "https://w3id.org/ogc/rim/definesSubstantiveChange",
+    "registerOwner": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/registerOwner",
+      "x-jsonld-type": "@id"
+    },
+    "registerManager": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/registerManager",
+      "x-jsonld-type": "@id"
+    },
+    "controlBody": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/controlBody",
+      "x-jsonld-type": "@id"
+    },
+    "registerSystemManager": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/registerSystemManager",
+      "x-jsonld-type": "@id"
+    },
+    "registerUser": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/registerUser",
+      "x-jsonld-type": "@id"
+    },
+    "hasCommitment": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/hasCommitment",
+      "x-jsonld-type": "@id"
+    },
+    "commitmentCategory": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/commitmentCategory",
+      "x-jsonld-type": "@vocab"
+    },
+    "access": "https://w3id.org/ogc/rim/accessCommitment",
+    "persistence": "https://w3id.org/ogc/rim/persistenceCommitment",
+    "transparency": "https://w3id.org/ogc/rim/transparencyCommitment",
+    "definedIn": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/definedIn",
+      "x-jsonld-type": "@id"
+    },
+    "validatedBy": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/validatedBy",
+      "x-jsonld-type": "@id"
+    },
+    "itemClass": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/itemClass",
+      "x-jsonld-type": "@id"
+    },
+    "inRegister": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/inRegister",
+      "x-jsonld-type": "@id"
+    },
+    "realizes": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/realizes",
+      "x-jsonld-type": "@id"
+    },
+    "versionOf": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/versionOf",
+      "x-jsonld-type": "@id"
+    },
+    "version": "https://w3id.org/ogc/rim/version",
+    "validityStatus": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/validityStatus",
+      "x-jsonld-type": "@vocab"
+    },
+    "publicationStatus": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/publicationStatus",
+      "x-jsonld-type": "@vocab"
+    },
+    "valid": "https://w3id.org/ogc/rim/valid",
+    "invalid": "https://w3id.org/ogc/rim/invalid",
+    "published": "https://w3id.org/ogc/rim/published",
+    "unpublished": "https://w3id.org/ogc/rim/unpublished",
+    "isRedacted": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/isRedacted",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "isDeleted": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/isDeleted",
+      "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "relatedItem": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/relatedItem",
+      "x-jsonld-type": "@id"
+    },
+    "supersededBy": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/supersededBy",
+      "x-jsonld-type": "@id"
+    },
+    "supersedes": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/supersedes",
+      "x-jsonld-type": "@id"
+    },
+    "hasAction": {
+      "x-jsonld-id": "https://w3id.org/ogc/rim/hasAction",
+      "x-jsonld-type": "@id"
+    },
+    "addition": "https://w3id.org/ogc/rim/additionAction",
+    "publish": "https://w3id.org/ogc/rim/publishAction",
+    "unpublish": "https://w3id.org/ogc/rim/unpublishAction",
+    "invalidation": "https://w3id.org/ogc/rim/invalidationAction",
+    "supersession": "https://w3id.org/ogc/rim/supersessionAction",
+    "redaction": "https://w3id.org/ogc/rim/redactionAction",
+    "deletion": "https://w3id.org/ogc/rim/deletionAction",
+    "substantive": "https://w3id.org/ogc/rim/substantiveChange",
+    "clarifying": "https://w3id.org/ogc/rim/clarifyingChange",
+    "correctional": "https://w3id.org/ogc/rim/correctionalChange"
+  },
+  "x-jsonld-prefixes": {
+    "rim": "https://w3id.org/ogc/rim/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.rim.schemas.register-action",
+    "register": "https://ogcincubator.github.io/registered-item-model/build/register.json",
+    "version": "0.2",
+    "dateOfLastChange": "2026-10-31"
+  }
+}
