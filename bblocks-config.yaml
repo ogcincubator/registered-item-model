@@ -35,3 +35,12 @@ imports:
   - https://ogcincubator.github.io/bblocks-stac
 
 schema-oas30-downcompile: False
+
+# SPARQL upload (credentials: sparql_username / sparql_password repository secrets)
+sparql:
+  push: https://defs-hosted.opengis.net/fuseki-ospd/data   # SPARQL Graph Store Protocol endpoint
+  query: https://defs-hosted.opengis.net/fuseki-ospd/query
+  graph: https://w3id.org/ogc/rim   # graph for the register (building block metadata)
+  resources:
+    ontologies: true   # ontology files of each block
+    data: true         # RDF data resources of each block (e.g. the catalog), in urn:ogc:bblocks/<id>/data

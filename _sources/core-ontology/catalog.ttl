@@ -1,0 +1,22 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix rim:     <https://w3id.org/ogc/rim/> .
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix geoproc: <https://w3id.org/ogc/rim/geoprocessing/> .
+@prefix mlact:   <https://w3id.org/ogc/rim/ml-activity/> .
+
+# Top-level catalog of the Registered Item Model, so that the model and its profiles can be browsed
+# (catalog > ontology / concept scheme > classes, properties, concepts). Ontologies are linked with
+# dct:hasPart; their classes and properties point back to them with rdfs:isDefinedBy.
+<https://w3id.org/ogc/rim/catalog> a dcat:Catalog ;
+    dct:title "Registered Item Model" ;
+    dct:description "A base RDF/OWL and SHACL model for register items, register item classes and register governance metadata, aligned with ISO 19135:2026, with its controlled vocabularies and its activity type, geoprocessing and machine learning profiles."@en ;
+    dct:hasPart rim:,
+        rim:ValidityStatusScheme,
+        rim:PublicationStatusScheme,
+        rim:RegisterActionTypeScheme,
+        rim:ChangeClassificationScheme,
+        rim:CommitmentCategoryScheme,
+        acttype:,
+        geoproc:,
+        mlact: .
