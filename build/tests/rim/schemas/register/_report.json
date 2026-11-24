@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.rim.schemas.register - Register",
   "bblockName": "Register",
   "bblockId": "ogc.rim.schemas.register",
-  "generated": "2026-10-31T04:32:57.438254+00:00",
+  "generated": "2026-11-24T11:16:17.389980+00:00",
   "result": true,
   "items": [
     {
@@ -16,6 +16,7 @@
         "language": "application/json"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "FILES",
@@ -64,25 +65,28 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core-ontology/ontology.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core-ontology/catalog.ttl\n - /github/workspace/_sources/core-ontology/ontology.ttl"
             },
             {
               "op": "shacl-report",
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/core-ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/core-ontology/shapes.shacl: no results"
             },
             {
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:TextShape/sh:or/rdf:first": {
+                "rim:RegisterItemClassShape": {
+                  "nodes": []
+                },
+                "rim:RegisterActionShape": {
                   "nodes": []
                 },
                 "rim:ConceptShape": {
                   "nodes": []
                 },
-                "rim:TextShape": {
+                "rim:RegisterSpecificationShape": {
                   "nodes": []
                 },
                 "rim:RegisterShape": {
@@ -90,10 +94,13 @@
                     "ex:r"
                   ]
                 },
-                "rim:RegisterSpecificationShape": {
+                "rim:TextShape/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "rim:ConceptVersionShape": {
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
                   "nodes": []
                 },
                 "rim:RegisterItemShape": {
@@ -102,18 +109,12 @@
                 "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                },
-                "rim:RegisterItemClassShape": {
-                  "nodes": []
-                },
-                "rim:RegisterActionShape": {
+                "rim:ConceptVersionShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterActionShape: *none*\n"
+              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:ConceptVersionShape: *none*\n"
             }
           ]
         }
@@ -130,6 +131,7 @@
         "language": "text/turtle"
       },
       "result": true,
+      "hasWarnings": false,
       "sections": [
         {
           "name": "FILES",
@@ -145,7 +147,7 @@
               "filename": "example_2_1.ttl",
               "size": 8,
               "isError": false,
-              "message": "Output Turtle example_2_1.ttl created"
+              "message": "Output Turtle example_2_1.ttl kept as provided"
             }
           ]
         },
@@ -165,25 +167,28 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core-ontology/ontology.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/core-ontology/catalog.ttl\n - /github/workspace/_sources/core-ontology/ontology.ttl"
             },
             {
               "op": "shacl-report",
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/core-ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/core-ontology/shapes.shacl: no results"
             },
             {
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:TextShape/sh:or/rdf:first": {
+                "rim:RegisterItemClassShape": {
+                  "nodes": []
+                },
+                "rim:RegisterActionShape": {
                   "nodes": []
                 },
                 "rim:ConceptShape": {
                   "nodes": []
                 },
-                "rim:TextShape": {
+                "rim:RegisterSpecificationShape": {
                   "nodes": []
                 },
                 "rim:RegisterShape": {
@@ -191,10 +196,13 @@
                     "ex:r"
                   ]
                 },
-                "rim:RegisterSpecificationShape": {
+                "rim:TextShape/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "rim:ConceptVersionShape": {
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
                   "nodes": []
                 },
                 "rim:RegisterItemShape": {
@@ -203,18 +211,12 @@
                 "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                },
-                "rim:RegisterItemClassShape": {
-                  "nodes": []
-                },
-                "rim:RegisterActionShape": {
+                "rim:ConceptVersionShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterActionShape: *none*\n"
+              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:ConceptVersionShape: *none*\n"
             }
           ]
         }
@@ -222,6 +224,7 @@
     }
   ],
   "globalErrors": {},
+  "hasWarnings": false,
   "counts": {
     "total": 2,
     "passed": 2,

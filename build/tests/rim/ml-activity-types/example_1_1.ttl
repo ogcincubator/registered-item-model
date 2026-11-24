@@ -1,0 +1,60 @@
+ex:landCoverModel a stac:Item ;
+    mlm:name "Land Cover Classifier" ;
+    mlm:architecture "U-Net" ;
+    mlm:tasks ( mlm:semantic-segmentation ) ;
+    mlm:framework "PyTorch" ;
+    mlm:input ( ex:landCoverInputSpec ) ;
+    mlm:output ( ex:landCoverOutputSpec ) .
+
+ex:landCoverInputSpec a mlm:ModelInput ;
+    mlm:io_name "sentinel2_bands" ;
+    mlm:input_structure ex:landCoverInputStructure .
+
+ex:landCoverInputStructure a mlm:InputStructure ;
+    mlm:shape -1, 4, 512, 512 ;
+    mlm:dim_order "batch", "channel", "height", "width" ;
+    mlm:data_type "float32" .
+
+ex:landCoverOutputSpec a mlm:ModelOutput ;
+    mlm:io_name "segmentation_mask" ;
+    mlm:result ex:landCoverResultStructure .
+
+ex:landCoverResultStructure a mlm:ResultStructure ;
+    mlm:shape -1, 10, 512, 512 ;
+    mlm:dim_order "batch", "class", "height", "width" ;
+    mlm:data_type "uint8" .
+
+ex:sceneChip a mlact:ActivityInput ;
+    dct:conformsTo ex:landCoverInputSpec ;
+    mlact:structure ex:landCoverInputStructure .
+
+ex:predictedMask a mlact:ActivityOutput ;
+    dct:conformsTo ex:landCoverOutputSpec ;
+    mlact:structure ex:landCoverResultStructure .
+
+ex:inference2026-09-01 a mlact:InferenceActivityType ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://example.org/registers/ml-activities/runs/inference2026-09-01"^^xsd:anyURI ;
+    rim:validityStatus rim:valid ;
+    rim:publicationStatus rim:published ;
+    mlact:model ex:landCoverModel ;
+    mlact:performsTask mlm:semantic-segmentation ;
+    mlact:framework "PyTorch" ;
+    mlact:accelerator mlm:cuda ;
+    mlact:input ex:sceneChip ;
+    mlact:output ex:predictedMask ;
+    rim:actionType rim:additionAction ;
+    rim:appliesTo ex:predictedItem ;
+    prov:startedAtTime "2026-09-01T10:00:00Z"^^xsd:dateTime ;
+    prov:endedAtTime "2026-09-01T10:00:05Z"^^xsd:dateTime .
+
+ex:predictedItem a rim:RegisterItem ;
+    dct:title "Predicted land cover mask, scene S2A_2026-09-01" ;
+    rim:itemClass ex:derivedProductItemClass ;
+    rim:objectIdentifier "https://example.org/registers/ml-activities/items/predicted-mask-2026-09-01"^^xsd:anyURI ;
+    rim:validityStatus rim:valid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction ex:inference2026-09-01 .
+
+ex:derivedProductItemClass a rim:RegisterItemClass ;
+    dct:title "Derived ML product" .

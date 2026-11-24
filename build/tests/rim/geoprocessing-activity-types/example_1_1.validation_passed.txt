@@ -1,0 +1,51 @@
+Validation report for ogc.rim.geoprocessing-activity-types - Geoprocessing Activity Types Profile
+Generated 2026-11-24T11:16:18.811700+00:00
+=== Files ===
+Using example_1_1.ttl from examples
+Output Turtle example_1_1.ttl kept as provided
+=== End Files ===
+
+=== Turtle ===
+Prefixes are defined for geoproc, acttype, rim, prov, p-plan, geo, dct, rdfs, owl, xsd, ex
+=== End Turtle ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/activity-type/ontology.ttl
+ - /github/workspace/_sources/geoprocessing-activity-types/ontology.ttl
+ - /github/workspace/_sources/core-ontology/catalog.ttl
+ - /github/workspace/_sources/core-ontology/ontology.ttl
+ - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle
+Validation result for _sources/geoprocessing-activity-types/shapes.shacl: no results
+Focus nodes for _sources/geoprocessing-activity-types/shapes.shacl:
+ - Shape _:n504cba9844114e0f9f7c948de161914fb20: *none*
+ - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:first: *none*
+ - Shape geoproc:SpatialDataTypeShape/sh:property/sh:qualifiedValueShape: *none*
+ - Shape geoproc:SpatialDataTypeShape: *none*
+ - Shape geoproc:GeoprocessingActivityTypesShape: geoproc:GeoprocessingActivityType
+ - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geoproc:GeoprocessingActivityTypeShape: *none*
+ - Shape geoproc:GeoprocessingActivityTypesShape/sh:property/sh:node: *none*
+ - Shape _:n504cba9844114e0f9f7c948de161914fb21: *none*
+
+Validation result for _sources/activity-type/shapes.shacl: no results
+Focus nodes for _sources/activity-type/shapes.shacl:
+ - Shape acttype:ActivityTypeItemClassShape: acttype:activityTypeItemClass
+ - Shape acttype:ActivityTypeShape: ex:NdviComputation
+
+Validation result for _sources/core-ontology/shapes.shacl: no results
+Focus nodes for _sources/core-ontology/shapes.shacl:
+ - Shape rim:RegisterItemClassShape: *none*
+ - Shape rim:RegisterActionShape: *none*
+ - Shape rim:ConceptShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape rim:RegisterSpecificationShape: *none*
+ - Shape rim:RegisterShape: ex:eoProcessingRegister
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:TextShape: *none*
+ - Shape rim:CommitmentShape: *none*
+ - Shape rim:RegisterItemShape: *none*
+ - Shape rim:ConceptVersionShape: *none*
+
+=== End SHACL ===
+

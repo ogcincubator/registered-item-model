@@ -1,78 +1,63 @@
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix ex: <https://example.org/registers/plants/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rim: <https://w3id.org/ogc/rim/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:plantRegister a rim:Register ;
+    dct:title "National Plant Taxa Register" ;
+    rim:runsOn ex:plantRegisterSystem ;
+    rim:hasSpecification ex:plantRegisterSpec ;
+    rim:registerOwner ex:nationalHerbarium ;
+    rim:registerManager ex:vocabServiceTeam ;
+    rim:controlBody ex:taxonomyEditorialBoard ;
+    rim:registerSystemManager ex:itOperations ;
+    rim:hasCommitment ex:persistenceCommitmentA .
 
-ex:action2024-06 a rim:RegisterAction ;
-    prov:startedAtTime "2024-06-01T00:00:00+00:00"^^xsd:dateTime ;
-    rim:actionType rim:publishAction ;
-    rim:appliesTo ex:quercusRoburItem ;
-    rim:changeClassification rim:clarifyingChange ;
-    rim:proposer ex:vocabServiceTeam .
-
-ex:itOperations a prov:Agent ;
-    dct:title "IT Operations" .
-
-ex:nationalHerbarium a prov:Agent ;
-    dct:title "National Herbarium" .
-
-ex:persistenceCommitmentA a rim:Commitment ;
-    dct:description "Object identifiers, once assigned, are never reused or reassigned." ;
-    rim:commitmentCategory rim:persistenceCommitment .
+ex:plantRegisterSystem a rim:RegisterSystem .
 
 ex:plantRegisterSpec a rim:RegisterSpecification ;
     dct:title "National Plant Taxa Register Specification" ;
     rim:definesSubstantiveChange "A change is substantive if it alters a taxon's accepted name or its placement in the classification hierarchy." .
 
-ex:plantRegisterSystem a rim:RegisterSystem .
+ex:persistenceCommitmentA a rim:Commitment ;
+    rim:commitmentCategory rim:persistenceCommitment ;
+    dct:description "Object identifiers, once assigned, are never reused or reassigned." .
 
-ex:quercusRoburConcept a rim:Concept ;
-    skos:definition "The pedunculate oak, a species of oak in the family Fagaceae."@en ;
-    skos:inScheme ex:taxonSystem ;
-    skos:prefLabel "Quercus robur"@en .
-
-ex:quercusRoburItem a rim:RegisterItem ;
-    dct:title "Quercus robur"@en ;
-    rim:functionalIdentifier "https://example.org/registers/plants/items/quercus-robur/current"^^xsd:anyURI ;
-    rim:hasAction ex:action2024-06 ;
-    rim:inRegister ex:plantRegister ;
-    rim:itemClass ex:taxonItemClass ;
-    rim:objectIdentifier "https://example.org/registers/plants/items/quercus-robur/v2"^^xsd:anyURI ;
-    rim:publicationStatus rim:published ;
-    rim:realizes ex:quercusRoburV2 ;
-    rim:validityStatus rim:valid .
-
-ex:quercusRoburV2 a rim:ConceptVersion ;
-    rim:functionalIdentifier "https://example.org/registers/plants/concepts/quercus-robur/current"^^xsd:anyURI ;
-    rim:objectIdentifier "https://example.org/registers/plants/concepts/quercus-robur/v2"^^xsd:anyURI ;
-    rim:publicationStatus rim:published ;
-    rim:validityStatus rim:valid ;
-    rim:versionOf ex:quercusRoburConcept .
-
-ex:taxonItemClass a rim:RegisterItemClass ;
-    dct:description "The register item class for a single accepted plant taxon." ;
-    dct:title "Taxon record" ;
-    rim:definedIn ex:plantRegister ;
-    rim:validatedBy <https://example.org/registers/plants/shapes#TaxonRecordShape> .
+ex:nationalHerbarium a prov:Agent ; dct:title "National Herbarium" .
+ex:vocabServiceTeam a prov:Agent ; dct:title "Vocabulary Service Team" .
+ex:taxonomyEditorialBoard a prov:Agent ; dct:title "Taxonomy Editorial Board" .
+ex:itOperations a prov:Agent ; dct:title "IT Operations" .
 
 ex:taxonSystem a rim:ConceptSystem ;
     skos:prefLabel "Plant taxa"@en .
 
-ex:taxonomyEditorialBoard a prov:Agent ;
-    dct:title "Taxonomy Editorial Board" .
+ex:quercusRoburConcept a rim:Concept ;
+    skos:inScheme ex:taxonSystem ;
+    skos:prefLabel "Quercus robur"@en ;
+    skos:definition "The pedunculate oak, a species of oak in the family Fagaceae."@en .
 
-ex:plantRegister a rim:Register ;
-    dct:title "National Plant Taxa Register" ;
-    rim:controlBody ex:taxonomyEditorialBoard ;
-    rim:hasCommitment ex:persistenceCommitmentA ;
-    rim:hasSpecification ex:plantRegisterSpec ;
-    rim:registerManager ex:vocabServiceTeam ;
-    rim:registerOwner ex:nationalHerbarium ;
-    rim:registerSystemManager ex:itOperations ;
-    rim:runsOn ex:plantRegisterSystem .
+ex:quercusRoburV2 a rim:ConceptVersion ;
+    rim:versionOf ex:quercusRoburConcept ;
+    rim:objectIdentifier "https://example.org/registers/plants/concepts/quercus-robur/v2"^^xsd:anyURI ;
+    rim:functionalIdentifier "https://example.org/registers/plants/concepts/quercus-robur/current"^^xsd:anyURI ;
+    rim:validityStatus rim:valid ;
+    rim:publicationStatus rim:published .
 
-ex:vocabServiceTeam a prov:Agent ;
-    dct:title "Vocabulary Service Team" .
+ex:taxonItemClass a rim:RegisterItemClass ;
+    dct:title "Taxon record" ;
+    dct:description "The register item class for a single accepted plant taxon." ;
+    rim:definedIn ex:plantRegister ;
+    rim:validatedBy <https://example.org/registers/plants/shapes#TaxonRecordShape> .
 
+ex:quercusRoburItem a rim:RegisterItem ;
+    rim:inRegister ex:plantRegister ;
+    rim:itemClass ex:taxonItemClass ;
+    rim:objectIdentifier "https://example.org/registers/plants/items/quercus-robur/v2"^^xsd:anyURI ;
+    rim:functionalIdentifier "https://example.org/registers/plants/items/quercus-robur/current"^^xsd:anyURI ;
+    dct:title "Quercus robur"@en ;
+    rim:realizes ex:quercusRoburV2 ;
+    rim:validityStatus rim:valid ;
+    rim:publicationStatus rim:published ;
+    rim:hasAction ex:action2024-06 .
+
+ex:action2024-06 a rim:RegisterAction ;
+    rim:actionType rim:publishAction ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:appliesTo ex:quercusRoburItem ;
+    rim:proposer ex:vocabServiceTeam ;
+    prov:startedAtTime "2024-06-01T00:00:00Z"^^xsd:dateTime .

@@ -1,15 +1,9 @@
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix ex: <https://example.org/registers/plants/> .
-@prefix rim: <https://w3id.org/ogc/rim/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-ex:code42 a rim:RegisterItem ;
-    dct:title "Example code 42"@en ;
-    rim:itemClass ex:codeListItemClass ;
-    rim:objectIdentifier "https://example.org/registers/codes/42"^^xsd:anyURI ;
-    rim:publicationStatus rim:published ;
-    rim:validityStatus rim:valid .
-
 ex:codeListItemClass a rim:RegisterItemClass ;
     dct:title "Code list entry" .
 
+ex:code42 a rim:RegisterItem ;
+    rim:itemClass ex:codeListItemClass ;
+    rim:objectIdentifier "https://example.org/registers/codes/42"^^xsd:anyURI ;
+    dct:title "Example code 42"@en ;
+    rim:validityStatus rim:valid ;
+    rim:publicationStatus rim:published .

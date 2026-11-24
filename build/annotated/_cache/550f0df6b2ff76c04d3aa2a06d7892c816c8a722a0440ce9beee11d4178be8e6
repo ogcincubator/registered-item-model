@@ -4,12 +4,12 @@
   "abstract": "These [Building Blocks](https://ogcincubator.github.io/bblocks-docs/) provide a validation and documentation wrapper over STAC and extension schemas, and aid in transparent re-use of STAC elements",
   "description": "Allows for validation and testing of STAC examples.\n\n**STAC extends OGC API Records** (i.e. Records is designed to be compatible with the prior STAC mode) - this packaging supports validation of STAC extensions against underlying Records, Features and Common elements.\n\nSupports definition and testing of transformations to/from STAC from other formats.\n\nImplementers can fork this repository and add additional examples in the `tests/` directory of each Building Block and run validation processes locally.\n\nProvides a framework for documentation and testing of additional extensions.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/sparql",
-  "modified": "2026-10-14T20:23:46.148091",
+  "modified": "2026-11-24T11:00:08.252732",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"f470eb472692ab3e5845074dc94405af89b2f182",
-      "shortCommitId": "\"f470eb",
-      "date": "2026-10-14T12:20:08+00:00\""
+      "commitId": "\"61523b7930e440b7e6e6bc03cb1b104d5d01f3f5",
+      "shortCommitId": "\"61523b",
+      "date": "2026-11-23T13:04:26+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-stac",
@@ -56,19 +56,19 @@
       },
       "rules": [],
       "dateTimeAddition": "2026-08-25T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/components/assets-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/components/assets-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/components/assets-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/components/assets-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/components/assets-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/components/assets-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -107,19 +107,19 @@
       },
       "rules": [],
       "dateTimeAddition": "2026-08-25T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/accuracy-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/accuracy-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/accuracy-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/accuracy-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/accuracy-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/accuracy-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -150,19 +150,19 @@
       },
       "rules": [],
       "dateTimeAddition": "2025-06-12T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/cf-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/cf-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/cf-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/cf-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/cf-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/cf-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -211,19 +211,19 @@
       },
       "rules": [],
       "dateTimeAddition": "2026-08-25T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/classification-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/classification-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/classification-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/classification-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/classification-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/classification-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -271,19 +271,19 @@
       ],
       "rules": [],
       "dateTimeAddition": "2026-08-25T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/eo-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/eo-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/eo-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/eo-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/eo-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/eo-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -331,19 +331,19 @@
       ],
       "rules": [],
       "dateTimeAddition": "2026-08-25T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/mlm-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/mlm-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/mlm-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/mlm-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/mlm-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -385,19 +385,19 @@
       ],
       "rules": [],
       "dateTimeAddition": "2025-06-12T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/osc-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/osc-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/osc-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/osc-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/osc-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/osc-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -428,19 +428,19 @@
       },
       "rules": [],
       "dateTimeAddition": "2025-06-12T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/processing-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/processing-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/processing-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/processing-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/processing-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/processing-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -488,19 +488,19 @@
       ],
       "rules": [],
       "dateTimeAddition": "2026-08-25T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/raster-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/raster-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/raster-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/raster-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/raster-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/raster-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -539,19 +539,19 @@
       },
       "rules": [],
       "dateTimeAddition": "2026-08-25T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/themes-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/themes-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/themes-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/themes-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/themes-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/themes-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -582,19 +582,19 @@
       },
       "rules": [],
       "dateTimeAddition": "2025-06-12T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "ontology": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/core-ontology/ontology.ttl",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/core-ontology/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/core-ontology/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/core-ontology/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/core-ontology/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/core-ontology/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -614,7 +614,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.components.assets-ontology",
         "bblocks://ogc.contrib.stac.core-ontology"
@@ -653,13 +653,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/components/assets/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/components/assets/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/components/assets/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/components/assets/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -679,7 +679,7 @@
       "itemClass": "schema",
       "register": "ogc-incubator-building-block-register",
       "version": "1.1.0",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.components.assets",
         "bblocks://ogc.contrib.stac.core-ontology",
@@ -719,13 +719,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/collection/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/collection/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -745,7 +745,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "dependsOn": [
         "bblocks://ogc.api.records.v1.schemas.recordGeoJSON",
         "bblocks://ogc.contrib.stac.components.assets",
@@ -793,13 +793,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/item/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/item/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -819,7 +819,7 @@
       "itemClass": "schema",
       "register": "ogc-incubator-building-block-register",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "sources": [
         {
           "title": "STAC Specification",
@@ -857,13 +857,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/collection-v1-0-0/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-0-0/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/collection-v1-0-0/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-0-0/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -883,7 +883,7 @@
       "itemClass": "schema",
       "register": "ogc-incubator-building-block-register",
       "version": "1.1.0",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "sources": [
         {
           "title": "STAC Specification",
@@ -920,13 +920,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/collection-v1-1-0/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/collection-v1-1-0/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/collection-v1-1-0/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -946,7 +946,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "link": "https://github.com/stac-extensions/accuracy",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.collection",
@@ -998,13 +998,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/accuracy/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/accuracy/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/accuracy/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/accuracy/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1031,7 +1031,7 @@
       ],
       "status": "under-development",
       "dateTimeAddition": "2026-10-03T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "version": "0.1.0",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -1080,13 +1080,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/application/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/application/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/application/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/application/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1112,7 +1112,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "1.0.0",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.collection",
         "bblocks://ogc.contrib.stac.extensions.cf-ontology",
@@ -1162,13 +1162,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/cf/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/cf/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/cf/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/cf/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1194,7 +1194,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "2.0.0",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "link": "https://github.com/stac-extensions/classification",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.collection",
@@ -1248,13 +1248,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/classification/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/classification/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/classification/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/classification/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1280,7 +1280,7 @@
       ],
       "status": "under-development",
       "dateTimeAddition": "2026-10-03T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "version": "2.3.0",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -1329,13 +1329,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/datacube/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/datacube/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/datacube/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/datacube/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1361,7 +1361,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "link": "https://github.com/stac-extensions/eo",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.collection",
@@ -1416,13 +1416,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/eo/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/eo/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/eo/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/eo/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1448,7 +1448,7 @@
       ],
       "status": "under-development",
       "dateTimeAddition": "2026-10-03T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "version": "2.1.0",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -1497,13 +1497,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/file/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/file/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/file/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/file/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1529,7 +1529,7 @@
       ],
       "status": "under-development",
       "dateTimeAddition": "2026-10-03T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "version": "0.2.0",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -1578,13 +1578,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/ml-aoi/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/ml-aoi/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/ml-aoi/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/ml-aoi/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1604,7 +1604,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.collection",
         "bblocks://ogc.contrib.stac.extensions.osc-ontology",
@@ -1658,13 +1658,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/osc/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/osc/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/osc/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/osc/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1690,7 +1690,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.2.0",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.collection",
         "bblocks://ogc.contrib.stac.extensions.processing-ontology",
@@ -1740,13 +1740,13 @@
       "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/processing/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/processing/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/processing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/processing/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1772,7 +1772,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "link": "https://github.com/stac-extensions/raster",
       "dependsOn": [
         "bblocks://ogc.contrib.stac.collection",
@@ -1826,13 +1826,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/raster/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/raster/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/raster/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/raster/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1858,7 +1858,7 @@
       ],
       "status": "under-development",
       "dateTimeAddition": "2026-10-03T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "version": "1.0.0",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -1907,13 +1907,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/scientific/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/scientific/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/scientific/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/scientific/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1933,7 +1933,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "dependsOn": [
         "bblocks://ogc.api.records.v1.schemas.theme",
         "bblocks://ogc.contrib.stac.collection",
@@ -2050,13 +2050,13 @@
         }
       ],
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/themes/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/themes/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/themes/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2074,7 +2074,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "sources": [
         {
           "title": "GitHub Repository",
@@ -2130,13 +2130,13 @@
         ]
       },
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/themes-jq/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/themes-jq/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/themes-jq/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2154,7 +2154,7 @@
       "itemClass": "schema",
       "register": "bblocks-stac",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "sources": [
         {
           "title": "GitHub Repository",
@@ -2210,13 +2210,13 @@
         ]
       },
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/themes-shacl/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/themes-shacl/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/themes-shacl/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2244,7 +2244,7 @@
       ],
       "status": "under-development",
       "dateTimeAddition": "2026-10-05T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "version": "0.1.0",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -2298,13 +2298,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/vcs/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/vcs/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/vcs/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/vcs/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2330,7 +2330,7 @@
       ],
       "status": "under-development",
       "dateTimeAddition": "2026-10-03T00:00:00Z",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "version": "1.2.0",
       "itemClass": "schema",
       "register": "ogc-building-block-register",
@@ -2379,13 +2379,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/version/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/version/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/version/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/version/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2405,7 +2405,7 @@
       "itemClass": "schema",
       "register": "ogcincubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "sources": [
         {
           "title": "STAC Specification",
@@ -2451,16 +2451,16 @@
       "ldContext": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item-prov/context.jsonld",
       "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/item-prov/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/item-prov/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/item-prov/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-prov/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/item-prov/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-prov/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2480,7 +2480,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "sources": [
         {
           "title": "STAC Specification",
@@ -2524,13 +2524,13 @@
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/item-v1-0-0/",
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-0-0/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/item-v1-0-0/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-0-0/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2550,7 +2550,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "sources": [
         {
           "title": "STAC Specification",
@@ -2595,13 +2595,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/item-v1-1-0/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/item-v1-1-0/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/item-v1-1-0/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -2627,7 +2627,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "1.6.0",
-      "dateOfLastChange": "2026-10-14",
+      "dateOfLastChange": "2026-11-24",
       "seeAlso": [
         "ogc.contrib.stac.extensions.datacube",
         "ogc.contrib.stac.extensions.ml-aoi",
@@ -2711,7 +2711,7 @@
       "sourceLdContext": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm/context.jsonld",
       "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-stac/build/annotated/contrib/stac/extensions/mlm/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/bblocks-stac/blob/master/build/tests/contrib/stac/extensions/mlm/",
       "transforms": [
         {
@@ -2795,13 +2795,13 @@
         }
       ],
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/mlm/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/json-full/contrib/stac/extensions/mlm/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-stac/build/generateddocs/markdown/contrib/stac/extensions/mlm/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
