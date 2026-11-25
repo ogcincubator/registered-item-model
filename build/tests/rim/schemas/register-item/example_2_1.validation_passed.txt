@@ -1,5 +1,5 @@
 Validation report for ogc.rim.schemas.register-item - Register Item
-Generated 2026-11-24T11:16:21.897147+00:00
+Generated 2026-11-25T10:15:23.971755+00:00
 === Files ===
 Using example_2_1.ttl from examples
 Output Turtle example_2_1.ttl kept as provided
@@ -15,17 +15,17 @@ Using SHACL closure graph sources (declared closures, ontologies and RDF data re
  - /github/workspace/_sources/core-ontology/ontology.ttl
 Validation result for _sources/core-ontology/shapes.shacl: no results
 Focus nodes for _sources/core-ontology/shapes.shacl:
- - Shape rim:RegisterItemClassShape: ex:uc
- - Shape rim:RegisterActionShape: *none*
- - Shape rim:ConceptShape: ex:c
- - Shape rim:RegisterSpecificationShape: *none*
- - Shape rim:RegisterShape: ex:r
- - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape rim:TextShape: *none*
- - Shape rim:CommitmentShape: *none*
- - Shape rim:TextShape/sh:or/rdf:first: *none*
  - Shape rim:RegisterItemShape: ex:i
+ - Shape rim:RegisterActionShape: *none*
  - Shape rim:ConceptVersionShape: ex:cv
+ - Shape rim:RegisterSpecificationShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:CommitmentShape: *none*
+ - Shape rim:RegisterItemClassShape: ex:uc
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape rim:RegisterShape: ex:r
+ - Shape rim:ConceptShape: ex:c
 
 === End SHACL ===
 

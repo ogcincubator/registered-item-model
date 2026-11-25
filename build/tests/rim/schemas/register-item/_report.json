@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.rim.schemas.register-item - Register Item",
   "bblockName": "Register Item",
   "bblockId": "ogc.rim.schemas.register-item",
-  "generated": "2026-11-24T11:16:21.897226+00:00",
+  "generated": "2026-11-25T10:15:23.971798+00:00",
   "result": true,
   "items": [
     {
@@ -101,31 +101,7 @@
             {
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:RegisterItemClassShape": {
-                  "nodes": []
-                },
-                "rim:RegisterActionShape": {
-                  "nodes": []
-                },
-                "rim:ConceptShape": {
-                  "nodes": []
-                },
-                "rim:RegisterSpecificationShape": {
-                  "nodes": []
-                },
-                "rim:RegisterShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
                 "rim:TextShape": {
-                  "nodes": []
-                },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "rim:RegisterItemShape": {
@@ -133,12 +109,36 @@
                     "<https://example.org/rim/i-ungoverned>"
                   ]
                 },
+                "rim:RegisterActionShape": {
+                  "nodes": []
+                },
                 "rim:ConceptVersionShape": {
+                  "nodes": []
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": []
+                },
+                "rim:ConceptShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemShape: <https://example.org/rim/i-ungoverned>\n - Shape rim:ConceptVersionShape: *none*\n"
+              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemShape: <https://example.org/rim/i-ungoverned>\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n"
             }
           ]
         }
@@ -216,37 +216,7 @@
             {
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:RegisterItemClassShape": {
-                  "nodes": [
-                    "ex:uc"
-                  ]
-                },
-                "rim:RegisterActionShape": {
-                  "nodes": []
-                },
-                "rim:ConceptShape": {
-                  "nodes": [
-                    "ex:c"
-                  ]
-                },
-                "rim:RegisterSpecificationShape": {
-                  "nodes": []
-                },
-                "rim:RegisterShape": {
-                  "nodes": [
-                    "ex:r"
-                  ]
-                },
-                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
                 "rim:TextShape": {
-                  "nodes": []
-                },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "rim:RegisterItemShape": {
@@ -254,14 +224,44 @@
                     "ex:i"
                   ]
                 },
+                "rim:RegisterActionShape": {
+                  "nodes": []
+                },
                 "rim:ConceptVersionShape": {
                   "nodes": [
                     "ex:cv"
                   ]
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": [
+                    "ex:uc"
+                  ]
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": [
+                    "ex:r"
+                  ]
+                },
+                "rim:ConceptShape": {
+                  "nodes": [
+                    "ex:c"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterItemClassShape: ex:uc\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: ex:c\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemShape: ex:i\n - Shape rim:ConceptVersionShape: ex:cv\n"
+              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemShape: ex:i\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptVersionShape: ex:cv\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemClassShape: ex:uc\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:ConceptShape: ex:c\n"
             }
           ]
         }
@@ -326,37 +326,7 @@
             {
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:RegisterItemClassShape": {
-                  "nodes": [
-                    "ex:uc"
-                  ]
-                },
-                "rim:RegisterActionShape": {
-                  "nodes": []
-                },
-                "rim:ConceptShape": {
-                  "nodes": [
-                    "ex:c"
-                  ]
-                },
-                "rim:RegisterSpecificationShape": {
-                  "nodes": []
-                },
-                "rim:RegisterShape": {
-                  "nodes": [
-                    "ex:r"
-                  ]
-                },
-                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
                 "rim:TextShape": {
-                  "nodes": []
-                },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "rim:RegisterItemShape": {
@@ -364,14 +334,44 @@
                     "ex:i"
                   ]
                 },
+                "rim:RegisterActionShape": {
+                  "nodes": []
+                },
                 "rim:ConceptVersionShape": {
                   "nodes": [
                     "ex:cv"
                   ]
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": [
+                    "ex:uc"
+                  ]
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": [
+                    "ex:r"
+                  ]
+                },
+                "rim:ConceptShape": {
+                  "nodes": [
+                    "ex:c"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterItemClassShape: ex:uc\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: ex:c\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemShape: ex:i\n - Shape rim:ConceptVersionShape: ex:cv\n"
+              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemShape: ex:i\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptVersionShape: ex:cv\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemClassShape: ex:uc\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterShape: ex:r\n - Shape rim:ConceptShape: ex:c\n"
             }
           ]
         }

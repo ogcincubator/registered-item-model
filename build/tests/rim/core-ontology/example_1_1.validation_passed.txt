@@ -1,5 +1,5 @@
 Validation report for ogc.rim.core-ontology - Registered Item Model
-Generated 2026-11-24T11:16:17.074951+00:00
+Generated 2026-11-25T10:15:23.568232+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl kept as provided
@@ -15,17 +15,17 @@ Using SHACL closure graph sources (declared closures, ontologies and RDF data re
  - /github/workspace/_sources/core-ontology/ontology.ttl
 Validation result for _sources/core-ontology/shapes.shacl: no results
 Focus nodes for _sources/core-ontology/shapes.shacl:
- - Shape rim:RegisterItemClassShape: ex:taxonItemClass
- - Shape rim:RegisterActionShape: ex:action2024-06
- - Shape rim:ConceptShape: ex:quercusRoburConcept
- - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape rim:RegisterSpecificationShape: ex:plantRegisterSpec
- - Shape rim:RegisterShape: ex:plantRegister
  - Shape rim:TextShape: *none*
- - Shape rim:CommitmentShape: ex:persistenceCommitmentA
  - Shape rim:RegisterItemShape: ex:quercusRoburItem
- - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:RegisterActionShape: ex:action2024-06
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape rim:ConceptVersionShape: ex:quercusRoburV2
+ - Shape rim:RegisterSpecificationShape: ex:plantRegisterSpec
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:CommitmentShape: ex:persistenceCommitmentA
+ - Shape rim:RegisterItemClassShape: ex:taxonItemClass
+ - Shape rim:RegisterShape: ex:plantRegister
+ - Shape rim:ConceptShape: ex:quercusRoburConcept
 
 === End SHACL ===
 

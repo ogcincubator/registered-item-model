@@ -125,11 +125,11 @@ ex:s a rim:RegisterSpecification ;
     dct:title "Units register specification" ;
     rim:definesSubstantiveChange "Any change to a unit's symbol, dimension or conversion factor is substantive; changes to its description are clarifying." ;
     rim:hasCommitment [ a rim:Commitment ;
-            dct:description "Object identifiers are never reassigned or deleted." ;
-            rim:commitmentCategory rim:persistenceCommitment ],
-        [ a rim:Commitment ;
             dct:description "Current and historic content are readable without authentication." ;
-            rim:commitmentCategory rim:accessCommitment ] .
+            rim:commitmentCategory rim:accessCommitment ],
+        [ a rim:Commitment ;
+            dct:description "Object identifiers are never reassigned or deleted." ;
+            rim:commitmentCategory rim:persistenceCommitment ] .
 
 
 ```
@@ -353,7 +353,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.rim.schemas.register-specification
   register: https://ogcincubator.github.io/registered-item-model/build/register.json
   version: '0.2'
-  dateOfLastChange: '2026-11-24'
+  dateOfLastChange: '2026-11-25'
 
 ```
 

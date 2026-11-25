@@ -364,7 +364,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.rim.schemas.concept-version
   register: https://ogcincubator.github.io/registered-item-model/build/register.json
   version: '0.2'
-  dateOfLastChange: '2026-11-24'
+  dateOfLastChange: '2026-11-25'
 
 ```
 

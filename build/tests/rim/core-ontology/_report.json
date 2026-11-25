@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.rim.core-ontology - Registered Item Model",
   "bblockName": "Registered Item Model",
   "bblockId": "ogc.rim.core-ontology",
-  "generated": "2026-11-24T11:16:17.100759+00:00",
+  "generated": "2026-11-25T10:15:23.588684+00:00",
   "result": true,
   "items": [
     {
@@ -64,9 +64,12 @@
             {
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:RegisterItemClassShape": {
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemShape": {
                   "nodes": [
-                    "ex:taxonItemClass"
+                    "ex:quercusRoburItem"
                   ]
                 },
                 "rim:RegisterActionShape": {
@@ -74,25 +77,20 @@
                     "ex:action2024-06"
                   ]
                 },
-                "rim:ConceptShape": {
-                  "nodes": [
-                    "ex:quercusRoburConcept"
-                  ]
-                },
                 "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
+                },
+                "rim:ConceptVersionShape": {
+                  "nodes": [
+                    "ex:quercusRoburV2"
+                  ]
                 },
                 "rim:RegisterSpecificationShape": {
                   "nodes": [
                     "ex:plantRegisterSpec"
                   ]
                 },
-                "rim:RegisterShape": {
-                  "nodes": [
-                    "ex:plantRegister"
-                  ]
-                },
-                "rim:TextShape": {
+                "rim:TextShape/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "rim:CommitmentShape": {
@@ -100,22 +98,24 @@
                     "ex:persistenceCommitmentA"
                   ]
                 },
-                "rim:RegisterItemShape": {
+                "rim:RegisterItemClassShape": {
                   "nodes": [
-                    "ex:quercusRoburItem"
+                    "ex:taxonItemClass"
                   ]
                 },
-                "rim:TextShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "rim:ConceptVersionShape": {
+                "rim:RegisterShape": {
                   "nodes": [
-                    "ex:quercusRoburV2"
+                    "ex:plantRegister"
+                  ]
+                },
+                "rim:ConceptShape": {
+                  "nodes": [
+                    "ex:quercusRoburConcept"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterItemClassShape: ex:taxonItemClass\n - Shape rim:RegisterActionShape: ex:action2024-06\n - Shape rim:ConceptShape: ex:quercusRoburConcept\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterSpecificationShape: ex:plantRegisterSpec\n - Shape rim:RegisterShape: ex:plantRegister\n - Shape rim:TextShape: *none*\n - Shape rim:CommitmentShape: ex:persistenceCommitmentA\n - Shape rim:RegisterItemShape: ex:quercusRoburItem\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:ConceptVersionShape: ex:quercusRoburV2\n"
+              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemShape: ex:quercusRoburItem\n - Shape rim:RegisterActionShape: ex:action2024-06\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:ConceptVersionShape: ex:quercusRoburV2\n - Shape rim:RegisterSpecificationShape: ex:plantRegisterSpec\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:CommitmentShape: ex:persistenceCommitmentA\n - Shape rim:RegisterItemClassShape: ex:taxonItemClass\n - Shape rim:RegisterShape: ex:plantRegister\n - Shape rim:ConceptShape: ex:quercusRoburConcept\n"
             }
           ]
         }
@@ -180,30 +180,7 @@
             {
               "shaclFile": "_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:RegisterItemClassShape": {
-                  "nodes": [
-                    "ex:codeListItemClass"
-                  ]
-                },
-                "rim:RegisterActionShape": {
-                  "nodes": []
-                },
-                "rim:ConceptShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "rim:RegisterSpecificationShape": {
-                  "nodes": []
-                },
-                "rim:RegisterShape": {
-                  "nodes": []
-                },
                 "rim:TextShape": {
-                  "nodes": []
-                },
-                "rim:CommitmentShape": {
                   "nodes": []
                 },
                 "rim:RegisterItemShape": {
@@ -211,15 +188,38 @@
                     "ex:code42"
                   ]
                 },
-                "rim:TextShape/sh:or/rdf:first": {
+                "rim:RegisterActionShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
                 "rim:ConceptVersionShape": {
                   "nodes": []
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": [
+                    "ex:codeListItemClass"
+                  ]
+                },
+                "rim:RegisterShape": {
+                  "nodes": []
+                },
+                "rim:ConceptShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterItemClassShape: ex:codeListItemClass\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: ex:code42\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:ConceptVersionShape: *none*\n"
+              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemShape: ex:code42\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemClassShape: ex:codeListItemClass\n - Shape rim:RegisterShape: *none*\n - Shape rim:ConceptShape: *none*\n"
             }
           ]
         }
