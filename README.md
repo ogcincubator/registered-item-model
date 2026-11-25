@@ -42,20 +42,10 @@ Each block carries a JSON example and the equivalent Turtle, validated against t
 
 ## Profiles
 
-The profiles form one chain, each a profile of the one above it:
-
-- [`_sources/activity-type`](_sources/activity-type): registers of `prov:Activity` types. Each
-  register item is a class that specialises `prov:Activity`. It declares the types of entity,
-  agent and activity it relates to, and may point to a `prov:Plan` of required steps.
-- [`_sources/geoprocessing-activity-types`](_sources/geoprocessing-activity-types): adds
-  `geoproc:GeoprocessingActivity` and requires each registered sub-type to use or generate at least
-  one GeoSPARQL spatial data type.
-- [`_sources/ml-activity-types`](_sources/ml-activity-types): machine learning
-  training/inference runs, built on the STAC Machine Learning Model (MLM) extension's ontology.
-  `mlact:MLActivity` is both a `geoproc:GeoprocessingActivity` and a `rim:RegisterAction`.
-
-Profile blocks share
-`"group": "Registered Item Model"` in their `bblock.json` so the viewer groups them together.
+The activity type profiles of this model (activity type, geoprocessing and machine learning activity types, with
+their JSON schemas) are published in the
+[Activity Types Register](https://github.com/ogcincubator/activity-type-register), which imports this register.
+That register also holds the generic activity types, as an implementation of this model.
 
 ## Where this could live
 
